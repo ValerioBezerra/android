@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_background"
+        android:orientation="vertical"
+        android:padding="@dimen/padding" >
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/nivImagem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_produto_layout_height_NetworkImageView"
+            android:layout_marginBottom="@dimen/layout_marginTop"
+            android:layout_marginRight="@dimen/layout_marginRight"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@null" />
+
+        <TextView
+            android:id="@+id/txtDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Beirute Bovino"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDetalhamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Beirute Com Filé Mignon, Queijo Derretido, Peito De Peru Defumado, Molho Verde, Alface E Tomate Com Orégano."
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginTop="@dimen/button_layout_marginTop"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/button_not_shape"
+            android:textColor="@color/primary_500"
+            android:text="@string/ok" />
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/dialog_produto_escolhido_detalhe.xml -->

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding" >
+
+    <RadioButton
+        android:id="@+id/rbDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Dinheiro"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtTroco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/troco_para"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/layout_marginLeft"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <br.com.encontredelivery.view.CurrencyEditText
+        android:id="@+id/edtTroco"
+        android:layout_width="@dimen/editText_currency"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+
+</LinearLayout>

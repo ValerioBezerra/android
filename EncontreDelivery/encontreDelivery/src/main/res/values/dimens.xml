@@ -1,0 +1,62 @@
+<resources>
+
+    <dimen name="navigation_drawer_width">280dp</dimen>
+    <dimen name="layout_height_drawer">60dp</dimen>
+    <dimen name="layout_marginLeft_drawer">12dp</dimen>
+    <dimen name="layout_marginRight_drawer">12dp</dimen>
+    <dimen name="paddingRight_drawer">40dp</dimen>
+    <dimen name="layout_marginLeft">7dp</dimen>
+    <dimen name="layout_marginRight">7dp</dimen>
+    <dimen name="layout_marginTop">7dp</dimen>
+    <dimen name="dashbord_layout_marginTop">120dp</dimen>
+    <dimen name="dialog_layout_marginLeft">7dp</dimen>
+    <dimen name="editText_layout_marginTop">7dp</dimen>
+    <dimen name="button_layout_width">280dp</dimen>
+    <dimen name="button_layout_height">55dp</dimen>
+    <dimen name="button_layout_marginTop">10dp</dimen>
+    <dimen name="corners_radius">5dp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="padding_left">10dp</dimen>
+    <dimen name="padding_top">10dp</dimen>
+    <dimen name="padding_right">10dp</dimen>
+    <dimen name="padding_bottom">10dp</dimen>
+    <dimen name="padding_button">30dp</dimen>
+    <dimen name="stroke_width">0.2dp</dimen>
+    <dimen name="ddd">70dp</dimen>
+    <dimen name="numero">90dp</dimen>
+    <dimen name="adapter_empresa_layout_width_height_NetworkImageView">80dp</dimen>
+    <dimen name="adapter_empresa_marginLeft_textView">3dp</dimen>
+    <dimen name="adapter_empresa_marginLeft_imageView">15dp</dimen>
+    <dimen name="adapter_empresa_layout_width_height_imageView">15dp</dimen>
+    <dimen name="activity_informacoes_layout_width_NetworkImageView">90dp</dimen>
+    <dimen name="activity_informacoes_layout_height_NetworkImageView">90dp</dimen>
+    <dimen name="adapter_forma_pagamento_layout_width_NetworkImageView">90dp</dimen>
+    <dimen name="adapter_forma_pagamento_layout_height_NetworkImageView">50dp</dimen>
+    <dimen name="activity_produto_layout_height_NetworkImageView">140dp</dimen>
+    <dimen name="activity_produto_layout_width_height">40dp</dimen>
+    <dimen name="activity_produto_layout_width">85dp</dimen>
+    <dimen name="corners_radius_btn_cinza_quantidade">10dp</dimen>
+    <dimen name="adapter_produto_layout_width">85dp</dimen>
+    <dimen name="editText_currency">120dp</dimen>
+    <item name="floatinghintedittext_hint_scale" type="dimen" format="float">0.6</item>
+    <item name="floatinghintedittext_animation_steps" type="dimen" format="integer">6</item>
+    <dimen name="widget_margin">8dp</dimen>
+
+    <!-- Navigation Drawer -->
+    <dimen name="navigation_drawer_max_width">320dp</dimen>
+    <dimen name="navigation_drawer_profile_image_size">64dp</dimen>
+    <dimen name="navigation_drawer_item_height">48dp</dimen>
+    <dimen name="navigation_drawer_account_section_default_height">164dp</dimen>
+    <dimen name="navigation_drawer_account_information_height">56dp</dimen>
+    <dimen name="nav_drawer_vertical_keyline_icon_left">16dp</dimen>
+    <dimen name="nav_drawer_vertical_keyline_text_left">72dp</dimen>
+    <dimen name="nav_drawer_vertical_keyline_right">16dp</dimen>
+    <dimen name="nav_drawer_item_row_height">48dp</dimen>
+    <dimen name="nav_drawer_item_row_icon_size">24dp</dimen>
+    <dimen name="nav_drawer_vertical_spacing_listing">8dp</dimen>
+    <dimen name="nav_drawer_vertical_spacing_listing_divider_top">7dp</dimen>
+    <dimen name="nav_drawer_vertical_spacing_listing_divider_bottom">8dp</dimen>
+    <dimen name="nav_drawer_subheader_height">48dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+</resources>

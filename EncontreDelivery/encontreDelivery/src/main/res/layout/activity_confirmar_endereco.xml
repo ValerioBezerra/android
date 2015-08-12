@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DashboardActivity" >
+
+    <LinearLayout
+        android:id="@+id/llCampos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="@dimen/padding" >
+
+        <TextView
+            android:id="@+id/txtEndereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Rua pessoa de melo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtBairro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Gercino Coelho"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtCidadeUF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Petrolina - PE"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_layout_marginTop"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilNumero"
+                android:layout_width="@dimen/numero"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edtNumero"
+                    android:layout_width="@dimen/numero"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/numero"
+                    android:inputType="number"
+                    android:maxLength="5" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilComplementoReferencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edtComplementoReferencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/layout_marginRight"
+                    android:ems="10"
+                    android:hint="@string/complemento_referencia"
+                    android:maxLength="50" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llCampos"
+        android:orientation="vertical"
+        android:padding="@dimen/padding" >
+    <Button
+        android:id="@+id/btnConfirmar"
+        style="@style/button_red"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_layout_height"
+
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:background="@drawable/button_red"
+        android:onClick="clickConfirmar"
+        android:text="@string/confirmar" />
+
+    </LinearLayout>
+
+</RelativeLayout>

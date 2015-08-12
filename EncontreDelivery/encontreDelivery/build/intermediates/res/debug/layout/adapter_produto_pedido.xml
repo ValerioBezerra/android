@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/padding_bottom"
+    android:paddingTop="@dimen/padding_top" >
+
+    <ImageButton
+        android:id="@+id/ibtRemover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_action_discard" />
+
+    <TextView
+        android:id="@+id/txtDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ibtRemover"
+        android:layout_toRightOf="@+id/ibtRemover"
+        android:text="Produto"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtTamanho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDescricao"
+        android:layout_toRightOf="@+id/ibtRemover"
+        android:text="Tamanho: Grande"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/txtProdutosEscolhidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTamanho"
+        android:layout_toRightOf="@+id/ibtRemover"
+        android:text="- Coca-Cola"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtAdicionais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtProdutosEscolhidos"
+        android:layout_toRightOf="@+id/ibtRemover"
+        android:text="+ Camarão (R$ 2,00)"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/txtAdicionais"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btnDiminuir"
+                style="@style/button_red"
+                android:layout_width="@dimen/activity_produto_layout_width_height"
+                android:layout_height="@dimen/activity_produto_layout_width_height"
+                android:background="@drawable/button_red"
+                android:enabled="false"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/txtQuantidade"
+                android:layout_width="@dimen/activity_produto_layout_width_height"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnAumentar"
+                style="@style/button_red"
+                android:layout_width="@dimen/activity_produto_layout_width_height"
+                android:layout_height="@dimen/activity_produto_layout_width_height"
+                android:background="@drawable/button_red"
+                android:text="+" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_marginLeft"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="@dimen/adapter_produto_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/valor_unitario"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtValorUnitario"
+                    android:layout_width="@dimen/adapter_produto_layout_width"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:text="R$ 28,50"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_marginLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="@dimen/adapter_produto_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/total"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtValorTotal"
+                    android:layout_width="@dimen/adapter_produto_layout_width"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:text="R$ 57,00"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_produto_pedido.xml -->

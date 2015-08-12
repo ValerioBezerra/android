@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="ClickableViewAccessibility" severity="ignore" />
+    <issue id="ContentDescription">
+        <ignore path="res/layout/activity_estabelecimento_categorias.xml" />
+        <ignore path="res/layout/activity_estabelecimento_produtos.xml" />
+        <ignore path="res/layout/activity_informacoes.xml" />
+        <ignore path="res/layout/activity_produto.xml" />
+        <ignore path="res/layout/adapter_empresa.xml" />
+        <ignore path="res/layout/adapter_meus_pedidos.xml" />
+        <ignore path="res/layout/adapter_produto_escolhido.xml" />
+        <ignore path="res/layout/adapter_produto_escolhido_quantidade.xml" />
+        <ignore path="res/layout/adapter_produto_pedido.xml" />
+        <ignore path="res/layout/adapter_status.xml" />
+        <ignore path="res/layout/view_password_edit_text.xml" />
+        <ignore path="res/layout/view_show_hide_password.xml" />
+    </issue>
+    <issue id="DisableBaselineAlignment">
+        <ignore path="res/layout/adapter_empresa.xml" />
+        <ignore path="res/layout/adapter_meus_pedidos.xml" />
+    </issue>
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="HardcodedText">
+        <ignore path="res/layout/activity_acompanhar_pedido.xml" />
+        <ignore path="res/layout/activity_carrinho.xml" />
+        <ignore path="res/layout/activity_confirmar_endereco.xml" />
+        <ignore path="res/layout/activity_confirmar_pedido.xml" />
+        <ignore path="res/layout/activity_estabelecimento_categorias.xml" />
+        <ignore path="res/layout/activity_estabelecimento_produtos.xml" />
+        <ignore path="res/layout/activity_finalizar_pedido.xml" />
+        <ignore path="res/layout/activity_informacoes.xml" />
+        <ignore path="res/layout/activity_produto.xml" />
+        <ignore path="res/layout/adapter_empresa.xml" />
+        <ignore path="res/layout/adapter_endereco.xml" />
+        <ignore path="res/layout/adapter_escolher_forma_pagamento.xml" />
+        <ignore path="res/layout/adapter_meus_pedidos.xml" />
+        <ignore path="res/layout/adapter_meus_vouchers.xml" />
+        <ignore path="res/layout/adapter_produto.xml" />
+        <ignore path="res/layout/adapter_produto_escolhido.xml" />
+        <ignore path="res/layout/adapter_produto_escolhido_quantidade.xml" />
+        <ignore path="res/layout/adapter_produto_pedido.xml" />
+        <ignore path="res/layout/adapter_status.xml" />
+        <ignore path="res/layout/adapter_tamanho.xml" />
+        <ignore path="res/layout/dialog_confirmacao_endereco.xml" />
+        <ignore path="res/layout/dialog_produto_escolhido_detalhe.xml" />
+        <ignore path="res/layout/fragment_lista_estabelecimentos.xml" />
+        <ignore path="res/layout/fragment_navigation_drawer.xml" />
+    </issue>
+    <issue id="InflateParams" severity="ignore" />
+    <issue id="MissingId">
+        <ignore path="res/layout/activity_configuracoes.xml" />
+        <ignore path="res/layout/activity_meus_pedidos.xml" />
+    </issue>
+    <issue id="TextFields">
+        <ignore path="res/layout/dialog_voucher.xml" />
+    </issue>
+    <issue id="UseCompoundDrawables">
+        <ignore path="res/layout/activity_carrinho.xml" />
+        <ignore path="res/layout/activity_estabelecimento_categorias.xml" />
+        <ignore path="res/layout/activity_estabelecimento_produtos.xml" />
+        <ignore path="res/layout/activity_informacoes.xml" />
+        <ignore path="res/layout/adapter_empresa.xml" />
+        <ignore path="res/layout/adapter_meus_pedidos.xml" />
+        <ignore path="res/layout/adapter_status.xml" />
+    </issue>
+    <issue id="UselessLeaf">
+        <ignore path="res/layout/activity_confirmar_endereco.xml" />
+        <ignore path="res/layout/activity_produto.xml" />
+    </issue>
+    <issue id="UselessParent">
+        <ignore path="res/layout/activity_carrinho.xml" />
+        <ignore path="res/layout/adapter_meus_pedidos.xml" />
+        <ignore path="res/layout/adapter_status.xml" />
+    </issue>
+</lint>

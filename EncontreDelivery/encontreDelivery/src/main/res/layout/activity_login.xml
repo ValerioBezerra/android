@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/padding"
+    tools:context=".LoginActivity" >
+
+    <LinearLayout
+        android:id="@+id/llCampos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="@dimen/padding" >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLength="50" >
+
+                <requestFocus />
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilSenha"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/editText_layout_marginTop"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edtSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/senha"
+                android:inputType="textPassword"
+                android:maxLines="12" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnEntrar"
+        style="@style/button_red"
+        android:layout_width="@dimen/button_layout_width"
+        android:layout_height="@dimen/button_layout_height"
+        android:layout_below="@id/llCampos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:background="@drawable/button_red"
+        android:onClick="clickEntrar"
+        android:text="@string/entrar" />
+
+    <com.facebook.widget.LoginButton
+        android:id="@+id/btnEntrarFacebook"
+        style="@style/button_blue"
+        android:layout_width="@dimen/button_layout_width"
+        android:layout_height="@dimen/button_layout_height"
+        android:layout_below="@id/btnEntrar"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_blue"
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:padding="@dimen/padding" />
+
+    <Button
+        android:id="@+id/btnQueroMeCadastrar"
+        style="@style/button_red"
+        android:layout_width="@dimen/button_layout_width"
+        android:layout_height="@dimen/button_layout_height"
+        android:layout_below="@id/btnEntrarFacebook"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:background="@drawable/button_red"
+        android:onClick="clickQueroMeCadastrar"
+        android:text="@string/quero_me_cadastrar" />
+
+    <Button
+        android:id="@+id/btnEsqueciMinhaSenha"
+        style="@style/button_red"
+        android:layout_width="@dimen/button_layout_width"
+        android:layout_height="@dimen/button_layout_height"
+        android:layout_below="@id/btnQueroMeCadastrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:background="@drawable/button_red"
+        android:onClick="clickEsqueciMinhaSenha"
+        android:text="@string/esqueci_minha_senha" />
+    
+
+</RelativeLayout>

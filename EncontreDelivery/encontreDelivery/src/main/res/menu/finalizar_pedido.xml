@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/acao_voucher"
+        android:icon="@drawable/ic_fa_dollar"
+        android:title="@string/voucher"
+        app:showAsAction="always"/>
+    
+</menu>

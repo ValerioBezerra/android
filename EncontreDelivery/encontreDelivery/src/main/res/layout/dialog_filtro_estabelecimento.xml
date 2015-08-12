@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/filtros"
+        android:textColor="@color/primary_500"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/primary_500" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:text="@string/segmentos"
+        android:textColor="@color/primary_500"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <GridView
+        android:id="@+id/gdSegmentos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice"
+        android:columnWidth="100dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth" >
+    </GridView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnFiltrar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginRight="@dimen/layout_marginRight"
+            android:layout_weight="1"
+            android:background="@drawable/button_not_shape"
+            android:textColor="@color/primary_500"
+            android:text="@string/filtrar" />
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginLeft="@dimen/layout_marginLeft"
+            android:layout_weight="1"
+            android:background="@drawable/button_not_shape"
+            android:textColor="@color/grey_black"
+            android:text="@string/cancelar" />
+    </LinearLayout>
+
+</LinearLayout>

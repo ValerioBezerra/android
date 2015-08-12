@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.encontredelivery"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="br.com.encontredelivery.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="br.com.encontredelivery.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/ActionBarTheme" >
+        <activity
+            android:name="br.com.encontredelivery.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.DashboardActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.PedirActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/pedir"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.EncontrarEnderecoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/encontrar_endereco"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.MeusEnderecosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/meus_enderecos"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.CadastroActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/cadastro"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.NavigationDrawerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme.WithNavDrawer" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.EstabelecimentoCategoriasActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.EstabelecimentoProdutosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.InformacoesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/informacoes"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.ProdutosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.CarrinhoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.ConfirmarEnderecoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/confirmar_endereco_titulo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.FinalizarPedidoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/finalizar_pedido"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.ConfirmarPedidoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/confirmar_pedido"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.MeusPedidosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/meus_pedidos"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.AcompanharPedidoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/acompanhar_pedido"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.MeusDadosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/meus_dados"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.encontredelivery.activity.EsqueciMinhaSenhaActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/esqueci_minha_senha"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.facebook.LoginActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="br.com.encontredelivery.activity.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="br.com.encontredelivery" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="br.com.encontredelivery.activity.GCMIntentService" />
+
+        <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"
+            android:theme="@style/Theme.IAPTheme" />
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <receiver
+            android:name="com.google.android.gms.wallet.EnableWalletOptimizationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.wallet.ENABLE_WALLET_OPTIMIZATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

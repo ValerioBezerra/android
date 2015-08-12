@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.encontredelivery">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="br.com.encontredelivery.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="br.com.encontredelivery.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"  />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/ActionBarTheme" >
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".activity.PedirActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/pedir"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.EncontrarEnderecoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/encontrar_endereco"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.MeusEnderecosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/meus_enderecos"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CadastroActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/cadastro"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.NavigationDrawerActivity"
+            android:theme="@style/NoActionBarTheme.WithNavDrawer"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.EstabelecimentoCategoriasActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.EstabelecimentoProdutosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.InformacoesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/informacoes"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ProdutosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CarrinhoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ConfirmarEnderecoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/confirmar_endereco_titulo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.FinalizarPedidoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/finalizar_pedido"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.ConfirmarPedidoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/confirmar_pedido"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.MeusPedidosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/meus_pedidos"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.AcompanharPedidoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/acompanhar_pedido"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.MeusDadosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/meus_dados"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.EsqueciMinhaSenhaActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/esqueci_minha_senha"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.facebook.LoginActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name=".activity.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="br.com.encontredelivery" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".activity.GCMIntentService" />
+
+    </application>
+
+</manifest>

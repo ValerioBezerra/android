@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fadingEdgeLength="0dp"
+    android:fillViewport="true"
+    tools:context=".ProdutosActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding" >
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/nivImagem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_produto_layout_height_NetworkImageView"
+            android:layout_marginBottom="@dimen/layout_marginTop"
+            android:layout_marginRight="@dimen/layout_marginRight"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@null" />
+
+        <TextView
+            android:id="@+id/txtDescricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beirute Bovino"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDetalhamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_marginTop"
+            android:text="Beirute Com Filé Mignon, Queijo Derretido, Peito De Peru Defumado, Molho Verde, Alface E Tomate Com Orégano."
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/txtPrecoTamanho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/preco_tamanho"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/primary_700" />
+
+        <Button
+            android:id="@+id/btnTamanho"
+            style="@style/button_red"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginBottom="@dimen/layout_marginTop"
+            android:background="@drawable/button_red"
+            android:onClick="clickTamanho"
+            android:text="@string/escolha_tamanho" />
+
+        <LinearLayout
+            android:id="@+id/llFracoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_marginTop"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/escolha_opcao"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/list_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_marginTop"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/imgFracao1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:onClick="clickFracao1"
+                    android:src="@drawable/fracao_desabilitada_1" />
+
+                <ImageButton
+                    android:id="@+id/imgFracao2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:background="@android:color/transparent"
+                    android:onClick="clickFracao2"
+                    android:src="@drawable/fracao_desabilitada_2" />
+
+                <ImageButton
+                    android:id="@+id/imgFracao3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:background="@android:color/transparent"
+                    android:onClick="clickFracao3"
+                    android:src="@drawable/fracao_desabilitada_3" />
+
+                <ImageButton
+                    android:id="@+id/imgFracao4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:background="@android:color/transparent"
+                    android:onClick="clickFracao4"
+                    android:src="@drawable/fracao_desabilitada_4" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtPrecoOpcoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/preco_produto"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/primary_700" />
+
+            <Button
+                android:id="@+id/btnOpcao1"
+                style="@style/button_red"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_layout_height"
+                android:background="@drawable/button_red"
+                android:gravity="left|center_vertical"
+                android:onClick="clickOpcao1"
+                android:text="Opção 1:" />
+
+            <Button
+                android:id="@+id/btnOpcao2"
+                style="@style/button_red"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_layout_height"
+                android:layout_marginTop="@dimen/button_layout_marginTop"
+                android:background="@drawable/button_red"
+                android:gravity="left|center_vertical"
+                android:onClick="clickOpcao2"
+                android:text="Opção 2:" />
+
+            <Button
+                android:id="@+id/btnOpcao3"
+                style="@style/button_red"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_layout_height"
+                android:layout_marginTop="@dimen/button_layout_marginTop"
+                android:background="@drawable/button_red"
+                android:gravity="left|center_vertical"
+                android:onClick="clickOpcao3"
+                android:text="Opção 3:" />
+
+            <Button
+                android:id="@+id/btnOpcao4"
+                style="@style/button_red"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_layout_height"
+                android:layout_marginTop="@dimen/button_layout_marginTop"
+                android:background="@drawable/button_red"
+                android:gravity="left|center_vertical"
+                android:onClick="clickOpcao4"
+                android:text="Opção 4:" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtPrecoProdutoEscolhido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/preco_produto_escolhido"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/primary_700" />
+
+        <Button
+            android:id="@+id/btnProdutoEscolhido"
+            style="@style/button_red"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginBottom="@dimen/layout_marginTop"
+            android:background="@drawable/button_red"
+            android:onClick="clickProdutoEscolhido"
+            android:text="Escolha 1 Sabor" />
+
+        <LinearLayout
+            android:id="@+id/llProdutosEscolhidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtProdutosEscolhidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Escolha 10 peças"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/list_divider" />
+
+            <TextView
+                android:id="@+id/txtMinimoProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                android:gravity="center"
+                android:text="Quantidade mínima por item: 5"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/primary_700" />
+
+            <TextView
+                android:id="@+id/txtMaximoProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Quantidade máxima por item: 5"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/primary_700" />
+
+            <br.com.encontredelivery.view.NoScrollListView
+                android:id="@+id/lvProdutosEscolhidos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:listSelector="@android:color/transparent" />
+
+            <LinearLayout
+                android:id="@+id/llVazioProdutosEscolhidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_marginTop"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/nenhum_produto_escolhido"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/layout_marginTop"
+                android:background="@color/list_divider" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAdicionais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtAdicionais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Escolha um adicional"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/list_divider" />
+
+            <br.com.encontredelivery.view.NoScrollListView
+                android:id="@+id/lvAdicionais"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:listSelector="@android:color/transparent" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/layout_marginTop"
+                android:background="@color/list_divider" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/btnDiminuir"
+                    style="@style/button_red"
+                    android:layout_width="@dimen/activity_produto_layout_width_height"
+                    android:layout_height="@dimen/activity_produto_layout_width_height"
+                    android:background="@drawable/button_red"
+                    android:enabled="false"
+                    android:onClick="clickDiminuir"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/txtQuantidade"
+                    android:layout_width="@dimen/activity_produto_layout_width_height"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/btnAumentar"
+                    style="@style/button_red"
+                    android:layout_width="@dimen/activity_produto_layout_width_height"
+                    android:layout_height="@dimen/activity_produto_layout_width_height"
+                    android:background="@drawable/button_red"
+                    android:onClick="clickAumentar"
+                    android:text="+" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="@dimen/activity_produto_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/valor_unitario"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtValorUnitario"
+                        android:layout_width="@dimen/activity_produto_layout_width"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:text="R$ 28,50"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="@dimen/activity_produto_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/total"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtValorTotal"
+                        android:layout_width="@dimen/activity_produto_layout_width"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:text="R$ 57,00"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilObservacao"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edtObservacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/observacoes"
+                android:inputType="textMultiLine"
+                android:maxLines="5" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnAdicionarPedido"
+            style="@style/button_red"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginTop="@dimen/button_layout_marginTop"
+            android:background="@drawable/button_red"
+            android:onClick="clickAdicionarPedido"
+            android:text="@string/adicionar_pedido" />
+    </LinearLayout>
+
+</ScrollView><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_produto.xml -->

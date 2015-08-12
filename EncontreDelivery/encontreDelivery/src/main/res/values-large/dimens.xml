@@ -1,0 +1,42 @@
+<resources>
+
+    <dimen name="navigation_drawer_width">300dp</dimen>
+    <dimen name="layout_height_drawer">60dp</dimen>
+    <dimen name="layout_marginLeft_drawer">12dp</dimen>
+    <dimen name="layout_marginRight_drawer">12dp</dimen>
+    <dimen name="paddingRight_drawer">40dp</dimen>
+    <dimen name="layout_marginLeft">10dp</dimen>
+    <dimen name="layout_marginRight">10dp</dimen>
+    <dimen name="layout_marginTop">10dp</dimen>
+    <dimen name="dashbord_layout_marginTop">200dp</dimen>
+    <dimen name="dialog_layout_marginLeft">10dp</dimen>
+    <dimen name="editText_layout_marginTop">10dp</dimen>
+    <dimen name="button_layout_width">390dp</dimen>
+    <dimen name="button_layout_height">55dp</dimen>
+    <dimen name="button_layout_marginTop">15dp</dimen>
+    <dimen name="corners_radius">6dp</dimen>
+    <dimen name="padding">12dp</dimen>
+    <dimen name="padding_left">12dp</dimen>
+    <dimen name="padding_top">12dp</dimen>
+    <dimen name="padding_right">12dp</dimen>
+    <dimen name="padding_bottom">12dp</dimen>
+    <dimen name="padding_button">32dp</dimen>
+    <dimen name="stroke_width">0.5dp</dimen>
+    <dimen name="ddd">80dp</dimen>
+    <dimen name="numero">100dp</dimen>
+    <dimen name="adapter_empresa_layout_width_height_NetworkImageView">90dp</dimen>
+    <dimen name="adapter_empresa_marginLeft_textView">3dp</dimen>
+    <dimen name="adapter_empresa_marginLeft_imageView">50dp</dimen>
+    <dimen name="adapter_empresa_layout_width_height_imageView">15dp</dimen>
+    <dimen name="activity_informacoes_layout_width_NetworkImageView">100dp</dimen>
+    <dimen name="activity_informacoes_layout_height_NetworkImageView">100dp</dimen>
+    <dimen name="adapter_forma_pagamento_layout_width_NetworkImageView">100dp</dimen>
+    <dimen name="adapter_forma_pagamento_layout_height_NetworkImageView">60dp</dimen>
+    <dimen name="activity_produto_layout_height_NetworkImageView">170dp</dimen>
+    <dimen name="activity_produto_layout_width_height">44dp</dimen>
+    <dimen name="activity_produto_layout_width">110dp</dimen>
+    <dimen name="corners_radius_btn_cinza_quantidade">14dp</dimen>
+    <dimen name="adapter_produto_layout_width">100dp</dimen>
+    <dimen name="editText_currency">150dp</dimen>
+    
+</resources>

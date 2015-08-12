@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding"
+    tools:context=".ConfirmarPedidoActivity" >
+
+    <LinearLayout
+        android:id="@+id/llVerificandoRecebimento"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/pedido_enviado_sucesso"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/aguarde_confirmar_pedido"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtPedido"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                android:layout_weight="1"
+                android:text="Nro Pedido: 25"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/txtTempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                android:gravity="right"
+                android:text="10:00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pbTempo"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:gravity="center"
+            android:text="@string/caso_pedido_nao_confirmado"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/primary_700" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPedidoRecebido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/icone"
+            android:src="@drawable/prato_recebido" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:gravity="center"
+            android:text="@string/bom_apetite"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:gravity="center"
+            android:text="@string/pedido_recebido"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/btnAcompanharPedido"
+            style="@style/button_red"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginTop="@dimen/button_layout_marginTop"
+            android:background="@drawable/button_red"
+            android:onClick="clickAcompanharPedido"
+            android:text="@string/acompanhar_pedido" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPedidoCancelado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/icone"
+            android:src="@drawable/prato_cancelado" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:gravity="center"
+            android:text="@string/desculpe"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:gravity="center"
+            android:text="@string/pedido_cancelado"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/fone_dois_pontos"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/txtFone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/layout_marginLeft"
+                android:gravity="center"
+                android:text="(87) 3862-1656"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnTelaInicial"
+        style="@style/button_red"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_layout_height"
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:background="@drawable/button_red"
+        android:onClick="clickTelaInicial"
+        android:text="@string/ir_tela_inicial"
+        android:visibility="gone" />
+
+</LinearLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_confirmar_pedido.xml -->

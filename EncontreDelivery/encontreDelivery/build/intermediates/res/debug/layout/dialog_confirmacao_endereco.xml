@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_background" >
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:textColor="@color/primary_500"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtTitulo"
+        android:background="@color/primary_500" />
+
+    <TextView
+        android:id="@+id/txtCEPLogradouro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/view"
+        android:text="(56306-090) Rua Pessoa de Melo"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtBairro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCEPLogradouro"
+        android:text="Gercino Coelho"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtCidadeUF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBairro"
+        android:text="Petrolina - PE"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCidadeUF"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnSim"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginRight="@dimen/layout_marginRight"
+            android:layout_weight="1"
+            android:background="@drawable/button_not_shape"
+            android:textColor="@color/primary_500"
+            android:text="@string/sim" />
+
+        <Button
+            android:id="@+id/btnNao"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginLeft="@dimen/layout_marginLeft"
+            android:layout_weight="1"
+            android:background="@drawable/button_not_shape"
+            android:textColor="@color/grey_black"
+            android:text="@string/nao" />
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/dialog_confirmacao_endereco.xml -->

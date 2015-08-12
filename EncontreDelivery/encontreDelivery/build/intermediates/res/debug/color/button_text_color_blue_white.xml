@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:color="@color/blue" android:state_pressed="true"/>
+	<item android:color="@color/white"/>
+</selector><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/color/button_text_color_blue_white.xml -->

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="floatingHintEditTextStyle" format="reference" />
+    <declare-styleable name="ShownEdittext">
+        <attr name="android:inputType"/>
+        <attr name="android:hint"/>
+        <attr name="android:enabled"/>
+    </declare-styleable>
+
+    <declare-styleable name="ScrimInsetsView">
+        <attr name="insetForegroundView" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="TintOnStateImageView">
+        <attr name="colorStateList" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="UserAvatar">
+        <attr name="border_width" format="reference|dimension" />
+        <attr name="border_color" format="reference|color" />
+    </declare-styleable>
+</resources>

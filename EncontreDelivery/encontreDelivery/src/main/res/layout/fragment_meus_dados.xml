@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/padding"
+    tools:context=".DashboardActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llCampos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:padding="@dimen/padding" >
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edtNome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/nome"
+                        android:inputType="textPersonName" >
+
+                        <requestFocus />
+                    </EditText>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilEmail"
+                    android:layout_marginTop="@dimen/editText_layout_marginTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/editText_layout_marginTop" >
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/DDDFone"
+                        android:layout_width="@dimen/ddd"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/edtDDDFone"
+                            android:layout_width="@dimen/ddd"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/ddd"
+                            android:inputType="number"
+                            android:maxLength="2" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tilFone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/edtFone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/fone"
+                            android:inputType="number"
+                            android:maxLength="9" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilSenhaAtual"
+                    android:layout_marginTop="@dimen/editText_layout_marginTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edtSenhaAtual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/senha_atual"
+                        android:inputType="textPassword"
+                        android:maxLength="12" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilNovaSenha"
+                    android:layout_marginTop="@dimen/editText_layout_marginTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edtNovaSenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/nova_senha"
+                        android:inputType="textPassword"
+                        android:maxLength="12" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/editText_layout_marginTop"
+                    android:id="@+id/tilConfirmarSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtConfirmarSenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/button_layout_marginTop"
+                        android:ems="10"
+                        android:hint="@string/confirmar_senha"
+                        android:inputType="textPassword"
+                        android:maxLength="12" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llCampos"
+                android:layout_marginTop="@dimen/button_layout_marginTop"
+                android:orientation="vertical"
+                android:padding="@dimen/padding" >
+
+                <Button
+                    android:id="@+id/btnAlterarDados"
+                    style="@style/button_red"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_layout_height"
+                    android:background="@drawable/button_red"
+                    android:text="@string/alterar_dados" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

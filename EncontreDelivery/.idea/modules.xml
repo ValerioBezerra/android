@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EncontreDelivery.iml" filepath="$PROJECT_DIR$/EncontreDelivery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/encontreDelivery/encontreDelivery.iml" filepath="$PROJECT_DIR$/encontreDelivery/encontreDelivery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/facebookSDK/facebookSDK.iml" filepath="$PROJECT_DIR$/facebookSDK/facebookSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/volley/volley.iml" filepath="$PROJECT_DIR$/volley/volley.iml" />
+    </modules>
+  </component>
+</project>

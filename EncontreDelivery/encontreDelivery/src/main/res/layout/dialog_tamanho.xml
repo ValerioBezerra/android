@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_background" >
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:textColor="@color/primary_500"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtTitulo"
+        android:background="@color/primary_500" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lvTamanhos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice" >
+        </ListView>
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginTop="@dimen/button_layout_marginTop"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/button_not_shape"
+            android:textColor="@color/primary_500"
+            android:text="@string/ok" />
+    </LinearLayout>
+
+</RelativeLayout>

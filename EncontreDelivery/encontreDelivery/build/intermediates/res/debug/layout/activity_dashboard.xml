@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_500"
+    android:padding="@dimen/padding_button"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".DashboardActivity" >
+
+    <Button
+        android:id="@+id/btnPedir"
+        android:layout_marginTop="@dimen/dashbord_layout_marginTop"
+        style="@style/button_white_grey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_layout_height"
+        android:background="@drawable/button_white"
+        android:drawableLeft="@drawable/ic_fa_cutlery_button_white_grey_red"
+        android:onClick="clickPedir"
+        android:text="@string/pedir" />
+
+    <Button
+        android:id="@+id/btnMeusPedidos"
+        style="@style/button_white_grey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_layout_height"
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:background="@drawable/button_white"
+        android:drawableLeft="@drawable/ic_action_notification_event_available_button_white_grey_red"
+        android:onClick="clickMeusPedidos"
+        android:text="@string/meus_pedidos" />
+
+    <Button
+        android:id="@+id/btnMeusDados"
+        style="@style/button_white_grey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_layout_height"
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:background="@drawable/button_white"
+        android:drawableLeft="@drawable/ic_fa_user_button_white_grey_red"
+        android:onClick="clickMeusDados"
+        android:text="@string/meus_dados" />
+
+    <Button
+        android:id="@+id/btnLoginLogout"
+        style="@style/button_white_grey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_layout_height"
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:background="@drawable/button_grey"
+        android:drawableLeft="@drawable/ic_action_not_secure_white_grey_red"
+        android:onClick="clickLoginLogout"
+        android:text="@string/login" />
+
+</LinearLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_dashboard.xml -->

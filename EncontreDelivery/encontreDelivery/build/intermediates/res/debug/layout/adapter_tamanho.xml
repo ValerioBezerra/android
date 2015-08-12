@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="@dimen/padding" >
+    
+    <RadioButton
+        android:id="@+id/rbDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Grande"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/txtPrecoPromocional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="De R$ 30,00 por"
+            android:textStyle="italic"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/txtPreco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 20,00"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_tamanho.xml -->
