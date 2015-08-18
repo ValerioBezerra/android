@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 
-import br.com.encontredelivery.activity.AcompanharPedidoActivity;
+import br.com.encontredelivery.activity.DetalhesPedidoActivity;
 import br.com.encontredelivery.R;
 import br.com.encontredelivery.model.Pedido;
 
@@ -37,7 +37,7 @@ public class MeusPedidosAdapter extends BaseAdapter {
 		TextView txtTaxaEntrega;
 		TextView txtFormaPagamento;
 		TextView txtTotal;
-		Button btnAcompanharPedido;
+		Button btnDetalhesPedido;
 	}	
 	
 	public MeusPedidosAdapter(Context context, List<Pedido> listaPedidos) {
@@ -83,7 +83,7 @@ public class MeusPedidosAdapter extends BaseAdapter {
 			PedidoViewHolder.txtTaxaEntrega		  = (TextView) view.findViewById(R.id.txtTaxaEntrega);
 			PedidoViewHolder.txtFormaPagamento    = (TextView) view.findViewById(R.id.txtFormaPagamento);
 			PedidoViewHolder.txtTotal     		  = (TextView) view.findViewById(R.id.txtTotal);
-			PedidoViewHolder.btnAcompanharPedido  = (Button) view.findViewById(R.id.btnAcompanharPedido);
+			PedidoViewHolder.btnDetalhesPedido  = (Button) view.findViewById(R.id.btnDetalhesPedido);
 			
 			view.setTag(PedidoViewHolder);
 		} else {
@@ -92,16 +92,16 @@ public class MeusPedidosAdapter extends BaseAdapter {
 		
 		DecimalFormat decimalFormat = new DecimalFormat("0.00");
 		PedidoViewHolder.txtNumeroPedido.setText("Nro Pedido: " + pedido.getId());
-		
+
 		if (pedido.getStatus() == null) {
 			PedidoViewHolder.imgStatus.setVisibility(View.GONE);
 			PedidoViewHolder.txtStatus.setVisibility(View.GONE);
 		} else {
 			if (pedido.getStatus().getIndicador() != 3) {
-				PedidoViewHolder.imgStatus.setImageResource(R.drawable.bola_verde);
+				PedidoViewHolder.imgStatus.setImageResource(R.drawable.ball_verde);
 				
 			} else {
-				PedidoViewHolder.imgStatus.setImageResource(R.drawable.bola_vermelha);
+				PedidoViewHolder.imgStatus.setImageResource(R.drawable.ball_vermelha);
 			}
 			PedidoViewHolder.txtStatus.setText(pedido.getStatus().getDescricao());
 		}
@@ -115,14 +115,14 @@ public class MeusPedidosAdapter extends BaseAdapter {
 		PedidoViewHolder.txtFormaPagamento.setText(pedido.getFormaPagamento().getDescricao());
 		PedidoViewHolder.txtTotal.setText("R$ " + decimalFormat.format(pedido.getValorTotal() - pedido.getDesconto() + pedido.getTaxaEntrega()).replace(".", ","));
 		
-		PedidoViewHolder.btnAcompanharPedido.setOnClickListener(new OnClickListener() {
+		PedidoViewHolder.btnDetalhesPedido.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Bundle extras = new Bundle();
 				extras.putLong("idPedido", pedido.getId());
 				extras.putSerializable("empresa", pedido.getEmpresa());
 				
-				Intent intent = new Intent(context, AcompanharPedidoActivity.class);
+				Intent intent = new Intent(context, DetalhesPedidoActivity.class);
 				intent.putExtras(extras);
 				context.startActivity(intent);
 			}

@@ -26,8 +26,8 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="Beirute Bovino"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/black"
             android:textStyle="bold" />
 
         <TextView
@@ -36,8 +36,8 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="Beirute Com Filé Mignon, Queijo Derretido, Peito De Peru Defumado, Molho Verde, Alface E Tomate Com Orégano."
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"  />
 
         <Button
             android:id="@+id/btnOK"

@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Grande"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textStyle="bold" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"  />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -35,8 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="R$ 20,00"
-            android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"  />
     </LinearLayout>
 
-</LinearLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_tamanho.xml -->
+</LinearLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_tamanho.xml -->

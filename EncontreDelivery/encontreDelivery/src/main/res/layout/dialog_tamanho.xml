@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:gravity="center_vertical"
         android:textColor="@color/primary_500"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
 
     <View
         android:id="@+id/view"

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="@color/white"
     android:orientation="vertical"
     android:padding="@dimen/padding" >
 
@@ -18,7 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Cancelado aut."
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <ImageView
@@ -26,7 +27,7 @@
             android:layout_width="@dimen/adapter_empresa_layout_width_height_imageView"
             android:layout_height="@dimen/adapter_empresa_layout_width_height_imageView"
             android:layout_marginLeft="@dimen/adapter_empresa_marginLeft_textView"
-            android:src="@drawable/bola_vermelha" />
+            android:src="@drawable/ball_vermelha" />
     </LinearLayout>
     
     <TextView
@@ -35,15 +36,14 @@
         android:layout_height="wrap_content"
         android:textColor="@color/primary_700"
         android:text="Recebimento não confirmado"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textStyle="bold" />
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
 
     <TextView
         android:id="@+id/txtDataHora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="18/02/2015 - 17:27:30"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textStyle="bold" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
 
-</LinearLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_status.xml -->
+</LinearLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_status.xml -->

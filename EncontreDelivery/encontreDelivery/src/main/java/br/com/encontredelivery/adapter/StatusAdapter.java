@@ -68,11 +68,12 @@ public class StatusAdapter extends BaseAdapter {
 		
 		StatusViewHolder.txtStatus.setText(status.getDescricao());
 		if (status.getIndicador() != 3) {
-			StatusViewHolder.imgStatus.setImageResource(R.drawable.bola_verde);
+			StatusViewHolder.imgStatus.setImageResource(R.drawable.ball_verde);
 			StatusViewHolder.txtMotivoCancelamento.setVisibility(View.GONE);
 		} else {
-			StatusViewHolder.imgStatus.setImageResource(R.drawable.bola_vermelha);
-			StatusViewHolder.txtMotivoCancelamento.setText(status.getMotivoCancelamento());
+			StatusViewHolder.imgStatus.setImageResource(R.drawable.ball_vermelha);
+			StatusViewHolder.txtMotivoCancelamento.setText("Motivo: " + status.getMotivoCancelamento());
+			StatusViewHolder.txtMotivoCancelamento.setVisibility(View.VISIBLE);
 		}
 		StatusViewHolder.txtDataHora.setText(status.getDataHora());
 		

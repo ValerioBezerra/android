@@ -60,7 +60,7 @@ public class EmpresaAdapter extends BaseAdapter {
 		
 		if (view == null) {
 		
-			view = inflater.inflate(R.layout.adapter_empresa, parent, false);
+			view = inflater.inflate(R.layout.adapter_restaurante, parent, false);
 			
 			empresaViewHolder = new EmpresaViewHolder();
 			
@@ -91,10 +91,10 @@ public class EmpresaAdapter extends BaseAdapter {
 		
 		
 		if (empresa.isAberto()) {
-			empresaViewHolder.imgAbertoFechado.setImageResource(R.drawable.bola_verde);
+			empresaViewHolder.imgAbertoFechado.setImageResource(R.drawable.ball_verde);
 			empresaViewHolder.txtAbertoFechado.setText("Aberto");
 		} else {
-			empresaViewHolder.imgAbertoFechado.setImageResource(R.drawable.bola_vermelha);
+			empresaViewHolder.imgAbertoFechado.setImageResource(R.drawable.ball_vermelha);
 			empresaViewHolder.txtAbertoFechado.setText("Fechado");			
 		}
 		

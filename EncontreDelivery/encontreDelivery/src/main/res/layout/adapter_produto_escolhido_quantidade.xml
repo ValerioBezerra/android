@@ -28,7 +28,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="1"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"  />
 
         <Button
             android:id="@+id/btnAumentar"
@@ -47,8 +48,8 @@
         android:layout_marginLeft="@dimen/layout_marginLeft"
         android:layout_weight="1"
         android:text="Makimons-Hot Roll Morango"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textStyle="bold" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"  />
 
     <ImageButton
         android:id="@+id/ibtProduto"

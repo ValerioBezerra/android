@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    android:padding="@dimen/padding" >
+    android:padding="@dimen/padding"
+    tools:context=".adapter.MeusPedidosAdapter">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,32 +20,40 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Nro Pedido: 69"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"  />
 
         <TextView
             android:id="@+id/txtStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Recebido"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <ImageView
             android:id="@+id/imgStatus"
             android:layout_width="@dimen/adapter_empresa_layout_width_height_imageView"
             android:layout_height="@dimen/adapter_empresa_layout_width_height_imageView"
             android:layout_marginLeft="@dimen/adapter_empresa_marginLeft_textView"
-            android:src="@drawable/bola_verde" />
-    </LinearLayout>
+            android:src="@drawable/ball_verde" />    </LinearLayout>
 
-    <TextView
-        android:id="@+id/txtNomeEmpresa"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Suda Sushi"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textStyle="bold" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txtNomeEmpresa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Suda Sushi"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fone_dois_pontos"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -62,15 +73,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/layout_marginLeft"
             android:text="(87) 3862-1656"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceMedium"  />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/layout_marginTop"
-        android:background="@color/grey"
+        android:background="@color/grey_200"
         android:orientation="horizontal" >
 
         <TextView
@@ -81,6 +92,7 @@
             android:layout_weight="1"
             android:gravity="left|bottom"
             android:text="2x Temaki\n1x Sushi"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -90,6 +102,7 @@
             android:layout_marginRight="@dimen/layout_marginRight"
             android:gravity="right|bottom"
             android:text="R$ 20,00\nR$ 6,00"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
 
@@ -97,7 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/layout_marginTop"
-        android:background="@color/list_divider" />
+        android:background="@color/black" />
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -107,7 +120,7 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
 
         <TextView
             android:layout_width="0dp"
@@ -116,6 +129,7 @@
             android:layout_marginTop="@dimen/layout_marginTop"
             android:layout_weight="1"
             android:text="@string/desconto"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -125,12 +139,13 @@
             android:layout_marginRight="@dimen/layout_marginRight"
             android:layout_marginTop="@dimen/layout_marginTop"
             android:text="R$ 4,00"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
     </LinearLayout>
 
     <LinearLayout
@@ -141,7 +156,7 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
 
         <TextView
             android:layout_width="0dp"
@@ -150,6 +165,7 @@
             android:layout_marginTop="@dimen/layout_marginTop"
             android:layout_weight="1"
             android:text="@string/taxa_entrega"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -159,12 +175,13 @@
             android:layout_marginRight="@dimen/layout_marginRight"
             android:layout_marginTop="@dimen/layout_marginTop"
             android:text="R$ 4,00"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
     </LinearLayout>
 
     <LinearLayout
@@ -175,7 +192,7 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
 
         <TextView
             android:id="@+id/txtFormaPagamento"
@@ -186,6 +203,7 @@
             android:layout_marginTop="@dimen/layout_marginTop"
             android:layout_weight="1"
             android:text="Dinheiro"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -196,26 +214,27 @@
             android:layout_marginRight="@dimen/layout_marginRight"
             android:layout_marginTop="@dimen/layout_marginTop"
             android:text="R$ 30,00"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
     </LinearLayout>
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="@color/list_divider" />
+        android:background="@color/black" />
 
     <Button
-        android:id="@+id/btnAcompanharPedido"
+        android:id="@+id/btnDetalhesPedido"
         style="@style/button_red"
         android:layout_width="match_parent"
         android:layout_height="@dimen/button_layout_height"
         android:layout_marginTop="@dimen/button_layout_marginTop"
         android:background="@drawable/button_red"
-        android:text="@string/acompanhar_pedido" />
+        android:text="@string/detalhes_pedido" />
 
 </LinearLayout>

@@ -144,7 +144,7 @@ public class ConfirmarPedidoActivity extends ActionBarActivity {
 		extras.putLong("idPedido", idPedido);
 		extras.putSerializable("empresa", empresa);
 		
-		Intent intent = new Intent(this, AcompanharPedidoActivity.class);
+		Intent intent = new Intent(this, DetalhesPedidoActivity.class);
 		intent.putExtras(extras);
 		startActivity(intent);
 		finish();

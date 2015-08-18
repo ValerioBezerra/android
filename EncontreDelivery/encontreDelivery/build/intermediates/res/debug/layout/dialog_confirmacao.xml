@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:gravity="center_vertical"
         android:textColor="@color/primary_500"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
 
     <View
         android:id="@+id/view"
@@ -45,8 +45,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/button_layout_marginTop"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
             </LinearLayout>
         </ScrollView>
 
@@ -78,4 +78,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</RelativeLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/dialog_confirmacao.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/dialog_confirmacao.xml -->

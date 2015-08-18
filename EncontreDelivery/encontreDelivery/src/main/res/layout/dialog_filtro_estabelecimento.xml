@@ -11,7 +11,7 @@
         android:gravity="center_vertical"
         android:text="@string/filtros"
         android:textColor="@color/primary_500"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
 
     <View
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:layout_marginTop="@dimen/layout_marginTop"
         android:text="@string/segmentos"
         android:textColor="@color/primary_500"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
 
     <GridView
         android:id="@+id/gdSegmentos"

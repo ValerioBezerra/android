@@ -78,7 +78,7 @@ public class EstabelecimentoProdutosActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_estabelecimento_produtos);
+		setContentView(R.layout.activity_restaurante_produtos);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		nivImagem 		  = (NetworkImageView) findViewById(R.id.nivImagem);
@@ -124,9 +124,9 @@ public class EstabelecimentoProdutosActivity extends ActionBarActivity {
 		txtCategoria.setText(categoria.getDescricao());
 		
 		if (empresa.isAberto()) {
-			imgAbertoFechado.setImageResource(R.drawable.bola_verde);
+			imgAbertoFechado.setImageResource(R.drawable.ball_verde);
 		} else {
-			imgAbertoFechado.setImageResource(R.drawable.bola_vermelha);
+			imgAbertoFechado.setImageResource(R.drawable.ball_vermelha);
 		}
 		
 		nivImagem.setImageUrl(empresa.getUrlImagem(), imageLoader);

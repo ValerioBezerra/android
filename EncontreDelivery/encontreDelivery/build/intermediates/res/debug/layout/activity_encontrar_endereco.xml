@@ -13,4 +13,4 @@
         android:paddingTop="@dimen/padding_top"
         android:textColor="@color/primary_500" />
 
-</android.support.v4.view.ViewPager><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_encontrar_endereco.xml -->
+</android.support.v4.view.ViewPager><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_encontrar_endereco.xml -->

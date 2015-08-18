@@ -4,15 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
-    android:padding="@dimen/padding" >
+    android:background="@color/white" >
 
     <ListView
         android:id="@+id/lvPedidos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/white"
-        android:dividerHeight="20dp"
+        android:divider="@color/grey_200"
+        android:dividerHeight="2dp"
         android:layout_marginTop="@dimen/layout_marginTop" >
     </ListView>
 

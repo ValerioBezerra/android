@@ -11,6 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="(56306-090) Rua Pessoa de Melo"
+        android:textColor="@color/black"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="bold" />
 
@@ -20,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtCEPLogradouroNumero"
         android:text="Gercino Coelho"
+        android:textColor="@color/black"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -28,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtBairro"
         android:text="Petrolina - PE"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

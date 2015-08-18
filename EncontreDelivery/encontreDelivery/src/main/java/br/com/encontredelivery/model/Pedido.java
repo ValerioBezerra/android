@@ -14,6 +14,7 @@ public class Pedido implements Serializable {
 	private Voucher voucher;
 	private double desconto;
 	private double valorTotal;
+	private String dataHora;
 	
 	public Pedido() {
 		this.id                  = 0;
@@ -26,6 +27,7 @@ public class Pedido implements Serializable {
 		this.voucher             = null;
 		this.desconto            = 0;
 		this.valorTotal          = 0;
+		this.dataHora            = "";
 	}
 
 	public long getId() {
@@ -106,5 +108,13 @@ public class Pedido implements Serializable {
 
 	public void setValorTotal(double valorTotal) {
 		this.valorTotal = valorTotal;
+	}
+
+	public String getDataHora() {
+		return dataHora;
+	}
+
+	public void setDataHora(String dataHora) {
+		this.dataHora = dataHora;
 	}
 }

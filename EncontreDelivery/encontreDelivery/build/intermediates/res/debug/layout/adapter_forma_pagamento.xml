@@ -18,6 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forma de Pagamento"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"  />
 
-</LinearLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_forma_pagamento.xml -->
+</LinearLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_forma_pagamento.xml -->

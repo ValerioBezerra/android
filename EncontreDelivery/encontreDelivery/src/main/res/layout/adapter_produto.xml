@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Produto"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"  />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -26,15 +27,15 @@
             android:layout_height="wrap_content"
             android:text="De R$ 30,00 por"
             android:textStyle="italic"
-            android:visibility="gone"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"  />
 
         <TextView
             android:id="@+id/txtPreco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="R$ 20,00"
-            android:textStyle="bold"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceSmall" />
     </LinearLayout>
 

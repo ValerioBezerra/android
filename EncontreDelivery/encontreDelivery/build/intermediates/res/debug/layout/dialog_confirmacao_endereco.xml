@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:gravity="center_vertical"
         android:textColor="@color/primary_500"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
 
     <View
         android:id="@+id/view"
@@ -30,7 +30,8 @@
         android:layout_below="@id/view"
         android:text="(56306-090) Rua Pessoa de Melo"
         android:layout_marginTop="@dimen/layout_marginTop"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold" />
 
     <TextView
@@ -39,7 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtCEPLogradouro"
         android:text="Gercino Coelho"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"  />
 
     <TextView
         android:id="@+id/txtCidadeUF"
@@ -47,7 +49,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtBairro"
         android:text="Petrolina - PE"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"  />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,4 +80,4 @@
             android:text="@string/nao" />
     </LinearLayout>
 
-</RelativeLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/dialog_confirmacao_endereco.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/dialog_confirmacao_endereco.xml -->

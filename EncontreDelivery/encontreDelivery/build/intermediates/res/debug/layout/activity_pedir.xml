@@ -10,15 +10,14 @@
     tools:context=".DashboardActivity" >
 
     <TextView
-        android:id="@+id/textView1"
         android:layout_marginTop="@dimen/dashbord_layout_marginTop"
         android:layout_width="@dimen/button_layout_width"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="@string/texto_pedir_localizacao"
         android:gravity="center"
+        android:textStyle="bold"
         android:textColor="@color/primary_500"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="@string/texto_pedir_localizacao"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <Button
         android:id="@+id/btnLocalizeGPS"
@@ -53,4 +52,4 @@
         android:onClick="clickMeusEnderecos"
         android:text="@string/meus_enderecos" />
 
-</LinearLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_pedir.xml -->
+</LinearLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_pedir.xml -->

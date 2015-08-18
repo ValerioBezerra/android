@@ -38,7 +38,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Suda Sushi"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -46,7 +47,7 @@
                     android:layout_width="@dimen/adapter_empresa_layout_width_height_imageView"
                     android:layout_height="@dimen/adapter_empresa_layout_width_height_imageView"
                     android:layout_marginLeft="@dimen/adapter_empresa_marginLeft_textView"
-                    android:src="@drawable/bola_verde" />
+                    android:src="@drawable/ball_verde" />
             </LinearLayout>
 
             <TextView
@@ -55,7 +56,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="O Melhor sushi da região"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textStyle="bold" />
 
             <TextView
@@ -63,20 +65,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chinesa/Japonesa"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/txtCEPLogradouroNumero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:text="(56306-090) - Rua pessoa de Melo, 455"
+                android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/txtBairroCidadeUF"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:text="Gercino Coelho, Petrolina - PE"
+                android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <LinearLayout
@@ -89,6 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/fone_dois_pontos"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <TextView
@@ -97,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/layout_marginLeft"
                     android:text="(87) 3862-1656"
-                    android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </LinearLayout>
         </LinearLayout>
@@ -107,12 +115,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/layout_marginTop"
             android:text="@string/horarios"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
 
         <br.com.encontredelivery.view.NoScrollListView
             android:id="@+id/lvHorarios"
@@ -143,12 +152,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/layout_marginTop"
             android:text="@string/formas_pagamento"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
 
         <br.com.encontredelivery.view.NoScrollListView
             android:id="@+id/lvFormasPagamento"

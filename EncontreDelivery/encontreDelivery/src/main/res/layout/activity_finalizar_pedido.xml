@@ -18,8 +18,8 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="Valério Bezerra Leite"
-            android:textColor="@android:color/black"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:textStyle="bold" />
 
         <TextView
@@ -28,8 +28,8 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="Rua pessoa de melo, 455"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
             android:id="@+id/txtBairro"
@@ -37,8 +37,8 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="Gercino Coelho"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
             android:id="@+id/txtCidadeUF"
@@ -46,8 +46,8 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="Petrolina - PE"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
         
         <TextView
             android:id="@+id/txtComplementoReferencia"
@@ -55,8 +55,8 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="Ref.: Próximo ao ceman"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
     </LinearLayout>
 
     <TextView
@@ -64,12 +64,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/layout_marginTop"
         android:text="@string/escolha_forma_pagamento"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="@color/list_divider" />
+        android:background="@color/black" />
 
     <ListView
         android:id="@+id/lvFormasPagamento"
@@ -106,7 +107,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -116,7 +117,7 @@
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
 
             <TextView
                 android:layout_width="0dp"
@@ -125,7 +126,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/total_produtos"
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/txtTotalProdutos"
@@ -136,12 +138,13 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="R$ 0,00 "
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -152,7 +155,7 @@
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
 
             <TextView
                 android:layout_width="0dp"
@@ -160,7 +163,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/desconto"
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/txtDesconto"
@@ -170,12 +174,13 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="R$ 0,00 "
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
         </LinearLayout>
         
         <LinearLayout
@@ -186,7 +191,7 @@
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
 
             <TextView
                 android:layout_width="0dp"
@@ -195,7 +200,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/taxa_entrega"
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/txtTaxaEntrega"
@@ -206,12 +212,13 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="R$ 0,00 "
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
         </LinearLayout>
         
 
@@ -219,7 +226,7 @@
             android:layout_width="wrap_content"
             android:layout_height="1dp"
             android:layout_marginBottom="@dimen/layout_marginTop"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -232,7 +239,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/total"
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/txtTotal"
@@ -242,7 +250,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="R$ 0,00 "
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
         </LinearLayout>
 
         <Button

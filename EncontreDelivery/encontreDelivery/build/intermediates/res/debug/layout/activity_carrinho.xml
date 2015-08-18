@@ -23,7 +23,6 @@
         android:orientation="vertical" >
 
         <ImageView
-            android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/icone"
@@ -34,7 +33,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/nenhum_produto_carrinho"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
     </LinearLayout>
 
     <LinearLayout
@@ -46,7 +46,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,7 +56,7 @@
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
 
             <TextView
                 android:layout_width="0dp"
@@ -65,7 +65,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/pedido_minimo"
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/txtValorMinimo"
@@ -76,12 +77,13 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="R$ 0,00 "
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -92,7 +94,7 @@
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
 
             <TextView
                 android:layout_width="0dp"
@@ -100,7 +102,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/total_produtos"
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/txtTotalProdutos"
@@ -110,12 +113,13 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="R$ 0,00 "
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -126,7 +130,7 @@
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
 
             <TextView
                 android:layout_width="0dp"
@@ -135,7 +139,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/taxa_entrega"
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/txtTaxaEntrega"
@@ -146,19 +151,20 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="R$ 0,00 "
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/list_divider" />
+                android:background="@color/black" />
         </LinearLayout>
 
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
             android:layout_marginBottom="@dimen/layout_marginTop"
-            android:background="@color/list_divider" />
+            android:background="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -171,7 +177,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/total"
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/txtTotal"
@@ -181,7 +188,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="R$ 0,00 "
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
         </LinearLayout>
 
         <Button
@@ -196,4 +204,4 @@
             android:text="@string/proximo" />
     </LinearLayout>
 
-</LinearLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_carrinho.xml -->
+</LinearLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_carrinho.xml -->

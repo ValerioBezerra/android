@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/texto_esqueci_minha_senha"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <android.support.design.widget.TextInputLayout
@@ -56,4 +57,4 @@
             android:text="@string/ok" />
     </LinearLayout>
 
-</RelativeLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_esqueci_minha_senha.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_esqueci_minha_senha.xml -->

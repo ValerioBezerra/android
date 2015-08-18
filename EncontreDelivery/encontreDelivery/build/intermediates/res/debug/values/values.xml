@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/attrs.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/attrs.xml -->
     <eat-comment/>
     <attr format="reference" name="floatingHintEditTextStyle"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="mediaRouteButtonStyle"/>
     <attr format="reference" name="mediaRouteConnectingDrawable"/>
@@ -19,7 +19,7 @@
     <attr format="reference" name="mediaRoutePauseDrawable"/>
     <attr format="reference" name="mediaRoutePlayDrawable"/>
     <attr format="reference" name="mediaRouteSettingsDrawable"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="string" name="title"/>
     <bool name="abc_action_bar_embed_tabs">true</bool>
@@ -39,11 +39,12 @@
     <color name="background_floating_material_light">#ffeeeeee</color>
     <color name="background_material_dark">#ff303030</color>
     <color name="background_material_light">#ffeeeeee</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
     <eat-comment/>
+    <color name="black">#000000</color>
     <color name="black_opacity">#804b4b4b</color>
     <color name="blue">#44619D</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -53,7 +54,7 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values/values.xml -->
     <eat-comment/>
     <color name="com_facebook_blue">#3B5998</color>
     <color name="com_facebook_likeboxcountview_border_color">#6a7180</color>
@@ -66,7 +67,7 @@
     <color name="com_facebook_usersettingsfragment_connected_shadow_color">#000000</color>
     <color name="com_facebook_usersettingsfragment_connected_text_color">#FFFFFF</color>
     <color name="com_facebook_usersettingsfragment_not_connected_text_color">#A6AED7</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/common_colors.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/common_colors.xml -->
     <eat-comment/>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_signin_btn_dark_text_default">@android:color/white</color>
@@ -78,34 +79,31 @@
     <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
     <color name="common_signin_btn_light_text_focused">#FF737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
-    <eat-comment/>
-    <color name="counter_text_bg">#626262</color>
-    <color name="counter_text_color">#c5c4c4</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="error_color">#FFDD2C00</color>
     <color name="fab_stroke_end_inner_color">#0A000000</color>
     <color name="fab_stroke_end_outer_color">#0F000000</color>
     <color name="fab_stroke_top_inner_color">#1AFFFFFF</color>
     <color name="fab_stroke_top_outer_color">#2EFFFFFF</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="green">#690</color>
+    <color name="green">#ff069916</color>
     <color name="grey">#e0e0e0</color>
     <color name="grey_200">#eeeeee</color>
+    <color name="grey_300">#e0e0e0</color>
     <color name="grey_400">#bdbdbd</color>
     <color name="grey_600">#757575</color>
     <color name="grey_black">#696969</color>
     <color name="grey_black_opacity">#80696969</color>
     <color name="grey_opacity">#80e0e0e0</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
@@ -113,17 +111,12 @@
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
     <color name="link_text_material_dark">@color/material_deep_teal_200</color>
     <color name="link_text_material_light">@color/material_deep_teal_500</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
-    <eat-comment/>
-    <color name="list_divider">#272727</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
-    <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="nav_drawer_inset_foreground">#4000</color>
     <color name="nav_drawer_item_icon_normal">@color/grey_600</color>
@@ -137,7 +130,7 @@
     <color name="primary_100">#ffcdd2</color>
     <color name="primary_500">#f44336</color>
     <color name="primary_700">#d32f2f</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark_material_dark">#ff000000</color>
     <color name="primary_dark_material_light">#ff757575</color>
@@ -149,28 +142,28 @@
     <color name="primary_text_disabled_material_light">#39000000</color>
     <color name="ripple_material_dark">#4dffffff</color>
     <color name="ripple_material_light">#1f000000</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="secondary">#d32f2f</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="shadow_end_color">@android:color/transparent</color>
     <color name="shadow_mid_color">#14000000</color>
     <color name="shadow_start_color">#44000000</color>
     <color name="snackbar_background_color">#323232</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="text_black_100">#000000</color>
     <color name="text_black_disable_hint_26">#42000000</color>
@@ -181,7 +174,7 @@
     <color name="text_white_divider_12">#1FFFFFFF</color>
     <color name="text_white_secondary_70">#B3FFFFFF</color>
     <color name="text_white_text_icons_100">#FFFFFF</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_colors.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_colors.xml -->
     <eat-comment/>
     <color name="wallet_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
     <color name="wallet_bright_foreground_holo_dark">#fff3f3f3</color>
@@ -196,7 +189,7 @@
     <color name="wallet_hint_foreground_holo_light">#808080</color>
     <color name="wallet_holo_blue_light">#ff33b5e5</color>
     <color name="wallet_link_text_light">#0000ee</color>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="white">#ffffff</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
@@ -254,7 +247,7 @@
     <declare-styleable name="com_facebook_picker_fragment"><attr format="boolean" name="show_pictures"/><attr format="string" name="extra_fields"/><attr format="boolean" name="show_title_bar"/><attr format="string" name="title_text"/><attr format="string" name="done_button_text"/><attr format="reference" name="title_bar_background"/><attr format="reference" name="done_button_background"/></declare-styleable>
     <declare-styleable name="com_facebook_place_picker_fragment"><attr format="integer" name="radius_in_meters"/><attr format="integer" name="results_limit"/><attr format="string" name="search_text"/><attr format="boolean" name="show_search_box"/></declare-styleable>
     <declare-styleable name="com_facebook_profile_picture_view"><attr name="preset_size"><enum name="small" value="-2"/><enum name="normal" value="-3"/><enum name="large" value="-4"/></attr><attr format="boolean" name="is_cropped"/></declare-styleable>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -316,29 +309,29 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_informacoes_layout_height_NetworkImageView">90dp</dimen>
     <dimen name="activity_informacoes_layout_width_NetworkImageView">90dp</dimen>
     <dimen name="activity_produto_layout_height_NetworkImageView">140dp</dimen>
     <dimen name="activity_produto_layout_width">85dp</dimen>
     <dimen name="activity_produto_layout_width_height">40dp</dimen>
-    <dimen name="adapter_empresa_layout_width_height_NetworkImageView">80dp</dimen>
+    <dimen name="adapter_empresa_layout_width_height_NetworkImageView">70dp</dimen>
     <dimen name="adapter_empresa_layout_width_height_imageView">15dp</dimen>
     <dimen name="adapter_empresa_marginLeft_imageView">15dp</dimen>
     <dimen name="adapter_empresa_marginLeft_textView">3dp</dimen>
-    <dimen name="adapter_forma_pagamento_layout_height_NetworkImageView">50dp</dimen>
-    <dimen name="adapter_forma_pagamento_layout_width_NetworkImageView">90dp</dimen>
+    <dimen name="adapter_forma_pagamento_layout_height_NetworkImageView">30dp</dimen>
+    <dimen name="adapter_forma_pagamento_layout_width_NetworkImageView">60dp</dimen>
     <dimen name="adapter_produto_layout_width">85dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="appbar_elevation">4dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="button_layout_height">55dp</dimen>
     <dimen name="button_layout_marginTop">10dp</dimen>
     <dimen name="button_layout_width">280dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values/values.xml -->
     <eat-comment/>
     <dimen name="com_facebook_likeboxcountview_border_radius">3dp</dimen>
     <dimen name="com_facebook_likeboxcountview_border_width">1dp</dimen>
@@ -368,31 +361,31 @@
     <dimen name="com_facebook_tooltip_horizontal_padding">10dp</dimen>
     <dimen name="com_facebook_usersettingsfragment_profile_picture_height">64dp</dimen>
     <dimen name="com_facebook_usersettingsfragment_profile_picture_width">64dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="corners_radius">5dp</dimen>
     <dimen name="corners_radius_btn_cinza_quantidade">10dp</dimen>
     <dimen name="dashbord_layout_marginTop">120dp</dimen>
     <dimen name="ddd">70dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
     <item name="dialog_fixed_width_major" type="dimen">320dp</item>
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="dialog_layout_marginLeft">7dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="divider_height">1dp</dimen>
     <dimen name="editText_currency">120dp</dimen>
     <dimen name="editText_layout_marginTop">7dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="fab_border_width">0.5dp</dimen>
     <dimen name="fab_content_size">24dp</dimen>
@@ -400,7 +393,7 @@
     <dimen name="fab_size_mini">40dp</dimen>
     <dimen name="fab_size_normal">56dp</dimen>
     <dimen name="fab_translation_z_pressed">6dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <item format="integer" name="floatinghintedittext_animation_steps" type="dimen">6</item>
     <item format="float" name="floatinghintedittext_hint_scale" type="dimen">0.6</item>
@@ -410,10 +403,10 @@
     <dimen name="layout_marginRight">7dp</dimen>
     <dimen name="layout_marginRight_drawer">12dp</dimen>
     <dimen name="layout_marginTop">7dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="mr_media_route_controller_art_max_height">320dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="nav_drawer_item_row_height">48dp</dimen>
     <dimen name="nav_drawer_item_row_icon_size">24dp</dimen>
@@ -430,7 +423,7 @@
     <dimen name="navigation_drawer_max_width">320dp</dimen>
     <dimen name="navigation_drawer_profile_image_size">64dp</dimen>
     <dimen name="navigation_drawer_width">280dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="navigation_elevation">12dp</dimen>
     <dimen name="navigation_icon_padding">32dp</dimen>
@@ -439,12 +432,12 @@
     <dimen name="navigation_padding_bottom">8dp</dimen>
     <dimen name="navigation_padding_top_default">0dp</dimen>
     <dimen name="navigation_separator_vertical_padding">8dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="numero">90dp</dimen>
     <dimen name="padding">10dp</dimen>
@@ -454,7 +447,7 @@
     <dimen name="padding_left">10dp</dimen>
     <dimen name="padding_right">10dp</dimen>
     <dimen name="padding_top">10dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="snackbar_action_inline_max_width">128dp</dimen>
     <dimen name="snackbar_background_corner_radius">0dp</dimen>
@@ -466,53 +459,53 @@
     <dimen name="snackbar_padding_vertical">14dp</dimen>
     <dimen name="snackbar_padding_vertical_2lines">24dp</dimen>
     <dimen name="snackbar_text_size">14sp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="stroke_width">0.2dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="tab_max_width">264dp</dimen>
     <dimen name="tab_min_width">72dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="text_size_14">14sp</dimen>
     <dimen name="widget_margin">8dp</dimen>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values/values.xml -->
     <eat-comment/>
     <drawable name="com_facebook_picker_default_separator_color">#33464c59</drawable>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/res/values/cast_ids.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/res/values/cast_ids.xml -->
     <eat-comment/>
     <item name="cast_notification_id" type="id"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <item name="home" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
     <item name="up" type="id"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="view_offset_helper" type="id"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/version.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/version.xml -->
     <eat-comment/>
     <integer name="google_play_services_version">7571000</integer>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <integer name="snackbar_text_max_lines">2</integer>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -532,27 +525,26 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="accept">Accept</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="acompanhar_pedido">Acompanhar pedido</string>
     <string name="adicionar_pedido">Adicionar ao pedido</string>
     <string name="aguarde_confirmar_pedido">Aguarde, verificando o recebimento do pedido pelo restaurante.</string>
     <string name="alterar_dados">Alterar dados</string>
     <string name="app_name">Encontre Delivery</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="atualizar">Atualizar</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/auth_strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/auth_strings.xml -->
     <eat-comment/>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="bom_apetite">Tenha um bom apetite!</string>
     <string name="cadastrar">Cadastrar</string>
@@ -560,49 +552,47 @@
     <string name="cancelar">Cancelar</string>
     <string name="carrinho">Carrinho</string>
     <string name="caso_pedido_nao_confirmado">O pedido será cancelado automaticamente, caso o restaurante não confirme o recebimento no tempo acima.</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/res/values/cast_strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/res/values/cast_strings.xml -->
     <eat-comment/>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_disconnect">Disconnect</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="categoria">Categoria:</string>
     <string name="categorias">Categorias</string>
     <string name="celular">Celular</string>
     <string name="cep">CEP</string>
     <string name="codigo_voucher">Código:</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values/values.xml -->
-    <eat-comment/>
-    <string name="com_facebook_choose_friends">Choose Friends</string>
+    <string name="com_facebook_choose_friends">Escolha os amigos</string>
     <string name="com_facebook_dialogloginactivity_ok_button">OK</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
     <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
-    <string name="com_facebook_like_button_liked">Liked</string>
-    <string name="com_facebook_like_button_not_liked">Like</string>
-    <string name="com_facebook_loading">Loading...</string>
-    <string name="com_facebook_loginview_cancel_action">Cancel</string>
-    <string name="com_facebook_loginview_log_in_button">Log in with Facebook</string>
+    <string name="com_facebook_like_button_liked">Curtido</string>
+    <string name="com_facebook_like_button_not_liked">Curtir</string>
+    <string name="com_facebook_loading">Carregando...</string>
+    <string name="com_facebook_loginview_cancel_action">Cancelar</string>
+    <string name="com_facebook_loginview_log_in_button">Entrar pelo Facebook</string>
     <string name="com_facebook_loginview_log_out_action">Log out</string>
     <string name="com_facebook_loginview_log_out_button">Log out</string>
-    <string name="com_facebook_loginview_logged_in_as">Logged in as: %1$s</string>
-    <string name="com_facebook_loginview_logged_in_using_facebook">Logged in using Facebook</string>
+    <string name="com_facebook_loginview_logged_in_as">Logado como: %1$s</string>
+    <string name="com_facebook_loginview_logged_in_using_facebook">Logado usando Facebook</string>
     <string name="com_facebook_logo_content_description">Facebook Logo</string>
-    <string name="com_facebook_nearby">Nearby</string>
-    <string name="com_facebook_picker_done_button_text">Done</string>
+    <string name="com_facebook_nearby">Próximo</string>
+    <string name="com_facebook_picker_done_button_text">Concluído</string>
     <string name="com_facebook_placepicker_subtitle_catetory_only_format">%1$s</string>
-    <string name="com_facebook_placepicker_subtitle_format">%1$s • %2$,d were here</string>
-    <string name="com_facebook_placepicker_subtitle_were_here_only_format">%1$,d were here</string>
-    <string name="com_facebook_requesterror_password_changed">Your Facebook password has changed. Please log into this app again to reconnect your Facebook account.</string>
-    <string name="com_facebook_requesterror_permissions">This app doesn’t have permission to do this. To change permissions, try logging into the app again.</string>
-    <string name="com_facebook_requesterror_reconnect">Please log into this app again to reconnect your Facebook account.</string>
-    <string name="com_facebook_requesterror_relogin">Please log into this app again to reconnect your Facebook account.</string>
-    <string name="com_facebook_requesterror_web_login">Your Facebook account is locked. Please log into www.facebook.com to continue.</string>
+    <string name="com_facebook_placepicker_subtitle_format">%1$s • %2$,d esteve aqui</string>
+    <string name="com_facebook_placepicker_subtitle_were_here_only_format">%1$,d esteve aqui</string>
+    <string name="com_facebook_requesterror_password_changed">Sua senha do Facebook mudou. Por favor entre em este aplicativo novamente para reconectar a sua conta Facebook.</string>
+    <string name="com_facebook_requesterror_permissions">Este aplicativo não tem permissão para fazer isso. Para alterar as permissões, tente fazer o login no aplicativo novamente.</string>
+    <string name="com_facebook_requesterror_reconnect">Por favor entre em este aplicativo novamente para reconectar a sua conta Facebook.</string>
+    <string name="com_facebook_requesterror_relogin">Por favor entre em este aplicativo novamente para reconectar a sua conta Facebook.</string>
+    <string name="com_facebook_requesterror_web_login">A sua conta Facebook está bloqueada. Por favor entre em www.facebook.com para continuar.</string>
     <string name="com_facebook_tooltip_default">New! You\'re in control - choose what info you want to share with apps.</string>
-    <string name="com_facebook_usersettingsfragment_log_in_button">Log in…</string>
-    <string name="com_facebook_usersettingsfragment_logged_in">Logged in</string>
-    <string name="com_facebook_usersettingsfragment_not_logged_in">Not logged in</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/common_strings.xml -->
+    <string name="com_facebook_usersettingsfragment_log_in_button">Logado…</string>
+    <string name="com_facebook_usersettingsfragment_logged_in">Logado</string>
+    <string name="com_facebook_usersettingsfragment_not_logged_in">Não logado</string>
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/common_strings.xml -->
     <eat-comment/>
     <string name="common_android_wear_notification_needs_update_text"><ns1:g id="app_name">%1$s</ns1:g> requires an update to the Android Wear app.</string>
     <string name="common_android_wear_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update the Android Wear app.</string>
@@ -636,7 +626,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="complemento_referencia">Referência</string>
     <string name="confirmar">Confirmar</string>
@@ -645,25 +635,28 @@
     <string name="confirmar_pedido">Confirmar Pedido</string>
     <string name="confirmar_senha">Confirmar senha</string>
     <string name="copyright">Copyright © 2015 King Soft.</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="data_pedido">Data do pedido</string>
     <string name="ddd">DDD</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="decline">Decline</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="desconto">Desconto</string>
     <string name="desculpe">Desculpe!</string>
+    <string name="detalhes_pedido">Detalhes do pedido</string>
     <string name="domingo">Domingo</string>
     <string name="email">Email</string>
     <string name="encontrar">Encontrar</string>
     <string name="encontrar_endereco">Encontrar meu endereço</string>
     <string name="endereco">Endereço</string>
+    <string name="endereco_entrega">Endereço de entrega</string>
     <string name="entrar">Entrar</string>
     <string name="entrar_facebook">Entrar com Facebook</string>
     <string name="enviar_pedido">Enviar Pedido</string>
@@ -678,11 +671,13 @@
     <string name="fone">Fone</string>
     <string name="fone_dois_pontos">Fone:</string>
     <string name="formas_pagamento">Formas de pagamento</string>
+    <string name="horario_pedido">Horário do pedido</string>
     <string name="horarios">Horários</string>
     <string name="icone">Ícone</string>
     <string name="informacoes">Informações</string>
     <string name="inicio">Início</string>
     <string name="ir_tela_inicial">Ir para tela inicial</string>
+    <string name="ligue_restaurante">Ligue e fale diretamente com o restaurante.</string>
     <string name="localize_gps">Localize-me pelo GPS</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
@@ -692,7 +687,7 @@
     <string name="meus_pedidos">Meus Pedidos</string>
     <string name="meus_vouchers">Meus Vouchers</string>
     <string name="minha_localizacao">Minha localização</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="mr_media_route_button_content_description">Cast</string>
     <string name="mr_media_route_chooser_searching">Searching for devices\u2026</string>
@@ -704,7 +699,7 @@
     <string name="mr_media_route_controller_stop">Stop casting</string>
     <string name="mr_system_route_name">System</string>
     <string name="mr_user_route_category_name">Devices</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="nao">Não</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -736,6 +731,7 @@
     <string name="preco_produto">O preço será definido pelo maior preço entre as opções</string>
     <string name="preco_produto_escolhido">O preço será definido pela opção escolhida</string>
     <string name="preco_tamanho">O preço será definido pelo tamanho</string>
+    <string name="problemas_alteracoes">Problemas? Alterações?</string>
     <string name="produtos">Produtos</string>
     <string name="proximo">Proximo</string>
     <string name="quarta">Quarta</string>
@@ -750,14 +746,14 @@
     <string name="senha_atual">Senha atual</string>
     <string name="sexta">Sexta</string>
     <string name="sim">Sim</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="tag_nav_drawer_main_entry">nav_drawer_main_entry</string>
     <string name="tag_nav_drawer_special_entry">nav_drawer_special_entry</string>
@@ -772,17 +768,17 @@
     <string name="ultimos">Ultimos</string>
     <string name="valor_unitario">Valor unit.</string>
     <string name="voucher">Voucher</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="ActionBarTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
 		<item name="colorPrimary">@color/primary_500</item>
     	<item name="colorPrimaryDark">@color/primary_700</item>
     	<item name="colorAccent">@color/secondary</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -1019,7 +1015,7 @@
         <item name="colorControlNormal">?android:attr/textColorPrimary</item>
         <item name="searchViewStyle">@style/Widget.AppCompat.SearchView.ActionBar</item>
     </style>
-    <style name="Base.ThemeOverlay.AppCompat.Dark">
+    <style name="Base.ThemeOverlay.AppCompat.Dark" parent="Platform.ThemeOverlay.AppCompat.Dark">
         <item name="android:windowBackground">@color/background_material_dark</item>
         <item name="android:colorForeground">@color/bright_foreground_material_dark</item>
         <item name="android:colorForegroundInverse">@color/bright_foreground_material_light</item>
@@ -1702,7 +1698,7 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
         <item name="tabMaxWidth">@dimen/tab_max_width</item>
@@ -1714,7 +1710,7 @@
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">@color/white</item>
@@ -1763,7 +1759,7 @@
     <style name="NoActionBarTheme.WithNavDrawer">
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -1906,7 +1902,7 @@
     <style name="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation">
         <item name="android:paddingLeft">@dimen/abc_action_bar_navigation_padding_start_material</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="ScrimInsetsLayout">
         <item name="android:layout_width">match_parent</item>
@@ -1915,7 +1911,7 @@
         <item name="android:layout_gravity">start</item>
         <item name="insetForeground">@color/nav_drawer_inset_foreground</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
@@ -1973,7 +1969,7 @@
     </style>
     <style name="TextAppearance.AppCompat.Widget.Switch" parent="Base.TextAppearance.AppCompat.Widget.Switch"/>
     <style name="TextAppearance.AppCompat.Widget.TextView.SpinnerItem" parent="Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.Design.Error" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textColor">@color/error_color</item>
@@ -1993,7 +1989,7 @@
         <item name="android:textColor">?android:textColorSecondary</item>
         <item name="textAllCaps">true</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.StatusBar.EventContent" parent=""/>
     <style name="TextAppearance.StatusBar.EventContent.Info" parent=""/>
@@ -2028,7 +2024,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_iap_style.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_iap_style.xml -->
     <eat-comment/>
     <style name="Theme.IAPTheme" parent="android:Theme">
     <item name="android:windowIsTranslucent">true</item>
@@ -2038,7 +2034,7 @@
     <item name="android:windowIsFloating">true</item>
     <item name="android:backgroundDimEnabled">false</item>
   </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Theme.MediaRouter" parent="">
         <item name="mediaRouteButtonStyle">@style/Widget.MediaRouter.MediaRouteButton</item>
@@ -2060,14 +2056,14 @@
         <item name="mediaRoutePlayDrawable">@drawable/mr_ic_play_light</item>
         <item name="mediaRoutePauseDrawable">@drawable/mr_ic_pause_light</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat"/>
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_styles.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_styles.xml -->
     <eat-comment/>
     <style name="WalletFragmentDefaultButtonTextAppearance">
         <item name="android:textColor">@color/wallet_primary_text_holo_light</item>
@@ -2101,7 +2097,7 @@
         <item name="maskedWalletDetailsLogoTextColor">@color/wallet_bright_foreground_holo_dark</item>
         <item name="maskedWalletDetailsLogoImageType">classic</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
@@ -2136,8 +2132,7 @@
         <item name="color">?attr/colorControlNormal</item>
     </style>
     <style name="Widget.AppCompat.DropDownItem.Spinner" parent="RtlOverlay.Widget.AppCompat.Search.DropDown.Text"/>
-    <style name="Widget.AppCompat.EditText" parent="Base.Widget.AppCompat.EditText">
-    </style>
+    <style name="Widget.AppCompat.EditText" parent="Base.Widget.AppCompat.EditText"/>
     <style name="Widget.AppCompat.Light.ActionBar" parent="Base.Widget.AppCompat.Light.ActionBar">
     </style>
     <style name="Widget.AppCompat.Light.ActionBar.Solid" parent="Base.Widget.AppCompat.Light.ActionBar.Solid">
@@ -2194,7 +2189,7 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.Design.AppBarLayout" parent="android:Widget">
         <item name="elevation">@dimen/appbar_elevation</item>
@@ -2246,7 +2241,7 @@
         <item name="hintTextAppearance">@style/TextAppearance.Design.Hint</item>
         <item name="errorTextAppearance">@style/TextAppearance.Design.Error</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.MediaRouter.Light.MediaRouteButton" parent="Widget.AppCompat.Light.ActionButton">
         <item name="android:minWidth">56dp</item>
@@ -2264,7 +2259,7 @@
         <item name="android:contentDescription">@string/mr_media_route_button_content_description</item>
         <item name="externalRouteEnabledDrawable">@drawable/mr_ic_media_route_mono_dark</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="buttonSmall">
         <item name="textAllCaps">false</item>
@@ -2292,7 +2287,7 @@
     <style name="button_white_grey">
         <item name="android:textColor">@color/button_text_color_white_grey_red</item>
     </style>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values/values.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values/values.xml -->
     <eat-comment/>
     <style name="com_facebook_loginview_default_style" parent="@android:style/Widget.Button">
         <item name="android:layout_width">wrap_content</item>

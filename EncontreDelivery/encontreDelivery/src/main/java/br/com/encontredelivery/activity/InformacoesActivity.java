@@ -135,9 +135,9 @@ public class InformacoesActivity extends ActionBarActivity {
 		txtFone.setText(empresa.getFone());
 		
 		if (empresa.isAberto()) {
-			imgAbertoFechado.setImageResource(R.drawable.bola_verde);
+			imgAbertoFechado.setImageResource(R.drawable.ball_verde);
 		} else {
-			imgAbertoFechado.setImageResource(R.drawable.bola_vermelha);
+			imgAbertoFechado.setImageResource(R.drawable.ball_vermelha);
 		}
 		
 		nivImagem.setImageUrl(empresa.getUrlImagem(), imageLoader);

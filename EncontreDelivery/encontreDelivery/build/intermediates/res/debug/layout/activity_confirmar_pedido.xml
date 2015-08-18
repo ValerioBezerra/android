@@ -107,14 +107,14 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <Button
-            android:id="@+id/btnAcompanharPedido"
+            android:id="@+id/btnDetalhesPedido"
             style="@style/button_red"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_layout_height"
             android:layout_marginTop="@dimen/button_layout_marginTop"
             android:background="@drawable/button_red"
             android:onClick="clickAcompanharPedido"
-            android:text="@string/acompanhar_pedido" />
+            android:text="@string/detalhes_pedido" />
     </LinearLayout>
 
     <LinearLayout
@@ -189,4 +189,4 @@
         android:text="@string/ir_tela_inicial"
         android:visibility="gone" />
 
-</LinearLayout><!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_confirmar_pedido.xml -->
+</LinearLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_confirmar_pedido.xml -->

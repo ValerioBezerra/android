@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/texto_esqueci_minha_senha"
+            android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <android.support.design.widget.TextInputLayout

@@ -107,14 +107,14 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <Button
-            android:id="@+id/btnAcompanharPedido"
+            android:id="@+id/btnDetalhesPedido"
             style="@style/button_red"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_layout_height"
             android:layout_marginTop="@dimen/button_layout_marginTop"
             android:background="@drawable/button_red"
             android:onClick="clickAcompanharPedido"
-            android:text="@string/acompanhar_pedido" />
+            android:text="@string/detalhes_pedido" />
     </LinearLayout>
 
     <LinearLayout

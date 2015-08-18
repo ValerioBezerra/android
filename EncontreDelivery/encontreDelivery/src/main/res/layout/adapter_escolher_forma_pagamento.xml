@@ -12,16 +12,17 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Dinheiro"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"  />
 
     <TextView
         android:id="@+id/txtTroco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/troco_para"
-        android:textStyle="bold"
         android:layout_marginLeft="@dimen/layout_marginLeft"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <br.com.encontredelivery.view.CurrencyEditText
         android:id="@+id/edtTroco"

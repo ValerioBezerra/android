@@ -16,7 +16,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/codigo_voucher"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"  />
 
         <TextView
             android:id="@+id/txtCodigo"
@@ -24,7 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/layout_marginLeft"
             android:text="xAas7"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:textStyle="bold"  />
     </LinearLayout>
 
@@ -33,7 +35,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Desconto de R$ 15,00 no Oriental Demo"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"  />
 
 
 </LinearLayout>

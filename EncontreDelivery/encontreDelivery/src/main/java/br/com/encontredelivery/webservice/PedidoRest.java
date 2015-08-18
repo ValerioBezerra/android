@@ -171,7 +171,7 @@ public class PedidoRest extends GenericRest{
 				pedido.setFormaPagamento(formaPagamento);
 				
 				pedido.setValorTotal(jsonObject.getDouble("valor_total"));
-				
+
 				listaPedidos.add(pedido);
 			}
 				

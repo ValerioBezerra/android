@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/src/main/res/values-pt-rBR/strings.xml -->
-    <eat-comment/>
-    <string name="com_facebook_choose_friends">Escolha os amigos</string>
-    <string name="com_facebook_dialogloginactivity_ok_button">OK</string>
-    <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
-    <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
-    <string name="com_facebook_like_button_liked">Curtido</string>
-    <string name="com_facebook_like_button_not_liked">Curtir</string>
-    <string name="com_facebook_loading">Carregando...</string>
-    <string name="com_facebook_loginview_cancel_action">Cancelar</string>
-    <string name="com_facebook_loginview_log_in_button">Entrar pelo Facebook</string>
-    <string name="com_facebook_loginview_log_out_action">Log out</string>
-    <string name="com_facebook_loginview_log_out_button">Log out</string>
-    <string name="com_facebook_loginview_logged_in_as">Logado como: %1$s</string>
-    <string name="com_facebook_loginview_logged_in_using_facebook">Logado usando Facebook</string>
-    <string name="com_facebook_logo_content_description">Facebook Logo</string>
-    <string name="com_facebook_nearby">Próximo</string>
-    <string name="com_facebook_picker_done_button_text">Concluído</string>
-    <string name="com_facebook_placepicker_subtitle_catetory_only_format">%1$s</string>
-    <string name="com_facebook_placepicker_subtitle_format">%1$s • %2$,d esteve aqui</string>
-    <string name="com_facebook_placepicker_subtitle_were_here_only_format">%1$,d esteve aqui</string>
-    <string name="com_facebook_requesterror_password_changed">Sua senha do Facebook mudou. Por favor entre em este aplicativo novamente para reconectar a sua conta Facebook.</string>
-    <string name="com_facebook_requesterror_permissions">Este aplicativo não tem permissão para fazer isso. Para alterar as permissões, tente fazer o login no aplicativo novamente.</string>
-    <string name="com_facebook_requesterror_reconnect">Por favor entre em este aplicativo novamente para reconectar a sua conta Facebook.</string>
-    <string name="com_facebook_requesterror_relogin">Por favor entre em este aplicativo novamente para reconectar a sua conta Facebook.</string>
-    <string name="com_facebook_requesterror_web_login">A sua conta Facebook está bloqueada. Por favor entre em www.facebook.com para continuar.</string>
-    <string name="com_facebook_tooltip_default">New! You\'re in control - choose what info you want to share with apps.</string>
-    <string name="com_facebook_usersettingsfragment_log_in_button">Logado…</string>
-    <string name="com_facebook_usersettingsfragment_logged_in">Logado</string>
-    <string name="com_facebook_usersettingsfragment_not_logged_in">Não logado</string>
-    <!-- From: file:/C:/Users/valerio/StudioProjects/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values-pt-rBR/common_strings.xml -->
+    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values-pt-rBR/common_strings.xml -->
     <eat-comment/>
     <string msgid="6428604800157361567" name="common_android_wear_notification_needs_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> exige uma atualização para o app Android Wear."</string>
     <string msgid="2453027084525739603" name="common_android_wear_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> só funciona com uma atualização para o app Android Wear."</string>
