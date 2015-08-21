@@ -77,10 +77,20 @@
                         style="@style/NavDrawerAccountInfoText"
                         android:text="Gercino Coelho. Petrolina-PE"/>
 
-                    <TextView
-                        android:id="@+id/txtComplementoReferencia"
-                        style="@style/NavDrawerAccountInfoText"
-                        android:text="Prox. ao Ceman"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/NavDrawerAccountInfoText"
+                            android:text="@string/referencia_abreviada"
+                            android:layout_marginRight="@dimen/layout_marginRight"/>
+                        <TextView
+                            android:id="@+id/txtComplementoReferencia"
+                            style="@style/NavDrawerAccountInfoText"
+                            android:text="Prox. ao Ceman"/>
+                    </LinearLayout>
 
                 </LinearLayout>
 

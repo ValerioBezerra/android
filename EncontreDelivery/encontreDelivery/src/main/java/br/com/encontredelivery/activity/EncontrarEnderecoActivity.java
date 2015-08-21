@@ -18,7 +18,12 @@ public class EncontrarEnderecoActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_encontrar_endereco);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		
+
+		if (getIntent().getExtras().getBoolean("adicionar"))
+			setTitle(R.string.adicionar_endereco);
+		else
+			setTitle(R.string.encontrar_endereco);
+
 		encontrarEnderecoTabAdapter = new EncontrarEnderecoTabAdapter(this, getSupportFragmentManager());	
 		
 		mViewPager = (ViewPager) findViewById(R.id.pager);

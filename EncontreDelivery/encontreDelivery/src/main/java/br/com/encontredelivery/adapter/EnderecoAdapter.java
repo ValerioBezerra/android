@@ -23,6 +23,7 @@ public class EnderecoAdapter extends BaseAdapter {
 		TextView txtCEPLogradouroNumero;
 		TextView txtBairro;
 		TextView txtCidadeUF;
+		TextView txtComplementoReferencia;
 	}	
 	
 	public EnderecoAdapter(Context context, List<Endereco> listaEnderecos) {
@@ -55,9 +56,10 @@ public class EnderecoAdapter extends BaseAdapter {
 			
 			enderecoViewHolder = new EnderecoViewHolder();
 			
-			enderecoViewHolder.txtCEPLogradouroNumero = (TextView) view.findViewById(R.id.txtCEPLogradouroNumero);
-			enderecoViewHolder.txtBairro              = (TextView) view.findViewById(R.id.txtBairro);
-			enderecoViewHolder.txtCidadeUF            = (TextView) view.findViewById(R.id.txtCidadeUF);
+			enderecoViewHolder.txtCEPLogradouroNumero   = (TextView) view.findViewById(R.id.txtCEPLogradouroNumero);
+			enderecoViewHolder.txtBairro                = (TextView) view.findViewById(R.id.txtBairro);
+			enderecoViewHolder.txtCidadeUF              = (TextView) view.findViewById(R.id.txtCidadeUF);
+			enderecoViewHolder.txtComplementoReferencia = (TextView) view.findViewById(R.id.txtComplementoReferencia);
 			
 			view.setTag(enderecoViewHolder);
 		} else {
@@ -71,6 +73,12 @@ public class EnderecoAdapter extends BaseAdapter {
 		
 		if (!endereco.getNumero().trim().equals("")) {
 			enderecoViewHolder.txtCEPLogradouroNumero.setText(enderecoViewHolder.txtCEPLogradouroNumero.getText().toString() + ", " + endereco.getNumero());
+		}
+
+		if ((endereco.getComplemento() != null) && (!endereco.getComplemento().trim().equals(""))) {
+			enderecoViewHolder.txtComplementoReferencia.setText("Ref.: " + endereco.getComplemento());
+		} else {
+			enderecoViewHolder.txtComplementoReferencia.setVisibility(View.GONE);
 		}
 		
 		return view;

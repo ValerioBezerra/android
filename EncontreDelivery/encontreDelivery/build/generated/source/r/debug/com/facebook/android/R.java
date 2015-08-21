@@ -188,8 +188,8 @@ public final class R {
 		public static final int com_facebook_dialogloginactivity_ok_button = 0x7f060038;
 		public static final int com_facebook_internet_permission_error_message = 0x7f060039;
 		public static final int com_facebook_internet_permission_error_title = 0x7f06003a;
-		public static final int com_facebook_like_button_liked = 0x7f06006c;
-		public static final int com_facebook_like_button_not_liked = 0x7f06006d;
+		public static final int com_facebook_like_button_liked = 0x7f06006e;
+		public static final int com_facebook_like_button_not_liked = 0x7f06006f;
 		public static final int com_facebook_loading = 0x7f06003b;
 		public static final int com_facebook_loginview_cancel_action = 0x7f06003c;
 		public static final int com_facebook_loginview_log_in_button = 0x7f06003d;
@@ -208,7 +208,7 @@ public final class R {
 		public static final int com_facebook_requesterror_reconnect = 0x7f06004a;
 		public static final int com_facebook_requesterror_relogin = 0x7f06004b;
 		public static final int com_facebook_requesterror_web_login = 0x7f06004c;
-		public static final int com_facebook_tooltip_default = 0x7f06006e;
+		public static final int com_facebook_tooltip_default = 0x7f060070;
 		public static final int com_facebook_usersettingsfragment_log_in_button = 0x7f06004d;
 		public static final int com_facebook_usersettingsfragment_logged_in = 0x7f06004e;
 		public static final int com_facebook_usersettingsfragment_not_logged_in = 0x7f06004f;

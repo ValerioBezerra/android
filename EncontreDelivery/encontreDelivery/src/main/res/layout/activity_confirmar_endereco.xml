@@ -96,7 +96,6 @@
         style="@style/button_red"
         android:layout_width="match_parent"
         android:layout_height="@dimen/button_layout_height"
-
         android:layout_marginTop="@dimen/button_layout_marginTop"
         android:background="@drawable/button_red"
         android:onClick="clickConfirmar"

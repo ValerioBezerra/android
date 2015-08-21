@@ -184,7 +184,7 @@ public class NavigationDrawerActivity extends ActionBarActivity implements View.
 		flLogout.setVisibility(View.GONE);
 
 		if (cliente == null) {
-			txtNome.setText("Visitante");
+			txtNome.setText("Olá, Visitante.");
 
 			flLogin.setVisibility(View.VISIBLE);
 		} else {

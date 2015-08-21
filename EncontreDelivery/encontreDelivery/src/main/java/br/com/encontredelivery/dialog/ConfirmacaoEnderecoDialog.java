@@ -16,6 +16,7 @@ public class ConfirmacaoEnderecoDialog extends Dialog {
 	private TextView txtCEPLogradouro;
 	private TextView txtBairro;
 	private TextView txtCidadeUF;
+	private TextView txtComplementoReferencia;
 	private Button btnNao;
 	private View view;   
 	
@@ -35,12 +36,14 @@ public class ConfirmacaoEnderecoDialog extends Dialog {
         view = getWindow().getDecorView();    
         view.setBackgroundResource(android.R.color.transparent);    
           
-        txtTitulo        = (TextView) findViewById(R.id.txtTitulo);    
-        txtCEPLogradouro = (TextView) findViewById(R.id.txtCEPLogradouro);
-        txtBairro        = (TextView) findViewById(R.id.txtBairro);
-        txtCidadeUF      = (TextView) findViewById(R.id.txtCidadeUF);
-        btnNao           = (Button) findViewById(R.id.btnNao);
-    	
+        txtTitulo                = (TextView) findViewById(R.id.txtTitulo);
+        txtCEPLogradouro         = (TextView) findViewById(R.id.txtCEPLogradouro);
+        txtBairro                = (TextView) findViewById(R.id.txtBairro);
+        txtCidadeUF              = (TextView) findViewById(R.id.txtCidadeUF);
+		txtComplementoReferencia = (TextView) findViewById(R.id.txtComplementoReferencia);
+        btnNao                   = (Button) findViewById(R.id.btnNao);
+
+		txtComplementoReferencia.setVisibility(View.GONE);
         btnNao.setOnClickListener(clickNao);
 
         setCancelable(false);
@@ -71,6 +74,17 @@ public class ConfirmacaoEnderecoDialog extends Dialog {
 	 public void setCidadeUF(CharSequence message) {    
 		 txtCidadeUF.setText(message);    
 		 txtCidadeUF.setMovementMethod(ScrollingMovementMethod.getInstance());    
-     }	
-	 
+     }
+
+	public void setComplementoReferencia(CharSequence message) {
+		if (!message.toString().trim().equals("")) {
+			txtComplementoReferencia.setVisibility(View.VISIBLE);
+			txtComplementoReferencia.setText("Ref.: " + message);
+			txtComplementoReferencia.setMovementMethod(ScrollingMovementMethod.getInstance());
+		} else {
+			txtComplementoReferencia.setVisibility(View.GONE);
+		}
+	}
+
+
 }

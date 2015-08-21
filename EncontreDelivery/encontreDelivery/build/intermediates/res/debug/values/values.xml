@@ -530,9 +530,11 @@
     <string name="accept">Accept</string>
     <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="adicionar_endereco">Adicionar endereço</string>
     <string name="adicionar_pedido">Adicionar ao pedido</string>
     <string name="aguarde_confirmar_pedido">Aguarde, verificando o recebimento do pedido pelo restaurante.</string>
     <string name="alterar_dados">Alterar dados</string>
+    <string name="apagar">Apagar</string>
     <string name="app_name">Encontre Delivery</string>
     <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
@@ -652,6 +654,7 @@
     <string name="desculpe">Desculpe!</string>
     <string name="detalhes_pedido">Detalhes do pedido</string>
     <string name="domingo">Domingo</string>
+    <string name="editar">Editar</string>
     <string name="email">Email</string>
     <string name="encontrar">Encontrar</string>
     <string name="encontrar_endereco">Encontrar meu endereço</string>
@@ -739,6 +742,7 @@
     <string name="quarta">Quarta</string>
     <string name="quero_me_cadastrar">Quero me cadastrar</string>
     <string name="quinta">Quinta</string>
+    <string name="referencia_abreviada">Ref.:</string>
     <string name="restaurantes">Restaurantes</string>
     <string name="sabado">Sábado</string>
     <string name="segmentos">Segmentos</string>

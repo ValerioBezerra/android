@@ -232,7 +232,7 @@ public class PedirActivity extends ActionBarActivity implements GoogleApiClient.
 									Util.messagem(ex.getMessage(), handlerErros);
 								}
 							}
-				    	});
+                        				    	});
 				    	
 				    	thread.start();
 					} else {
@@ -249,6 +249,7 @@ public class PedirActivity extends ActionBarActivity implements GoogleApiClient.
 	
 	public void clickEncontrarEndereco(View view) {
 		Bundle extras = new Bundle();
+		extras.putBoolean("adicionar", false);
 		extras.putSerializable("cliente", cliente);
 		Intent intent = new Intent(this, EncontrarEnderecoActivity.class);
 		intent.putExtras(extras);

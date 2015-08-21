@@ -104,7 +104,7 @@ public class DetalhesPedidoActivity extends ActionBarActivity {
                 if (pedido.getEndereco().getComplemento().equals(""))
                     txtComplementoReferencia.setVisibility(View.GONE);
                 else
-                    txtComplementoReferencia.setText(pedido.getEndereco().getComplemento());
+                    txtComplementoReferencia.setText("Ref.: " + pedido.getEndereco().getComplemento());
 
                 String fones         = "";
                 String separadorFone = "";

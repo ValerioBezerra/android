@@ -1,5 +1,6 @@
 package br.com.encontredelivery.fragment;
 
+import br.com.encontredelivery.activity.ConfirmarEnderecoActivity;
 import br.com.encontredelivery.activity.NavigationDrawerActivity;
 import br.com.encontredelivery.R;
 import br.com.encontredelivery.dialog.ConfirmacaoEnderecoDialog;
@@ -17,6 +18,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +39,8 @@ public class EncontrarEnderecoCEP extends Fragment {
 	private ProgressoDialog progressoDialog;
 	private ErroAvisoDialog erroAvisoDialog;
 	private ConfirmacaoEnderecoDialog confirmacaoEnderecoDialog;
+
+	private static final int REQUEST_CONFIRMAR_ENDERECO_ACTIVITY = 0;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -88,11 +92,18 @@ public class EncontrarEnderecoCEP extends Fragment {
 							Bundle extras = new Bundle();
 							extras.putSerializable("cliente", (Cliente) getActivity().getIntent().getExtras().getSerializable("cliente"));
 							extras.putSerializable("endereco", endereco);
-							Intent intent = new Intent(getActivity(), NavigationDrawerActivity.class);
-							intent.putExtras(extras);
-							getActivity().startActivity(intent);
-							getActivity().setResult(Activity.RESULT_OK);
-							getActivity().finish();
+
+							if (getActivity().getIntent().getExtras().getBoolean("adicionar")) {
+								Intent intent = new Intent(getActivity(), ConfirmarEnderecoActivity.class);
+								intent.putExtras(extras);
+								startActivityForResult(intent, REQUEST_CONFIRMAR_ENDERECO_ACTIVITY);
+							} else {
+								Intent intent = new Intent(getActivity(), NavigationDrawerActivity.class);
+								intent.putExtras(extras);
+								getActivity().startActivity(intent);
+								getActivity().setResult(Activity.RESULT_OK);
+								getActivity().finish();
+							}
 						}
 					});							
 				}
@@ -104,7 +115,26 @@ public class EncontrarEnderecoCEP extends Fragment {
 		
 		return view;
 	}
-	
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == REQUEST_CONFIRMAR_ENDERECO_ACTIVITY) {
+			if (resultCode == getActivity().RESULT_OK) {
+				endereco = (Endereco) data.getExtras().getSerializable("endereco");
+
+				Bundle extras = new Bundle();
+				extras.putSerializable("cliente", (Cliente) getActivity().getIntent().getExtras().getSerializable("cliente"));
+				extras.putSerializable("endereco", endereco);
+				Intent intent = new Intent(getActivity(), NavigationDrawerActivity.class);
+				intent.putExtras(extras);
+				getActivity().startActivity(intent);
+				getActivity().setResult(Activity.RESULT_OK);
+				getActivity().finish();
+			}
+		}
+	}
+
 	private OnClickListener clickEncontrar() {
 		OnClickListener clickEncontrar = new OnClickListener() {
 			@Override
@@ -133,7 +163,7 @@ public class EncontrarEnderecoCEP extends Fragment {
 					Util.messagem(ex.getMessage(), handlerErros);
 				}
 			}
-    	});
+		    	});
     	
     	thread.start();
 	}	

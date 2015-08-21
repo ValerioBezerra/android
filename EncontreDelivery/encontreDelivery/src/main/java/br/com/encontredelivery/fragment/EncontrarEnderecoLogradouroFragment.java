@@ -3,6 +3,7 @@ package br.com.encontredelivery.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.encontredelivery.activity.ConfirmarEnderecoActivity;
 import br.com.encontredelivery.activity.NavigationDrawerActivity;
 import br.com.encontredelivery.R;
 import br.com.encontredelivery.adapter.EnderecoAdapter;
@@ -26,6 +27,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -67,7 +69,9 @@ public class EncontrarEnderecoLogradouroFragment extends Fragment {
 	private ProgressoDialog progressoDialog;
 	private ErroAvisoDialog erroAvisoDialog;
 	private ConfirmacaoEnderecoDialog confirmacaoEnderecoDialog;
-	
+
+	private static final int REQUEST_CONFIRMAR_ENDERECO_ACTIVITY = 0;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -170,7 +174,26 @@ public class EncontrarEnderecoLogradouroFragment extends Fragment {
 		
 		return view;
 	}
-	
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == REQUEST_CONFIRMAR_ENDERECO_ACTIVITY) {
+			if (resultCode == getActivity().RESULT_OK) {
+				endereco = (Endereco) data.getExtras().getSerializable("endereco");
+
+				Bundle extras = new Bundle();
+				extras.putSerializable("cliente", (Cliente) getActivity().getIntent().getExtras().getSerializable("cliente"));
+				extras.putSerializable("endereco", endereco);
+				Intent intent = new Intent(getActivity(), NavigationDrawerActivity.class);
+				intent.putExtras(extras);
+				getActivity().startActivity(intent);
+				getActivity().setResult(Activity.RESULT_OK);
+				getActivity().finish();
+			}
+		}
+	}
+
 	private OnClickListener clickEncontrar() {
 		OnClickListener clickEncontrar = new OnClickListener() {
 			@Override
@@ -190,32 +213,38 @@ public class EncontrarEnderecoLogradouroFragment extends Fragment {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position,
 					long id) {
-				endereco = listaEnderecos.get(position);
-				
-				confirmacaoEnderecoDialog = new ConfirmacaoEnderecoDialog(ctx);
-				confirmacaoEnderecoDialog.setTitle(getResources().getString(R.string.confirmar_endereco));
-				confirmacaoEnderecoDialog.setCEPLogradouro("(" + Retorno.getMascaraCep(endereco.getCep()) + ") " + endereco.getLogradouro());
-				confirmacaoEnderecoDialog.setBairro(endereco.getBairro().getNome());
-				confirmacaoEnderecoDialog.setCidadeUF(endereco.getBairro().getCidade().getNome() + " - " + endereco.getBairro().getCidade().getUf());
-				confirmacaoEnderecoDialog.show();		
-				
-				Button btnSim = (Button) confirmacaoEnderecoDialog.findViewById(R.id.btnSim);
-				
-				btnSim.setOnClickListener(new android.view.View.OnClickListener() {				
-					@Override
-					public void onClick(View arg0) {
-						confirmacaoEnderecoDialog.dismiss();
-						
-						Bundle extras = new Bundle();
-						extras.putSerializable("cliente", (Cliente) getActivity().getIntent().getExtras().getSerializable("cliente"));
-						extras.putSerializable("endereco", endereco);
+			endereco = listaEnderecos.get(position);
+
+			confirmacaoEnderecoDialog = new ConfirmacaoEnderecoDialog(ctx);
+			confirmacaoEnderecoDialog.setTitle(getResources().getString(R.string.confirmar_endereco));
+			confirmacaoEnderecoDialog.setCEPLogradouro("(" + Retorno.getMascaraCep(endereco.getCep()) + ") " + endereco.getLogradouro());
+			confirmacaoEnderecoDialog.setBairro(endereco.getBairro().getNome());
+			confirmacaoEnderecoDialog.setCidadeUF(endereco.getBairro().getCidade().getNome() + " - " + endereco.getBairro().getCidade().getUf());
+			confirmacaoEnderecoDialog.show();
+
+			Button btnSim = (Button) confirmacaoEnderecoDialog.findViewById(R.id.btnSim);
+			btnSim.setOnClickListener(new android.view.View.OnClickListener() {
+				@Override
+				public void onClick(View arg0) {
+					confirmacaoEnderecoDialog.dismiss();
+
+					Bundle extras = new Bundle();
+					extras.putSerializable("cliente", (Cliente) getActivity().getIntent().getExtras().getSerializable("cliente"));
+					extras.putSerializable("endereco", endereco);
+
+					if (getActivity().getIntent().getExtras().getBoolean("adicionar")) {
+						Intent intent = new Intent(getActivity(), ConfirmarEnderecoActivity.class);
+						intent.putExtras(extras);
+						startActivityForResult(intent, REQUEST_CONFIRMAR_ENDERECO_ACTIVITY);
+					} else {
 						Intent intent = new Intent(getActivity(), NavigationDrawerActivity.class);
 						intent.putExtras(extras);
 						getActivity().startActivity(intent);
 						getActivity().setResult(Activity.RESULT_OK);
 						getActivity().finish();
 					}
-				});						
+				}
+			});
 			}
 		};
 		

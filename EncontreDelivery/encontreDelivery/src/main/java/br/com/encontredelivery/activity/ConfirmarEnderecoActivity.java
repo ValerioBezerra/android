@@ -120,6 +120,7 @@ public class ConfirmarEnderecoActivity extends ActionBarActivity {
 			                                           endereco.getNumero());
 			confirmacaoEnderecoDialog.setBairro(endereco.getBairro().getNome());
 			confirmacaoEnderecoDialog.setCidadeUF(endereco.getBairro().getCidade().getNome() + " - " + endereco.getBairro().getCidade().getUf());
+			confirmacaoEnderecoDialog.setComplementoReferencia(endereco.getComplemento());
 			confirmacaoEnderecoDialog.show();
 			
 			Button btnSim = (Button) confirmacaoEnderecoDialog.findViewById(R.id.btnSim);
