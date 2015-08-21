@@ -47,6 +47,8 @@ public class MeusEnderecosActivity extends ActionBarActivity {
 	private ProgressoDialog progressoDialog;
 	private ErroAvisoDialog erroAvisoDialog;
 	private ConfirmacaoEnderecoDialog confirmacaoEnderecoDialog;
+
+	private static final int REQUEST_ENCONTRAR_ENDERECO_ACTIVITY = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -229,6 +231,14 @@ public class MeusEnderecosActivity extends ActionBarActivity {
 		};
 		
 		return clickLongLvEnderecos;
+	}
+
+	public void clickAdicionar(View view) {
+		Bundle extras = new Bundle();
+		extras.putSerializable("cliente", cliente);
+		Intent intent = new Intent(this, EncontrarEnderecoActivity.class);
+		intent.putExtras(extras);
+		startActivityForResult(intent, REQUEST_ENCONTRAR_ENDERECO_ACTIVITY);
 	}
 	
 

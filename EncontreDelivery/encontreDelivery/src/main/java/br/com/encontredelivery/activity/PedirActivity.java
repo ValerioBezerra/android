@@ -106,7 +106,6 @@ public class PedirActivity extends ActionBarActivity implements GoogleApiClient.
 			        erroAvisoDialog.show();
 				} else {
 					enderecoDialog = new EnderecoDialog(PedirActivity.this);
-					enderecoDialog.setTitle("Onde você se encontra?");
 					enderecoDialog.setCliente(cliente);
 					enderecoDialog.setListaEnderecos(listaEnderecos);
 					enderecoDialog.show();

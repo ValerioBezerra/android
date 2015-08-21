@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_pressed="true" android:color="@color/primary_700" />
+	<item android:state_focused="true" android:color="@color/primary_700" />
+	<item android:color="@color/primary_500"/>
+</selector><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/color/fab_ripple_red.xml -->

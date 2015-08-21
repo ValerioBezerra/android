@@ -40,6 +40,10 @@ public class Retorno {
 	
 	public static String getMascaraCpf(String cpf){  
 		return cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-" + cpf.substring(9);   
-	}	
+	}
+
+	public static String getSomenteNumeros(String valor) {
+		return valor.replaceAll("[^0-9]", "");
+	}
 	
 }

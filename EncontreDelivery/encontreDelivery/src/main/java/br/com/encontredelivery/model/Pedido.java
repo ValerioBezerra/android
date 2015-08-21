@@ -1,12 +1,17 @@
 package br.com.encontredelivery.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("serial")
 public class Pedido implements Serializable {
 	private long id;
+	private String data;
+	private String hora;
 	private Status status;
 	private Empresa empresa;
+	private Endereco endereco;
 	private String descricaoProdutos;
 	private String precoProdutos;
 	private double taxaEntrega;
@@ -14,10 +19,13 @@ public class Pedido implements Serializable {
 	private Voucher voucher;
 	private double desconto;
 	private double valorTotal;
-	private String dataHora;
-	
+	private List<Status> listaStatus;
+	private List<String> listaFones;
+
 	public Pedido() {
 		this.id                  = 0;
+		this.data                = "";
+		this.hora                = "";
 		this.status              = new Status();
 		this.empresa             = new Empresa();
 		this.descricaoProdutos   = "";
@@ -27,7 +35,8 @@ public class Pedido implements Serializable {
 		this.voucher             = null;
 		this.desconto            = 0;
 		this.valorTotal          = 0;
-		this.dataHora            = "";
+		this.listaStatus         = new ArrayList<Status>();
+		this.listaFones          = new ArrayList<String>();
 	}
 
 	public long getId() {
@@ -36,6 +45,22 @@ public class Pedido implements Serializable {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
 	}
 
 	public Status getStatus() {
@@ -52,6 +77,14 @@ public class Pedido implements Serializable {
 
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 	public String getDescricaoProdutos() {
@@ -110,11 +143,19 @@ public class Pedido implements Serializable {
 		this.valorTotal = valorTotal;
 	}
 
-	public String getDataHora() {
-		return dataHora;
+	public List<Status> getListaStatus() {
+		return listaStatus;
 	}
 
-	public void setDataHora(String dataHora) {
-		this.dataHora = dataHora;
+	public void setListaStatus(List<Status> listaStatus) {
+		this.listaStatus = listaStatus;
+	}
+
+	public List<String> getListaFones() {
+		return listaFones;
+	}
+
+	public void setListaFones(List<String> listaFones) {
+		this.listaFones = listaFones;
 	}
 }

@@ -73,8 +73,8 @@ public final class R {
 		public static final int wallet_hint_foreground_holo_light = 0x7f0b007d;
 		public static final int wallet_holo_blue_light = 0x7f0b007e;
 		public static final int wallet_link_text_light = 0x7f0b007f;
-		public static final int wallet_primary_text_holo_light = 0x7f0b0094;
-		public static final int wallet_secondary_text_holo_dark = 0x7f0b0095;
+		public static final int wallet_primary_text_holo_light = 0x7f0b0095;
+		public static final int wallet_secondary_text_holo_dark = 0x7f0b0096;
 	}
 	public static final class drawable {
 		public static final int cast_ic_notification_0 = 0x7f020042;
@@ -108,12 +108,12 @@ public final class R {
 		public static final int common_signin_btn_text_normal_light = 0x7f02008d;
 		public static final int common_signin_btn_text_pressed_dark = 0x7f02008e;
 		public static final int common_signin_btn_text_pressed_light = 0x7f02008f;
-		public static final int ic_plusone_medium_off_client = 0x7f0200df;
-		public static final int ic_plusone_small_off_client = 0x7f0200e0;
-		public static final int ic_plusone_standard_off_client = 0x7f0200e1;
-		public static final int ic_plusone_tall_off_client = 0x7f0200e2;
-		public static final int powered_by_google_dark = 0x7f0200f3;
-		public static final int powered_by_google_light = 0x7f0200f4;
+		public static final int ic_plusone_medium_off_client = 0x7f0200e0;
+		public static final int ic_plusone_small_off_client = 0x7f0200e1;
+		public static final int ic_plusone_standard_off_client = 0x7f0200e2;
+		public static final int ic_plusone_tall_off_client = 0x7f0200e3;
+		public static final int powered_by_google_dark = 0x7f0200f4;
+		public static final int powered_by_google_light = 0x7f0200f5;
 	}
 	public static final class id {
 		public static final int adjust_height = 0x7f0c002d;
@@ -191,8 +191,8 @@ public final class R {
 		public static final int create_calendar_message = 0x7f060076;
 		public static final int create_calendar_title = 0x7f060077;
 		public static final int decline = 0x7f06007a;
-		public static final int store_picture_message = 0x7f0600d0;
-		public static final int store_picture_title = 0x7f0600d1;
+		public static final int store_picture_message = 0x7f0600d2;
+		public static final int store_picture_title = 0x7f0600d3;
 		public static final int wallet_buy_button_place_holder = 0x7f060050;
 	}
 	public static final class style {

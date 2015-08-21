@@ -8,6 +8,8 @@ import org.json.JSONObject;
 
 
 import br.com.encontredelivery.model.Adicional;
+import br.com.encontredelivery.model.Bairro;
+import br.com.encontredelivery.model.Cidade;
 import br.com.encontredelivery.model.Cliente;
 import br.com.encontredelivery.model.Empresa;
 import br.com.encontredelivery.model.Endereco;
@@ -181,7 +183,68 @@ public class PedidoRest extends GenericRest{
 
 		return listaPedidos;
 	}
-	
+
+	public Pedido getDetalhesPedido(long idPedido) throws Exception {
+		String[] resposta = new WebServiceClient().get(getUrlWebService() + "retornar_detalhes_pedido/" + CHAVE_MD5 + "/" + idPedido);
+
+        if (resposta[0].equals("200")) {
+            Pedido pedido = null;
+
+            if (!resposta[1].equals("[]")) {
+                JSONObject jsonObject = new JSONObject(resposta[1]);
+
+                pedido = new Pedido();
+                pedido.setData(jsonObject.getString("dlv_data_ped"));
+                pedido.setHora(jsonObject.getString("dlv_hora_ped"));
+
+                Empresa empresa = new Empresa();
+                empresa.setNome(jsonObject.getString("dlv_nome_emp"));
+                pedido.setEmpresa(empresa);
+
+                Endereco endereco = new Endereco();
+                endereco.setCep(jsonObject.getString("glo_cep_end"));
+                endereco.setLogradouro(jsonObject.getString("glo_logradouro_end"));
+                endereco.setNumero(jsonObject.getString("dlv_numero_ped"));
+                Bairro bairro = new Bairro();
+                bairro.setNome(jsonObject.getString("glo_nome_bai"));
+                Cidade cidade = new Cidade();
+                cidade.setNome(jsonObject.getString("glo_nome_cid"));
+                cidade.setUf(jsonObject.getString("glo_uf_est"));
+                bairro.setCidade(cidade);
+                endereco.setBairro(bairro);
+                pedido.setEndereco(endereco);
+
+				JSONArray jsonArrayStatus = new JSONObject(resposta[1]).getJSONArray("status");
+				List<Status> listaStatus  = new ArrayList<Status>();
+				for (int i = 0; i < jsonArrayStatus.length(); i++){
+					JSONObject jsonObjectStatus = jsonArrayStatus.getJSONObject(i);
+
+					Status status = new Status();
+					status.setDescricao(jsonObjectStatus.getString("dlv_descricao_sta"));
+					status.setIndicador(jsonObjectStatus.getInt("dlv_indicador_sta"));
+					status.setDataHora(jsonObjectStatus.getString("dlv_datahoramod_spe"));
+					status.setMotivoCancelamento(jsonObjectStatus.getString("dlv_motivocanc_spe"));
+
+					listaStatus.add(status);
+				}
+				pedido.setListaStatus(listaStatus);
+
+				JSONArray jsonArrayFones = new JSONObject(resposta[1]).getJSONArray("fones");
+				List<String> listaFones  = new ArrayList<String>();
+				for (int i = 0; i < jsonArrayFones.length(); i++){
+					JSONObject jsonObjectFone = jsonArrayFones.getJSONObject(i);
+
+					listaFones.add(jsonObjectFone.getString("dlv_fone_ext"));
+				}
+				pedido.setListaFones(listaFones);
+            }
+
+            return pedido;
+        } else {
+            throw new WebServiceException(resposta[1]);
+        }
+	}
+
 	public List<Status> getStatusPedido(long idPedido) throws Exception {
 		List<Status> listaStatus = new ArrayList<Status>();
 		

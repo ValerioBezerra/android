@@ -1,14 +1,15 @@
 package br.com.encontredelivery.activity;
 
-import java.util.List;
-
 import br.com.encontredelivery.R;
 import br.com.encontredelivery.adapter.StatusAdapter;
+import br.com.encontredelivery.dialog.EnderecoDialog;
 import br.com.encontredelivery.dialog.ErroAvisoDialog;
+import br.com.encontredelivery.dialog.FoneDialog;
 import br.com.encontredelivery.dialog.ProgressoDialog;
-import br.com.encontredelivery.model.Empresa;
-import br.com.encontredelivery.model.Status;
+import br.com.encontredelivery.model.Pedido;
+import br.com.encontredelivery.util.Retorno;
 import br.com.encontredelivery.util.Util;
+import br.com.encontredelivery.view.NoScrollListView;
 import br.com.encontredelivery.webservice.PedidoRest;
 
 import android.content.Intent;
@@ -21,24 +22,29 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class DetalhesPedidoActivity extends ActionBarActivity {
+    private ScrollView scrollView;
 	private TextView txtNumeroPedido;
 	private TextView txtNomeEmpresa;
 	private TextView txtFoneEmpresa;
-	private ListView lvStatus;
+    private TextView txtDataPedido;
+    private TextView txtHorarioPedido;
+    private TextView txtCEPLogradouroNumero;
+    private TextView txtBairroCidadeUF;
+    private TextView txtComplementoReferencia;
+	private NoScrollListView lvStatus;
 
 	private long idPedido;
-	private Empresa empresa;
+	private Pedido pedido;
 	
-	private List<Status> listaStatus;
 	private StatusAdapter statusAdapter;
 	
 	private Handler handlerErros;
-	private Handler handlerCarregarStatus;
-	
+	private Handler handlerCarregarDetalhes;
+
 	private ProgressoDialog progressoDialog;
 	private ErroAvisoDialog erroAvisoDialog;		
 	
@@ -47,23 +53,33 @@ public class DetalhesPedidoActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_detalhes_pedido);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		
-		txtNumeroPedido = (TextView) findViewById(R.id.txtNumeroPedido);
-		txtNomeEmpresa  = (TextView) findViewById(R.id.txtNomeEmpresa);
-		txtFoneEmpresa  = (TextView) findViewById(R.id.txtFoneEmpresa);
-		lvStatus        = (ListView) findViewById(R.id.lvStatus);
+
+        scrollView               = (ScrollView) findViewById(R.id.scrollView);
+		txtNumeroPedido          = (TextView) findViewById(R.id.txtNumeroPedido);
+		txtNomeEmpresa           = (TextView) findViewById(R.id.txtNomeEmpresa);
+		txtFoneEmpresa           = (TextView) findViewById(R.id.txtFoneEmpresa);
+        txtDataPedido            = (TextView) findViewById(R.id.txtDataPedido);
+        txtHorarioPedido         = (TextView) findViewById(R.id.txtHorarioPedido);
+        txtCEPLogradouroNumero   = (TextView) findViewById(R.id.txtCEPLogradouroNumero);
+        txtBairroCidadeUF        = (TextView) findViewById(R.id.txtBairroCidadeUF);
+        txtComplementoReferencia = (TextView) findViewById(R.id.txtComplementoReferencia);
+		lvStatus        = (NoScrollListView) findViewById(R.id.lvStatus);
 
 		progressoDialog = new ProgressoDialog(this);
 		erroAvisoDialog = new ErroAvisoDialog(this);
 		
 		Bundle extras = getIntent().getExtras();
 		idPedido      = extras.getLong("idPedido");
-		empresa       = (Empresa) extras.getSerializable("empresa");
-		
+
 		txtNumeroPedido.setText("Nro Pedido: " + idPedido);
-		txtNomeEmpresa.setText(empresa.getNome());
-		txtFoneEmpresa.setText(empresa.getFone());
-		
+		txtNomeEmpresa.setText("");
+		txtFoneEmpresa.setText("");
+        txtDataPedido.setText("");
+        txtHorarioPedido.setText("");
+        txtCEPLogradouroNumero.setText("");
+        txtBairroCidadeUF.setText("");
+        txtComplementoReferencia.setText("");
+
 		handlerErros = new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
@@ -74,25 +90,45 @@ public class DetalhesPedidoActivity extends ActionBarActivity {
 		        erroAvisoDialog.setMessage(mensagem);
 		        erroAvisoDialog.show();
 			}
-		};	
-		
-		handlerCarregarStatus = new Handler() {
-			@Override
-			public void handleMessage(Message msg) {
-				statusAdapter = new StatusAdapter(DetalhesPedidoActivity.this, listaStatus);
-				lvStatus.setAdapter(statusAdapter);
-				
-				if (listaStatus.isEmpty())
-					lvStatus.setVisibility(View.GONE);
-				else
-					lvStatus.setVisibility(View.VISIBLE);
-
-				
-				progressoDialog.dismiss();
-			}
 		};
-		
-		carregarStatus();
+
+        handlerCarregarDetalhes = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                txtNomeEmpresa.setText(pedido.getEmpresa().getNome());
+                txtDataPedido.setText(pedido.getData());
+                txtHorarioPedido.setText(pedido.getHora());
+                txtCEPLogradouroNumero.setText("(" +  Retorno.getMascaraCep(pedido.getEndereco().getCep()) + ") " + pedido.getEndereco().getLogradouro() + ", " + pedido.getEndereco().getNumero());
+                txtBairroCidadeUF.setText(pedido.getEndereco().getBairro().getNome() + ". " + pedido.getEndereco().getBairro().getCidade().getNome() + "-" + pedido.getEndereco().getBairro().getCidade().getUf());
+
+                if (pedido.getEndereco().getComplemento().equals(""))
+                    txtComplementoReferencia.setVisibility(View.GONE);
+                else
+                    txtComplementoReferencia.setText(pedido.getEndereco().getComplemento());
+
+                String fones         = "";
+                String separadorFone = "";
+                for (String fone: pedido.getListaFones()) {
+                    fones         += separadorFone + fone;
+                    separadorFone  = "\n";
+                }
+                txtFoneEmpresa.setText(fones);
+
+
+                statusAdapter = new StatusAdapter(DetalhesPedidoActivity.this, pedido.getListaStatus());
+                lvStatus.setAdapter(statusAdapter);
+
+                if (pedido.getListaStatus().isEmpty())
+                    lvStatus.setVisibility(View.GONE);
+                else
+                    lvStatus.setVisibility(View.VISIBLE);
+
+                scrollView.fling(0);
+                progressoDialog.dismiss();
+            }
+        };
+
+        carregarDetalhesPedido();
 	}
 	
 	@Override
@@ -108,35 +144,43 @@ public class DetalhesPedidoActivity extends ActionBarActivity {
 	    switch (item.getItemId()) {
 	    	case android.R.id.home: finish();
 	    		 break;
-	    	case R.id.acao_refresh: carregarStatus();
+	    	case R.id.acao_refresh: carregarDetalhesPedido();
 	    		 break;
 	    }
 	    return super.onOptionsItemSelected(item);
 	}
-	
-	private void carregarStatus() {
-		progressoDialog.setMessage("Aguarde. Carregando status do pedido...");
+
+	private void carregarDetalhesPedido() {
+		progressoDialog.setMessage("Aguarde. Carregando detalhes do pedido...");
 		progressoDialog.show();
 		Thread thread = new Thread(new Runnable() {
 			@Override
 			public void run() {
-		        PedidoRest pedidoRest = new PedidoRest();
-		        try {
-		        	listaStatus = pedidoRest.getStatusPedido(idPedido);
-		        	Util.messagem("", handlerCarregarStatus);
+				PedidoRest pedidoRest = new PedidoRest();
+				try {
+					pedido = pedidoRest.getDetalhesPedido(idPedido);
+					Util.messagem("", handlerCarregarDetalhes);
 				} catch (Exception ex) {
 					Util.messagem(ex.getMessage(), handlerErros);
 				}
 			}
-    	});
-    	
-    	thread.start();
+		});
+
+		thread.start();
 	}
 
 	public void clickLigar(View view) {
-		Intent callIntent = new Intent(Intent.ACTION_DIAL);
-		callIntent.setData(Uri.parse("tel:8788655045"));
-		startActivity(callIntent);
+        if (pedido != null) {
+            if (pedido.getListaFones().size() == 1) {
+                Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:" + Retorno.getSomenteNumeros(pedido.getListaFones().get(0))));
+                startActivity(callIntent);
+            } else {
+                FoneDialog foneDialog = new FoneDialog(this);
+                foneDialog.setListaFones(pedido.getListaFones());
+                foneDialog.show();
+			}
+        }
 	}
 
 }

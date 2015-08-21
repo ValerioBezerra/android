@@ -35,8 +35,7 @@ public class DashboardActivity extends Activity {
 	
 	private Cliente cliente;
 	private ClienteDao clienteDao;
-	
-	
+
 	private ConfirmacaoDialog confirmacaoDialog;
 	private ProgressoDialog progressoDialog;
 	private ErroAvisoDialog erroAvisoDialog;

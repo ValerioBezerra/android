@@ -661,6 +661,7 @@
     <string name="entrar_facebook">Entrar com Facebook</string>
     <string name="enviar_pedido">Enviar Pedido</string>
     <string name="escolha_forma_pagamento">Escolha a forma de pagamento:</string>
+    <string name="escolha_numero_ligar">Escolha o número</string>
     <string name="escolha_opcao">Escolha a sua opção</string>
     <string name="escolha_tamanho">Escolha o tamanho</string>
     <string name="esqueci_minha_senha">Esqueci minha senha</string>
@@ -721,6 +722,7 @@
     <string name="numero">Número</string>
     <string name="observacoes">Observações</string>
     <string name="ok">OK</string>
+    <string name="onde_voce_encontra">Onde você se encontra?</string>
     <string name="pedido_cancelado">O seu pedido foi cancelado automáticamente pois o restaurante não confirmou o recebimento. Ligue para o restaurante para informar sobre o ocorrido.</string>
     <string name="pedido_enviado_sucesso">Pedido enviado com sucesso!</string>
     <string name="pedido_minimo">Pedido mínimo</string>

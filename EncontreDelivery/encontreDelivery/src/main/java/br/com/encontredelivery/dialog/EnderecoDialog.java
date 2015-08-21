@@ -24,7 +24,6 @@ import android.widget.TextView;
 public class EnderecoDialog extends Dialog {
 	
 	private Context context;    
-	private TextView txtTitulo;    
 	private ListView lvEnderecos;
 	private Button btnCancelar;
 	private View view; 
@@ -73,7 +72,6 @@ public class EnderecoDialog extends Dialog {
 					if (context instanceof PedirActivity) {
 						((PedirActivity) context).finish();
 					}
-					
 				}
 			});					
 			
@@ -89,7 +87,6 @@ public class EnderecoDialog extends Dialog {
         view = getWindow().getDecorView();    
         view.setBackgroundResource(android.R.color.transparent);    
           
-        txtTitulo   = (TextView) findViewById(R.id.txtTitulo); 
         lvEnderecos = (ListView) findViewById(R.id.lvEnderecos);
         btnCancelar = (Button) findViewById(R.id.btnCancelar);
     	
@@ -99,18 +96,6 @@ public class EnderecoDialog extends Dialog {
         setCancelable(false);
 	}
 	
-	 @Override    
-     public void setTitle(CharSequence title) {    
-         super.setTitle(title);    
-         txtTitulo.setText(title);    
-     } 
-	 
-	 @Override    
-     public void setTitle(int titleId) {    
-         super.setTitle(titleId);    
-         txtTitulo.setText(context.getResources().getString(titleId));    
-     }	 
-	 
 	 public void setCliente(Cliente cliente) {
 		 this.cliente = cliente;
 	 }

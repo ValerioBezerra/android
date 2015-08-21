@@ -6,193 +6,199 @@
     android:layout_height="match_parent"
     tools:context=".activity.DetalhesPedidoActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical">
 
-        <LinearLayout
+        <ScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:nestedScrollingEnabled="false"
+            android:layout_height="match_parent">
             <LinearLayout
-                android:id="@+id/llDadosPedidoRestaurante"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/primary_500"
-                android:padding="@dimen/padding" >
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/txtNumeroPedido"
+                <LinearLayout
+                    android:id="@+id/llDadosPedidoRestaurante"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Nro Pedido: 69"
-                    android:textColor="@color/white"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:orientation="vertical"
+                    android:background="@color/primary_500"
+                    android:padding="@dimen/padding" >
 
-                <TextView
-                    android:id="@+id/txtNomeEmpresa"
+                    <TextView
+                        android:id="@+id/txtNumeroPedido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nro Pedido: 69"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                    <TextView
+                        android:id="@+id/txtNomeEmpresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Suda Sushi"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fone_dois_pontos"
+                            android:textColor="@color/white"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/txtFoneEmpresa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/layout_marginLeft"
+                            android:text="(87) 3862-1656"
+                            android:textColor="@color/white"
+                            android:textAppearance="?android:attr/textAppearanceMedium"  />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llProblemasAlteracoes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Suda Sushi"
-                    android:textColor="@color/white"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textStyle="bold" />
+                    android:orientation="vertical"
+                    android:background="@color/grey_300"
+                    android:padding="@dimen/padding" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/problemas_alteracoes"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ligue_restaurante"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_marginTop"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:layout_marginRight="@dimen/layout_marginRight"
                     android:orientation="horizontal" >
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/fone_dois_pontos"
-                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:text="@string/data_pedido"
+                        android:textColor="@color/black"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
                     <TextView
-                        android:id="@+id/txtFoneEmpresa"
+                        android:id="@+id/txtDataPedido"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/layout_marginLeft"
-                        android:text="(87) 3862-1656"
-                        android:textColor="@color/white"
-                        android:textAppearance="?android:attr/textAppearanceMedium"  />
-
+                        android:text="15/08/2015"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
                 </LinearLayout>
-            </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/llProblemasAlteracoes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/grey_300"
-                android:padding="@dimen/padding" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_marginTop"
+                    android:layout_marginBottom="@dimen/layout_marginTop"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:layout_marginRight="@dimen/layout_marginRight"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/horario_pedido"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/txtHorarioPedido"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14:53"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/problemas_alteracoes"
+                    android:layout_marginTop="@dimen/layout_marginTop"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:text="@string/endereco_entrega"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:layout_marginRight="@dimen/layout_marginRight"
+                    android:layout_height="1dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtCEPLogradouroNumero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:layout_marginTop="@dimen/layout_marginTop"
+                    android:text="(56306-090) Rua Pessoa de Melo, 455"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtBairroCidadeUF"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/ligue_restaurante"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:text="Gercino Coelho. Petrolina - PE"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/txtComplementoReferencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_marginLeft"
+                    android:text="Próximo ao ceman"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <br.com.encontredelivery.view.NoScrollListView
+                    android:id="@+id/lvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/grey_200"
+                    android:dividerHeight="1dp" />
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/layout_marginTop"
-                android:layout_marginLeft="@dimen/layout_marginLeft"
-                android:layout_marginRight="@dimen/layout_marginRight"
-                android:orientation="horizontal" >
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/data_pedido"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/txtDataPedido"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="15/08/2015"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/layout_marginTop"
-                android:layout_marginBottom="@dimen/layout_marginTop"
-                android:layout_marginLeft="@dimen/layout_marginLeft"
-                android:layout_marginRight="@dimen/layout_marginRight"
-                android:orientation="horizontal" >
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/horario_pedido"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/txtHorarioPedido"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="14:53"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/layout_marginTop"
-                android:layout_marginLeft="@dimen/layout_marginLeft"
-                android:text="@string/endereco_entrega"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_marginLeft="@dimen/layout_marginLeft"
-                android:layout_marginRight="@dimen/layout_marginRight"
-                android:layout_height="1dp"
-                android:background="@color/black" />
-
-            <TextView
-                android:id="@+id/txtCEPLogradouroNumero"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/layout_marginLeft"
-                android:layout_marginTop="@dimen/layout_marginTop"
-                android:text="(56306-090) Rua Pessoa de Melo, 455"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <TextView
-                android:id="@+id/txtBairroCidadeUF"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/layout_marginLeft"
-                android:text="Gercino Coelho. Petrolina - PE"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <TextView
-                android:id="@+id/txtComplementoReferencia"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/layout_marginLeft"
-                android:text="Próximo ao ceman"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <ListView
-                android:id="@+id/lvStatus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/layout_marginTop"
-                android:divider="@color/grey_200"
-                android:dividerHeight="1dp" />
-        </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
@@ -207,8 +213,8 @@
         app:layout_anchorGravity="bottom|right|end"
         app:fabSize="normal"
         app:borderWidth="0dp"
-        app:elevation="6dp"
-        app:pressedTranslationZ="12dp"
+        app:elevation="0dp"
+        app:pressedTranslationZ="0dp"
         app:backgroundTint="@color/fab_ripple_white" />
 
 </android.support.design.widget.CoordinatorLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_detalhes_pedido.xml -->
