@@ -20,7 +20,6 @@ public class Pedido implements Serializable {
 	private double desconto;
 	private double valorTotal;
 	private List<Status> listaStatus;
-	private List<String> listaFones;
 
 	public Pedido() {
 		this.id                  = 0;
@@ -36,7 +35,6 @@ public class Pedido implements Serializable {
 		this.desconto            = 0;
 		this.valorTotal          = 0;
 		this.listaStatus         = new ArrayList<Status>();
-		this.listaFones          = new ArrayList<String>();
 	}
 
 	public long getId() {
@@ -149,13 +147,5 @@ public class Pedido implements Serializable {
 
 	public void setListaStatus(List<Status> listaStatus) {
 		this.listaStatus = listaStatus;
-	}
-
-	public List<String> getListaFones() {
-		return listaFones;
-	}
-
-	public void setListaFones(List<String> listaFones) {
-		this.listaFones = listaFones;
 	}
 }

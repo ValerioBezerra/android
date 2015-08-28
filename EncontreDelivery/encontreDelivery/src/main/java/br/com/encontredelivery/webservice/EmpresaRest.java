@@ -48,7 +48,16 @@ public class EmpresaRest extends GenericRest{
 				empresa.setTaxaEntrega(jsonObject.getDouble("dlv_taxaentrega_emp"));
 				empresa.setValorMinimo(jsonObject.getDouble("dlv_valorminimo_emp"));
 				empresa.setTempoMedio(jsonObject.getString("dlv_tempomedio_emp"));
-				empresa.setFone(jsonObject.getString("dlv_fone_emp"));
+
+				JSONArray jsonArrayFones = jsonObject.getJSONArray("fones");
+				List<String> listaFones  = new ArrayList<String>();
+				for (int j = 0; j < jsonArrayFones.length(); j++){
+					JSONObject jsonObjectFone = jsonArrayFones.getJSONObject(j);
+
+					listaFones.add(jsonObjectFone.getString("dlv_fone_ext"));
+				}
+				empresa.setListaFones(listaFones);
+
 				empresa.setAberto(jsonObject.getInt("dlv_aberto_emp") == 1);
 				
 				Endereco endereco = new Endereco();

@@ -4,7 +4,6 @@ package br.com.encontredelivery.service;
 import br.com.encontredelivery.R;
 import br.com.encontredelivery.activity.DetalhesPedidoActivity;
 import br.com.encontredelivery.activity.DashboardActivity;
-import br.com.encontredelivery.model.Empresa;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
@@ -32,17 +31,17 @@ public class GCMIntentService extends IntentService {
 		
         if (!extras.isEmpty()) { 
             if (GoogleCloudMessaging.MESSAGE_TYPE_SEND_ERROR.equals(tipoMsg)) {
-                enviarNotification("Send error: " + extras.toString(), "", extras);
+                enviarNotification("Send error: " + extras.toString(), "");
             } else if (GoogleCloudMessaging.MESSAGE_TYPE_DELETED.equals(tipoMsg)) {
-                enviarNotification("Deleted messages on server: " + extras.toString(), "", extras);
+                enviarNotification("Deleted messages on server: " + extras.toString(), "");
             } else if (GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE.equals(tipoMsg)) {
-                enviarNotification(extras.getString("msg"), extras.getString("idPedido"), extras);
+                enviarNotification(extras.getString("msg"), extras.getString("idPedido"));
                 Log.i("TAG", "Receiver: " + extras.toString());
             }
         }
 	}
 	
-	private void enviarNotification(String msg, String idPedido, Bundle extras) {
+	private void enviarNotification(String msg, String idPedido) {
         if (idPedido != null) {
             NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
             PendingIntent contentIntent = null;
@@ -54,12 +53,6 @@ public class GCMIntentService extends IntentService {
             } else {
                 Bundle extrasIntent = new Bundle();
                 extrasIntent.putLong("idPedido", Long.parseLong(idPedido));
-
-                Empresa empresa = new Empresa();
-                empresa.setNome(extras.getString("nomeEmpresa"));
-                empresa.setFone(extras.getString("foneEmpresa"));
-
-                extrasIntent.putSerializable("empresa", empresa);
 
                 Intent intent = new Intent(this, DetalhesPedidoActivity.class);
                 intent.putExtras(extrasIntent);

@@ -108,7 +108,7 @@ public class DetalhesPedidoActivity extends ActionBarActivity {
 
                 String fones         = "";
                 String separadorFone = "";
-                for (String fone: pedido.getListaFones()) {
+                for (String fone: pedido.getEmpresa().getListaFones()) {
                     fones         += separadorFone + fone;
                     separadorFone  = "\n";
                 }
@@ -171,13 +171,13 @@ public class DetalhesPedidoActivity extends ActionBarActivity {
 
 	public void clickLigar(View view) {
         if (pedido != null) {
-            if (pedido.getListaFones().size() == 1) {
+            if (pedido.getEmpresa().getListaFones().size() == 1) {
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
-                callIntent.setData(Uri.parse("tel:" + Retorno.getSomenteNumeros(pedido.getListaFones().get(0))));
+                callIntent.setData(Uri.parse("tel:" + Retorno.getSomenteNumeros(pedido.getEmpresa().getListaFones().get(0))));
                 startActivity(callIntent);
             } else {
                 FoneDialog foneDialog = new FoneDialog(this);
-                foneDialog.setListaFones(pedido.getListaFones());
+                foneDialog.setListaFones(pedido.getEmpresa().getListaFones());
                 foneDialog.show();
 			}
         }

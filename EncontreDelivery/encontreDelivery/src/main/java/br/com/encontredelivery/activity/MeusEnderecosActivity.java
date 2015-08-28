@@ -7,7 +7,6 @@ import br.com.encontredelivery.R;
 import br.com.encontredelivery.adapter.EnderecoAdapter;
 import br.com.encontredelivery.dialog.ConfirmacaoDialog;
 import br.com.encontredelivery.dialog.ConfirmacaoEnderecoDialog;
-import br.com.encontredelivery.dialog.EditarApagarEnderecoDialog;
 import br.com.encontredelivery.dialog.ErroAvisoDialog;
 import br.com.encontredelivery.dialog.ProgressoDialog;
 import br.com.encontredelivery.model.Cliente;
@@ -19,6 +18,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,7 +33,9 @@ import android.widget.AdapterView.OnItemLongClickListener;
 public class MeusEnderecosActivity extends AppCompatActivity {
 	private ListView lvEnderecos;
 	private LinearLayout llVazioEnderecos;
-	
+	private FloatingActionButton fabEditar;
+	private FloatingActionButton fabApagar;
+
 	private Cliente cliente;
 	
 	private Endereco endereco;
@@ -50,6 +52,7 @@ public class MeusEnderecosActivity extends AppCompatActivity {
 	private ConfirmacaoEnderecoDialog confirmacaoEnderecoDialog;
 
 	private static final int REQUEST_ENCONTRAR_ENDERECO_ACTIVITY = 0;
+	private static final int REQUEST_CONFIRMAR_ENDERECO_ACTIVITY = 1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +62,12 @@ public class MeusEnderecosActivity extends AppCompatActivity {
 		
 		lvEnderecos      = (ListView) findViewById(R.id.lvEnderecos);
 		llVazioEnderecos = (LinearLayout) findViewById(R.id.llVazioEnderecos);
-		
+		fabEditar        = (FloatingActionButton) findViewById(R.id.fabEditar);
+		fabApagar        = (FloatingActionButton) findViewById(R.id.fabApagar);
+
+		fabEditar.setVisibility(View.GONE);
+		fabApagar.setVisibility(View.GONE);
+
 		Bundle extras = getIntent().getExtras();
 		cliente       = (Cliente) extras.getSerializable("cliente");
 		
@@ -120,6 +128,19 @@ public class MeusEnderecosActivity extends AppCompatActivity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == REQUEST_ENCONTRAR_ENDERECO_ACTIVITY) {
 			if (resultCode == RESULT_OK) {
+				setResult(RESULT_OK);
+				finish();
+			}
+		} else if (requestCode == REQUEST_CONFIRMAR_ENDERECO_ACTIVITY) {
+			if (resultCode == RESULT_OK) {
+				endereco = (Endereco) data.getExtras().getSerializable("endereco");
+
+				Bundle extras = new Bundle();
+				extras.putSerializable("cliente", cliente);
+				extras.putSerializable("endereco", endereco);
+				Intent intent = new Intent(MeusEnderecosActivity.this, NavigationDrawerActivity.class);
+				intent.putExtras(extras);
+				startActivity(intent);
 				setResult(RESULT_OK);
 				finish();
 			}
@@ -202,29 +223,11 @@ public class MeusEnderecosActivity extends AppCompatActivity {
 
 			@Override
 			public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-				endereco = listaEnderecos.get(position);
+			endereco = listaEnderecos.get(position);
 
-				final EditarApagarEnderecoDialog EDITAR_APAGAR_ENDERECO_DIALOG = new EditarApagarEnderecoDialog(MeusEnderecosActivity.this);
-				Button btnEditar = (Button) EDITAR_APAGAR_ENDERECO_DIALOG.findViewById(R.id.btnEditar);
-				Button btnApagar = (Button) EDITAR_APAGAR_ENDERECO_DIALOG.findViewById(R.id.btnApagar);
-
-				btnEditar.setOnClickListener(new OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						EDITAR_APAGAR_ENDERECO_DIALOG.dismiss();
-					}
-				});
-
-				btnApagar.setOnClickListener(new OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						EDITAR_APAGAR_ENDERECO_DIALOG.dismiss();
-						apagar();
-					}
-				});
-
-				EDITAR_APAGAR_ENDERECO_DIALOG.show();
-				return true;
+			fabEditar.setVisibility(View.VISIBLE);
+			fabApagar.setVisibility(View.VISIBLE);
+			return true;
 			}
 		};
 	}
@@ -238,7 +241,20 @@ public class MeusEnderecosActivity extends AppCompatActivity {
 		startActivityForResult(intent, REQUEST_ENCONTRAR_ENDERECO_ACTIVITY);
 	}
 
-	private void apagar() {
+	public void clickEditar(View view) {
+		Bundle extras = new Bundle();
+		extras.putSerializable("cliente", cliente);
+		extras.putSerializable("endereco", endereco);
+		extras.putBoolean("adicionar", false);
+		Intent intent = new Intent(this, ConfirmarEnderecoActivity.class);
+		intent.putExtras(extras);
+		startActivityForResult(intent, REQUEST_CONFIRMAR_ENDERECO_ACTIVITY);
+
+		fabEditar.setVisibility(View.GONE);
+		fabApagar.setVisibility(View.GONE);
+	}
+
+	public void clickApagar(View view) {
 		final ConfirmacaoDialog CONFIRMACAO_DIALOG = new ConfirmacaoDialog(MeusEnderecosActivity.this);
 		CONFIRMACAO_DIALOG.setTitle("Atenção");
 		CONFIRMACAO_DIALOG.setMessage("Deseja apagar este endereço?");
@@ -269,6 +285,8 @@ public class MeusEnderecosActivity extends AppCompatActivity {
 		});
 
 		CONFIRMACAO_DIALOG.show();
+		fabEditar.setVisibility(View.GONE);
+		fabApagar.setVisibility(View.GONE);
 	}
 
 

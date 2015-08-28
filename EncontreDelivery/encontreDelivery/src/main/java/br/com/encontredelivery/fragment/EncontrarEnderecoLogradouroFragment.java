@@ -233,6 +233,7 @@ public class EncontrarEnderecoLogradouroFragment extends Fragment {
 					extras.putSerializable("endereco", endereco);
 
 					if (getActivity().getIntent().getExtras().getBoolean("adicionar")) {
+						extras.putBoolean("adicionar", true);
 						Intent intent = new Intent(getActivity(), ConfirmarEnderecoActivity.class);
 						intent.putExtras(extras);
 						startActivityForResult(intent, REQUEST_CONFIRMAR_ENDERECO_ACTIVITY);

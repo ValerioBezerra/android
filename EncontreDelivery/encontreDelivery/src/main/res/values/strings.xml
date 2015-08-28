@@ -16,6 +16,7 @@
     <string name="cadastro">Cadastro</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="cardapio">Cardápio</string>
     <string name="carrinho">Carrinho</string>
     <string name="caso_pedido_nao_confirmado">O pedido será cancelado automaticamente, caso o restaurante não confirme o recebimento no tempo acima.</string>    
     <string name="categoria">Categoria:</string>
@@ -25,8 +26,8 @@
     <string name="codigo_voucher">Código:</string>
     <string name="complemento_referencia">Referência</string>
     <string name="confirmar">Confirmar</string>
-    <string name="confirmar_endereco_titulo">Confirmar endereço</string>
     <string name="confirmar_endereco">Confirmar este endereço?</string>
+    <string name="confirmar_endereco_titulo">Confirmar endereço</string>
     <string name="confirmar_pedido">Confirmar Pedido</string>
     <string name="confirmar_senha">Confirmar senha</string>
     <string name="copyright">Copyright © 2015 King Soft.</string>
@@ -37,6 +38,7 @@
     <string name="detalhes_pedido">Detalhes do pedido</string>
     <string name="domingo">Domingo</string>
     <string name="editar">Editar</string>
+    <string name="editar_endereco">Editar endereço</string>
     <string name="email">Email</string>
     <string name="encontrar">Encontrar</string>
     <string name="encontrar_endereco">Encontrar meu endereço</string>

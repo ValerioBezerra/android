@@ -2,7 +2,7 @@ package br.com.encontredelivery.adapter;
 
 
 import br.com.encontredelivery.R;
-import br.com.encontredelivery.fragment.EncontrarEnderecoCEP;
+import br.com.encontredelivery.fragment.EncontrarEnderecoCEPFragment;
 import br.com.encontredelivery.fragment.EncontrarEnderecoLogradouroFragment;
 
 import android.app.Activity;
@@ -15,7 +15,7 @@ public class EncontrarEnderecoTabAdapter extends FragmentPagerAdapter {
 	private Fragment fragment;
 	
 	private EncontrarEnderecoLogradouroFragment encontrarEnderecoEnderecoFragment;
-	private EncontrarEnderecoCEP encontrarEnderecoEnderecoCEP;
+	private EncontrarEnderecoCEPFragment encontrarEnderecoEnderecoCEP;
 
 	public EncontrarEnderecoTabAdapter(Activity activity, FragmentManager fm) {
 		super(fm);
@@ -23,7 +23,7 @@ public class EncontrarEnderecoTabAdapter extends FragmentPagerAdapter {
 		this.activity                          = activity;
 		this.fragment                          = null;
 		this.encontrarEnderecoEnderecoFragment = new EncontrarEnderecoLogradouroFragment();
-		this.encontrarEnderecoEnderecoCEP      = new EncontrarEnderecoCEP();
+		this.encontrarEnderecoEnderecoCEP      = new EncontrarEnderecoCEPFragment();
 	}
 
 	@Override

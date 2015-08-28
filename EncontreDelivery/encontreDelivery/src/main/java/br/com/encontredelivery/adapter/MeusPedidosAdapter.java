@@ -107,7 +107,14 @@ public class MeusPedidosAdapter extends BaseAdapter {
 		}
 		
 		PedidoViewHolder.txtNomeEmpresa.setText(pedido.getEmpresa().getNome());
-		PedidoViewHolder.txtFoneEmpresa.setText(pedido.getEmpresa().getFone());
+
+		String fones         = "";
+		String separadorFone = "";
+		for (String fone: pedido.getEmpresa().getListaFones()) {
+			fones         += separadorFone + fone;
+			separadorFone  = "\n";
+		}
+		PedidoViewHolder.txtFoneEmpresa.setText(fones);
 		PedidoViewHolder.txtDescricaoProdutos.setText(pedido.getDescricaoProdutos());
 		PedidoViewHolder.txtPrecoProdutos.setText(pedido.getPrecoProdutos());
 		PedidoViewHolder.txtDesconto.setText("R$ " + decimalFormat.format(pedido.getDesconto()).replace(".", ","));

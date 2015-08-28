@@ -68,9 +68,15 @@ public class ConfirmarPedidoActivity extends ActionBarActivity {
 		
 		progressoDialog = new ProgressoDialog(this);
 		erroAvisoDialog = new ErroAvisoDialog(this);
-		
-		txtFone.setText(empresa.getFone());
-		
+
+		String fones         = "";
+		String separadorFone = "";
+		for (String fone: empresa.getListaFones()) {
+			fones         += separadorFone + fone;
+			separadorFone  = "\n";
+		}
+		txtFone.setText(fones);
+
 		handlerErros = new Handler() {
 			@Override
 			public void handleMessage(Message msg) {

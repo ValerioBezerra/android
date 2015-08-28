@@ -31,6 +31,7 @@ public class ConfirmarEnderecoActivity extends ActionBarActivity {
 	
 	private Cliente cliente;
 	private Endereco endereco;
+	private boolean adicionar;
 	
 	private ProgressoDialog progressoDialog;
 	private ErroAvisoDialog erroAvisoDialog;
@@ -54,6 +55,15 @@ public class ConfirmarEnderecoActivity extends ActionBarActivity {
 		Bundle extras = getIntent().getExtras();
 		cliente       = (Cliente) extras.getSerializable("cliente");
 		endereco      = (Endereco) extras.getSerializable("endereco");
+		adicionar     = extras.getBoolean("adicionar");
+
+		if (adicionar) {
+			setTitle(R.string.confirmar_endereco_titulo);
+		} else {
+			setTitle(R.string.editar_endereco);
+			edtNumero.setText(endereco.getNumero());
+			edtComplementoReferencia.setText(endereco.getComplemento());
+		}
 		
 		if (endereco != null) {
 			txtEndereco.setText(endereco.getLogradouro());
@@ -136,14 +146,19 @@ public class ConfirmarEnderecoActivity extends ActionBarActivity {
 						@Override
 						public void run() {
 					        EnderecoRest enderecoRest = new EnderecoRest();
+							String resposta           = null;
 					        try {
-					        	String resposta = enderecoRest.cadastrarEnderecoCliente(cliente, endereco);
+								if (adicionar)
+					        		resposta = enderecoRest.cadastrarEnderecoCliente(cliente, endereco);
+								else
+									resposta = enderecoRest.alterarEnderecoCliente(cliente, endereco);
+
 					        	Util.messagem(resposta, handlerCadastrarEnderecoCliente);
 							} catch (Exception ex) {
 								Util.messagem(ex.getMessage(), handlerErros);
 							}
 						}
-			    	});
+								    	});
 			
 					thread.start();
 				}

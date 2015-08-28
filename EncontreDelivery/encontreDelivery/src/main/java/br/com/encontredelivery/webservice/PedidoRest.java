@@ -160,7 +160,14 @@ public class PedidoRest extends GenericRest{
 				
 				Empresa empresa = new Empresa();
 				empresa.setNome(jsonObject.getString("dlv_nome_emp"));
-				empresa.setFone(jsonObject.getString("dlv_fone_emp"));
+				JSONArray jsonArrayFones = jsonObject.getJSONArray("fones");
+				List<String> listaFones  = new ArrayList<String>();
+				for (int j = 0; j < jsonArrayFones.length(); j++){
+					JSONObject jsonObjectFone = jsonArrayFones.getJSONObject(j);
+
+					listaFones.add(jsonObjectFone.getString("dlv_fone_ext"));
+				}
+				empresa.setListaFones(listaFones);
 				pedido.setEmpresa(empresa);
 				
 				pedido.setDescricaoProdutos(jsonObject.getString("descricao_produtos"));
@@ -197,10 +204,6 @@ public class PedidoRest extends GenericRest{
                 pedido.setData(jsonObject.getString("dlv_data_ped"));
                 pedido.setHora(jsonObject.getString("dlv_hora_ped"));
 
-                Empresa empresa = new Empresa();
-                empresa.setNome(jsonObject.getString("dlv_nome_emp"));
-                pedido.setEmpresa(empresa);
-
                 Endereco endereco = new Endereco();
                 endereco.setCep(jsonObject.getString("glo_cep_end"));
                 endereco.setLogradouro(jsonObject.getString("glo_logradouro_end"));
@@ -229,6 +232,8 @@ public class PedidoRest extends GenericRest{
 				}
 				pedido.setListaStatus(listaStatus);
 
+				Empresa empresa = new Empresa();
+				empresa.setNome(jsonObject.getString("dlv_nome_emp"));
 				JSONArray jsonArrayFones = new JSONObject(resposta[1]).getJSONArray("fones");
 				List<String> listaFones  = new ArrayList<String>();
 				for (int i = 0; i < jsonArrayFones.length(); i++){
@@ -236,7 +241,8 @@ public class PedidoRest extends GenericRest{
 
 					listaFones.add(jsonObjectFone.getString("dlv_fone_ext"));
 				}
-				pedido.setListaFones(listaFones);
+				empresa.setListaFones(listaFones);
+				pedido.setEmpresa(empresa);
             }
 
             return pedido;

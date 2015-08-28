@@ -121,6 +121,7 @@ public class CarrinhoActivity extends ActionBarActivity {
 				Bundle extras = new Bundle();
 				extras.putSerializable("cliente", cliente);
 				extras.putSerializable("endereco", endereco);
+				extras.putBoolean("adicionar", true);
 				Intent intent = new Intent(this, ConfirmarEnderecoActivity.class);
 				intent.putExtras(extras);
 				startActivityForResult(intent, REQUEST_CONFIRMAR_ENDERECO_ACTIVITY);

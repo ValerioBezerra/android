@@ -70,7 +70,8 @@
             android:name="br.com.encontredelivery.activity.EncontrarEnderecoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/encontrar_endereco"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme.Toolbar" >
         </activity>
         <activity
             android:name="br.com.encontredelivery.activity.MeusEnderecosActivity"
@@ -98,13 +99,14 @@
             android:theme="@style/NoActionBarTheme.WithNavDrawer" >
         </activity>
         <activity
-            android:name="br.com.encontredelivery.activity.EstabelecimentoCategoriasActivity"
+            android:name="br.com.encontredelivery.activity.RestauranteActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme.Toolbar" >
         </activity>
         <activity
-            android:name="br.com.encontredelivery.activity.EstabelecimentoProdutosActivity"
+            android:name="br.com.encontredelivery.activity.RestauranteProdutosActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >

@@ -19,7 +19,7 @@ import com.android.volley.toolbox.Volley;
 
 import br.com.encontredelivery.R;
 import br.com.encontredelivery.dao.ClienteDao;
-import br.com.encontredelivery.fragment.EstabelecimentosFragment;
+import br.com.encontredelivery.fragment.RestaurantesFragment;
 import br.com.encontredelivery.fragment.MeusDadosFragment;
 import br.com.encontredelivery.fragment.MeusPedidosFragment;
 import br.com.encontredelivery.fragment.MeusVouchersFragment;
@@ -39,6 +39,7 @@ public class NavigationDrawerActivity extends ActionBarActivity implements View.
 	private TextView txtNome;
 	private TextView txtEnderecoNumero;
 	private TextView txtBairroCidadeUF;
+	private LinearLayout llComplementoReferencia;
 	private TextView txtComplementoReferencia;
 	private FrameLayout flRestaurantes;
 	private FrameLayout flMeusPedidos;
@@ -48,7 +49,7 @@ public class NavigationDrawerActivity extends ActionBarActivity implements View.
 	private FrameLayout flLogin;
 	private FrameLayout flLogout;
 
-	private EstabelecimentosFragment estabelecimentosFragment;
+	private RestaurantesFragment estabelecimentosFragment;
 	private MeusPedidosFragment meusPedidosFragment;
 	private MeusDadosFragment meusDadosFragment;
 	private MeusVouchersFragment meusVouchersFragment;
@@ -98,10 +99,11 @@ public class NavigationDrawerActivity extends ActionBarActivity implements View.
 
 		llEntriesRootView = (LinearLayout)findViewById(R.id.llEntriesRootView);
 
-		imgFacebook             = (UserAvatar) findViewById(R.id.imgFacebook);
+		imgFacebook              = (UserAvatar) findViewById(R.id.imgFacebook);
 		txtNome                  = (TextView) findViewById(R.id.txtNome);
 		txtEnderecoNumero        = (TextView) findViewById(R.id.txtEnderecoNumero);
 		txtBairroCidadeUF        = (TextView) findViewById(R.id.txtBairroCidadeUF);
+		llComplementoReferencia  = (LinearLayout) findViewById(R.id.llComplementoReferencia);
 		txtComplementoReferencia = (TextView) findViewById(R.id.txtComplementoReferencia);
 
 		flRestaurantes = (FrameLayout) findViewById(R.id.flRestaurantes);
@@ -156,7 +158,7 @@ public class NavigationDrawerActivity extends ActionBarActivity implements View.
 		flLogout.setOnClickListener(this);
 
 
-		estabelecimentosFragment = new EstabelecimentosFragment();
+		estabelecimentosFragment = new RestaurantesFragment();
 		meusPedidosFragment      = new MeusPedidosFragment();
 		meusDadosFragment        = new MeusDadosFragment();
 		meusVouchersFragment     = new MeusVouchersFragment();
@@ -175,7 +177,11 @@ public class NavigationDrawerActivity extends ActionBarActivity implements View.
 			txtEnderecoNumero.setText(endereco.getLogradouro());
 
 		txtBairroCidadeUF.setText(endereco.getBairro().getNome() + ". " + endereco.getBairro().getCidade().getNome() + "-" + endereco.getBairro().getCidade().getUf());
-		txtComplementoReferencia.setText(endereco.getComplemento());
+
+		if (endereco.getComplemento().trim().equals(""))
+			llComplementoReferencia.setVisibility(View.GONE);
+		else
+			txtComplementoReferencia.setText(endereco.getComplemento());
 
 		flMeusPedidos.setVisibility(View.GONE);
 		flMeusDados.setVisibility(View.GONE);

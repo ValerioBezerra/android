@@ -1,11 +1,14 @@
 package br.com.encontredelivery.adapter;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import br.com.encontredelivery.R;
 import br.com.encontredelivery.model.Horario;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,10 +82,21 @@ public class HorarioAdapter extends BaseAdapter {
 	
 			default: break;
 		}
-		
-		
+
 		horarioViewHolder.txtHorario.setText(horario.getHorarios());
-		
+
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(new Date());
+		int day = cal.get(Calendar.DAY_OF_WEEK);
+
+		if (day == horario.getDia()) {
+			horarioViewHolder.txtDia.setTypeface(null, Typeface.BOLD);
+			horarioViewHolder.txtHorario.setTypeface(null, Typeface.BOLD);
+		} else {
+			horarioViewHolder.txtDia.setTypeface(null, Typeface.NORMAL);
+			horarioViewHolder.txtHorario.setTypeface(null, Typeface.NORMAL);
+		}
+
 		return view;
 	}
 	

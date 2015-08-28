@@ -186,8 +186,26 @@ public class EnderecoRest extends GenericRest{
 		} else {
 			throw new WebServiceException(resposta[1]);
 		}
-	}	
-	
+	}
+
+	public String alterarEnderecoCliente(Cliente cliente, Endereco endereco) throws Exception {
+		JSONObject json = new JSONObject();
+
+		json.put("dlv_id_ecl", endereco.getIdEnderecoCliente());
+		json.put("dlv_dlvcli_ecl", cliente.getId());
+		json.put("dlv_gloend_ecl", endereco.getId());
+		json.put("dlv_numero_ecl", endereco.getNumero());
+		json.put("dlv_complemento_ecl", endereco.getComplemento());
+
+		String[] resposta = new WebServiceClient().post(getUrlWebService() + "alterar_endereco_cliente/" + CHAVE_MD5, json);
+		if (resposta[0].equals("200")) {
+			return resposta[1];
+		} else {
+			throw new WebServiceException(resposta[1]);
+		}
+	}
+
+
 	public String apagarEnderecoCliente(Endereco endereco) throws Exception {
 		JSONObject json = new JSONObject(); 
 		

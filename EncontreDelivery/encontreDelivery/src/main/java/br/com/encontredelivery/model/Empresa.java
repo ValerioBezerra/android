@@ -12,7 +12,7 @@ public class Empresa implements Serializable {
 	private double taxaEntrega;
 	private double valorMinimo;
 	private String tempoMedio;
-	private String fone;
+	private List<String> listaFones;
 	private boolean aberto;
 	private Endereco endereco;
 	private String distanciaEnderecos;
@@ -28,7 +28,7 @@ public class Empresa implements Serializable {
 		this.taxaEntrega  		= 0;
 		this.valorMinimo  		= 0;
 		this.tempoMedio   		= "";
-		this.fone               = "";
+		this.listaFones         = new ArrayList<String>();
 		this.aberto       		= false;
 		this.endereco     		= null;
 		this.distanciaEnderecos = "";
@@ -86,12 +86,12 @@ public class Empresa implements Serializable {
 		this.tempoMedio = tempoMedio;
 	}
 
-	public String getFone() {
-		return fone;
+	public List<String> getListaFones() {
+		return listaFones;
 	}
 
-	public void setFone(String fone) {
-		this.fone = fone;
+	public void setListaFones(List<String> listaFones) {
+		this.listaFones = listaFones;
 	}
 
 	public boolean isAberto() {

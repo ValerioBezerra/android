@@ -69,7 +69,7 @@ public class InformacoesActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_informacoes);
+		setContentView(R.layout.fragment_informacoes);
 		
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		
@@ -117,8 +117,7 @@ public class InformacoesActivity extends ActionBarActivity {
 				return lruCache.get(url);
 			}
 		});	
-	    
-	    
+
 	    String segmentos = "";
 		String separador = "";
 		
@@ -132,8 +131,16 @@ public class InformacoesActivity extends ActionBarActivity {
 		txtSegmentos.setText(segmentos);
 		txtCEPLogradouroNumero.setText("(" + Retorno.getMascaraCep(empresa.getEndereco().getCep() + ") " + empresa.getEndereco().getLogradouro() + ", " + empresa.getEndereco().getNumero()));
 		txtBairroCidadeUF.setText(empresa.getEndereco().getBairro().getNome() + ", " + empresa.getEndereco().getBairro().getCidade().getNome() + " - " + empresa.getEndereco().getBairro().getCidade().getUf());
-		txtFone.setText(empresa.getFone());
-		
+
+
+		String fones         = "";
+		String separadorFone = "";
+		for (String fone: empresa.getListaFones()) {
+			fones         += separadorFone + fone;
+			separadorFone  = "\n";
+		}
+		txtFone.setText(fones);
+
 		if (empresa.isAberto()) {
 			imgAbertoFechado.setImageResource(R.drawable.ball_verde);
 		} else {
