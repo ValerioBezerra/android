@@ -9,7 +9,6 @@ import com.android.volley.toolbox.Volley;
 
 
 import br.com.encontredelivery.activity.RestauranteActivity;
-import br.com.encontredelivery.activity.RestauranteCategoriasActivity;
 import br.com.encontredelivery.activity.NavigationDrawerActivity;
 import br.com.encontredelivery.R;
 import br.com.encontredelivery.adapter.EmpresaAdapter;
@@ -204,7 +203,7 @@ public class RestaurantesFragment extends Fragment implements OnQueryTextListene
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.estabelecimentos, menu);
+        inflater.inflate(R.menu.restaurantes, menu);
         
         MenuItem menuItem = menu.findItem(R.id.acao_pesquisar);
         

@@ -8,7 +8,7 @@ public class GenericRest {
 	
 	public GenericRest(String classe) {
 //		this.urlWebService = "http://192.168.56.1/encontredelivery/administrador/json/" + classe + "/";
-		this.urlWebService = "http://192.168.100.10/encontredelivery/administrador/json/" + classe + "/";
+		this.urlWebService = "http://192.168.100.10/web/encontredelivery/administrador/json/" + classe + "/";
 //		this.urlWebService = "http://encontredelivery.com.br/administrador/json/" + classe + "/";
 	}
 

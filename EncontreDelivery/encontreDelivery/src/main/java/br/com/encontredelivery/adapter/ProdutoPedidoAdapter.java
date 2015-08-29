@@ -26,7 +26,6 @@ public class ProdutoPedidoAdapter extends BaseAdapter {
 	private List<ProdutoPedido> listaProdutoPedidos;
 	
 	static class ProdutoPedidoViewHolder {
-		 ImageButton ibtRemover;
 		 TextView txtTamanho;
 		 TextView txtDescricao;
 		 TextView txtProdutosEscolhidos;
@@ -72,7 +71,6 @@ public class ProdutoPedidoAdapter extends BaseAdapter {
 			
 			produtoPedidoViewHolder = new ProdutoPedidoViewHolder();
 		
-			produtoPedidoViewHolder.ibtRemover            = (ImageButton) view.findViewById(R.id.ibtRemover);
 			produtoPedidoViewHolder.txtTamanho		      = (TextView) view.findViewById(R.id.txtTamanho);
 			produtoPedidoViewHolder.txtDescricao          = (TextView) view.findViewById(R.id.txtDescricao);
 			produtoPedidoViewHolder.txtProdutosEscolhidos = (TextView) view.findViewById(R.id.txtProdutosEscolhidos);
@@ -171,48 +169,44 @@ public class ProdutoPedidoAdapter extends BaseAdapter {
 		produtoPedidoViewHolder.txtValorUnitario.setText("R$ " + decimalFormat.format(produtoPedido.getPreco() + valorAdicionais).replace(".", ","));
 		produtoPedidoViewHolder.txtValorTotal.setText("R$ " + decimalFormat.format(produtoPedido.getQuantidade() * (produtoPedido.getPreco() + valorAdicionais)).replace(".", ","));
 		
-		produtoPedidoViewHolder.btnDiminuir.setEnabled(produtoPedido.getQuantidade() > 1);
+		produtoPedidoViewHolder.btnDiminuir.setEnabled(produtoPedido.getQuantidade() > 0);
 		produtoPedidoViewHolder.btnAumentar.setEnabled(produtoPedido.getQuantidade() < 99);
 		
 		produtoPedidoViewHolder.btnDiminuir.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				produtoPedido.setQuantidade(produtoPedido.getQuantidade() - 1);
-				notifyDataSetChanged();
-			}
-		});
+            @Override
+            public void onClick(View v) {
+                if (produtoPedido.getQuantidade() > 1) {
+                    produtoPedido.setQuantidade(produtoPedido.getQuantidade() - 1);
+                    notifyDataSetChanged();
+                } else {
+                    final ConfirmacaoDialog confirmacaoDialog = new ConfirmacaoDialog(context);
+                    confirmacaoDialog.setTitle("Atenção");
+                    confirmacaoDialog.setMessage("Deseja realmente remover este produto?");
+
+                    Button btnSim = (Button) confirmacaoDialog.findViewById(R.id.btnSim);
+                    btnSim.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            confirmacaoDialog.dismiss();
+
+                            listaProdutoPedidos.remove(produtoPedido);
+                            notifyDataSetChanged();
+                        }
+                    });
+
+                    confirmacaoDialog.show();
+                }
+            }
+        });
 		
 		produtoPedidoViewHolder.btnAumentar.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				produtoPedido.setQuantidade(produtoPedido.getQuantidade() + 1);
-				notifyDataSetChanged();
-			}
-		});
+            @Override
+            public void onClick(View v) {
+                produtoPedido.setQuantidade(produtoPedido.getQuantidade() + 1);
+                notifyDataSetChanged();
+            }
+        });
 		
-		produtoPedidoViewHolder.ibtRemover.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				final ConfirmacaoDialog confirmacaoDialog = new ConfirmacaoDialog(context);
-				confirmacaoDialog.setTitle("Atençãso");
-				confirmacaoDialog.setMessage("Deseja realmente remover este produto?");	
-				
-				Button btnSim = (Button) confirmacaoDialog.findViewById(R.id.btnSim);
-				btnSim.setOnClickListener(new OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						confirmacaoDialog.dismiss(); 
-						
-						listaProdutoPedidos.remove(produtoPedido);
-						notifyDataSetChanged();
-					}
-				});
-				
-				confirmacaoDialog.show();
-			}
-		});
-		
-
 		return view;
 	}
 

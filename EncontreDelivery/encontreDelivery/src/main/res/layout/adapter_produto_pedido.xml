@@ -5,20 +5,10 @@
     android:paddingBottom="@dimen/padding_bottom"
     android:paddingTop="@dimen/padding_top" >
 
-    <ImageButton
-        android:id="@+id/ibtRemover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_action_discard" />
-
     <TextView
         android:id="@+id/txtDescricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/ibtRemover"
-        android:layout_toRightOf="@+id/ibtRemover"
         android:text="Produto"
         android:textColor="@color/black"
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -29,7 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtDescricao"
-        android:layout_toRightOf="@+id/ibtRemover"
         android:text="Tamanho: Grande"
         android:textColor="@color/black"
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -40,7 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtTamanho"
-        android:layout_toRightOf="@+id/ibtRemover"
         android:text="- Coca-Cola"
         android:textColor="@color/black"
         android:textAppearance="?android:attr/textAppearanceSmall"  />
@@ -50,7 +38,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtProdutosEscolhidos"
-        android:layout_toRightOf="@+id/ibtRemover"
         android:text="+ Camarão (R$ 2,00)"
         android:textColor="@color/black"
         android:textAppearance="?android:attr/textAppearanceSmall"  />
@@ -74,7 +61,6 @@
                 android:layout_width="@dimen/activity_produto_layout_width_height"
                 android:layout_height="@dimen/activity_produto_layout_width_height"
                 android:background="@drawable/button_red"
-                android:enabled="false"
                 android:text="-" />
 
             <TextView

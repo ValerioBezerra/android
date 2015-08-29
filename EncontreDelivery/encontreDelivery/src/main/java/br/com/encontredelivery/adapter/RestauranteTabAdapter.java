@@ -9,8 +9,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.List;
 
 import br.com.encontredelivery.R;
+import br.com.encontredelivery.fragment.CategoriaProdutoFragment;
 import br.com.encontredelivery.fragment.InformacoesFragment;
-import br.com.encontredelivery.fragment.RestauranteCategoriaFragment;
 import br.com.encontredelivery.model.Categoria;
 import br.com.encontredelivery.model.FormaPagamento;
 import br.com.encontredelivery.model.Horario;
@@ -19,27 +19,22 @@ public class RestauranteTabAdapter extends FragmentPagerAdapter {
 	private Activity activity;
 	private Fragment fragment;
 
-	private Fragment cardapioFragment;
-	private RestauranteCategoriaFragment restauranteCategoriaFragment;
+	private CategoriaProdutoFragment categoriaProdutoFragment;
 	private InformacoesFragment informacoesFragment;
-
-	private FragmentManager fragmentManager;
 
 	public RestauranteTabAdapter(Activity activity, FragmentManager fm) {
 		super(fm);
 		
 		this.activity                     = activity;
 		this.fragment                     = null;
-		this.restauranteCategoriaFragment = new RestauranteCategoriaFragment();
+		this.categoriaProdutoFragment     = new CategoriaProdutoFragment();
 		this.informacoesFragment          = new InformacoesFragment();
-		this.cardapioFragment             = restauranteCategoriaFragment;
-		this.fragmentManager              = fm;
 	}
 
 	@Override
 	public Fragment getItem(int position) {
 		if (position == 0) {
-			fragment = cardapioFragment;
+			fragment = categoriaProdutoFragment;
 		} else {
 			fragment = informacoesFragment;
 		}
@@ -62,7 +57,7 @@ public class RestauranteTabAdapter extends FragmentPagerAdapter {
     }
 
 	public void carregarCategorias(List<Categoria> listaCategorias) {
-		restauranteCategoriaFragment.carregarCategorias(listaCategorias);
+		categoriaProdutoFragment.carregarCategorias(listaCategorias);
 	}
 
 	public void carregarHorarios(List<Horario> listaHorarios) {
@@ -73,17 +68,7 @@ public class RestauranteTabAdapter extends FragmentPagerAdapter {
 		informacoesFragment.carregarFormasPagamento(listaFormasPagamento);
 	}
 
-	public void trocarCardapioFragment(Categoria categoria) {
-		fragmentManager.beginTransaction().remove(cardapioFragment).commit();
-		if (categoria == null) {
-			cardapioFragment  = restauranteCategoriaFragment;
-		} else {
-			cardapioFragment = new InformacoesFragment();
-		}
-		fragmentManager.beginTransaction().add(cardapioFragment, toString()).commit();
-		notifyDataSetChanged();
-//		getItem(0);
-//		fragment = cardapioFragment;
-//		fragment.on
+	public void replaceFragment(Categoria categoria) {
+		categoriaProdutoFragment.replaceFragment(categoria);
 	}
 }

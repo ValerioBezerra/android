@@ -4,12 +4,6 @@
     tools:context="br.com.android.MainActivity" >
 
     <item
-        android:id="@+id/informacoes"
-        android:icon="@drawable/ic_action_about"
-        app:showAsAction="always"
-        android:title="@string/informacoes"/>
-    
-    <item
         android:id="@+id/carrinho"
         app:actionLayout="@layout/action_bar_notifitcation_icon"
         android:icon="@drawable/ic_action_action_shopping_cart"

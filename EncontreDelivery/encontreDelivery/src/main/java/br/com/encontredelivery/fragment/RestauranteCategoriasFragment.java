@@ -1,10 +1,7 @@
 package br.com.encontredelivery.fragment;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,20 +23,15 @@ import java.util.List;
 
 import br.com.encontredelivery.R;
 import br.com.encontredelivery.activity.RestauranteActivity;
-import br.com.encontredelivery.activity.RestauranteProdutosActivity;
 import br.com.encontredelivery.adapter.CategoriaAdapter;
-import br.com.encontredelivery.dialog.ErroAvisoDialog;
-import br.com.encontredelivery.dialog.ProgressoDialog;
 import br.com.encontredelivery.model.Categoria;
 import br.com.encontredelivery.model.Cliente;
 import br.com.encontredelivery.model.Empresa;
 import br.com.encontredelivery.model.ProdutoPedido;
 import br.com.encontredelivery.model.Segmento;
 import br.com.encontredelivery.util.LruBitmapCache;
-import br.com.encontredelivery.util.Util;
-import br.com.encontredelivery.webservice.CategoriaRest;
 
-public class RestauranteCategoriaFragment extends Fragment {
+public class RestauranteCategoriasFragment extends Fragment {
 	private NetworkImageView nivImagem;
 	private TextView txtNome;
 	private ImageView imgAbertoFechado;
@@ -47,8 +39,6 @@ public class RestauranteCategoriaFragment extends Fragment {
 	private TextView txtEntrega;
 	private ListView lvCategorias;
 	private LinearLayout llVazioCategorias;
-
-	private TextView txtBadge;
 
 	private RequestQueue requestQueue;
 	private ImageLoader imageLoader;
@@ -61,11 +51,6 @@ public class RestauranteCategoriaFragment extends Fragment {
 	private List<Categoria> listaCategorias;
 
 	private CategoriaAdapter categoriaAdapter;
-
-	private static final int REQUEST_ESTABELECIMENTO_PRODUTOS_ACTIVITY = 0;
-	private static final int REQUEST_CARRINHO_ACTIVITY                 = 1;
-
-	private static final String STATE_LISTA_PRODUTOS_PEDIDO = "listaProdutosPedido";
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -124,6 +109,9 @@ public class RestauranteCategoriaFragment extends Fragment {
 
 		lvCategorias.setOnItemClickListener(clickLvCategorias());
 
+		if (listaCategorias != null)
+			carregarCategorias(listaCategorias);
+
 		return view;
 	}
 
@@ -133,17 +121,7 @@ public class RestauranteCategoriaFragment extends Fragment {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				categoria = listaCategorias.get(position);
-
-				((RestauranteActivity) getActivity()).trocarCardapioFragment(categoria);
-
-//				Bundle extras = new Bundle();
-//				extras.putSerializable("cliente", cliente);
-//				extras.putSerializable("empresa", empresa);
-//				extras.putSerializable("categoria", categoria);
-//				extras.putSerializable("listaProdutosPedido", (ArrayList<ProdutoPedido>) listaProdutosPedido);
-//				Intent intent = new Intent(getActivity(), RestauranteProdutosActivity.class);
-//				intent.putExtras(extras);
-//				startActivityForResult(intent, REQUEST_ESTABELECIMENTO_PRODUTOS_ACTIVITY);
+				((RestauranteActivity) getActivity()).replaceFragment(categoria);
 			}
 		};
 
@@ -164,5 +142,4 @@ public class RestauranteCategoriaFragment extends Fragment {
 			lvCategorias.setVisibility(View.VISIBLE);
 		}
 	}
-
 }

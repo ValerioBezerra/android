@@ -678,9 +678,7 @@ public class ProdutosActivity extends ActionBarActivity {
 			listaProdutosPedido.add(produtoPedido);
 			
 			Bundle extras = new Bundle();
-			extras.putLong("idPedido", -1);
 			extras.putSerializable("listaProdutosPedido", (ArrayList<ProdutoPedido>) listaProdutosPedido);
-			extras.putBoolean("chamarCarrinhoActivity", false);
 			Intent data = new Intent();
 			data.putExtras(extras);
 			setResult(RESULT_OK, data);

@@ -78,7 +78,7 @@ public class RestauranteProdutosActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_restaurante_produtos);
+		setContentView(R.layout.fragment_restaurante_produtos);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		nivImagem 		  = (NetworkImageView) findViewById(R.id.nivImagem);
@@ -209,7 +209,7 @@ public class RestauranteProdutosActivity extends ActionBarActivity {
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.estabelecimento_categorias_produtos, menu);
+        menuInflater.inflate(R.menu.restaurante_carrinho, menu);
 
         MenuItem itemCarrinho = menu.findItem(R.id.carrinho);
         final View menuCarrinho = MenuItemCompat.getActionView(itemCarrinho);
@@ -237,13 +237,13 @@ public class RestauranteProdutosActivity extends ActionBarActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
 		
-		if (id == R.id.informacoes) {
-			Bundle extras = new Bundle();
-			extras.putSerializable("empresa", empresa);
-			Intent intent = new Intent(this, InformacoesActivity.class);
-			intent.putExtras(extras);
-			startActivity(intent);
-		}
+//		if (id == R.id.informacoes) {
+//			Bundle extras = new Bundle();
+//			extras.putSerializable("empresa", empresa);
+//			Intent intent = new Intent(this, InformacoesActivity.class);
+//			intent.putExtras(extras);
+//			startActivity(intent);
+//		}
 		
 		if (id == android.R.id.home) {
 			voltar();

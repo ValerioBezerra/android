@@ -220,7 +220,7 @@ public class RestauranteCategoriasActivity extends ActionBarActivity {
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.estabelecimento_categorias_produtos, menu);
+        menuInflater.inflate(R.menu.restaurante_carrinho, menu);
 
         MenuItem itemCarrinho = menu.findItem(R.id.carrinho);
         final View menuCarrinho = MenuItemCompat.getActionView(itemCarrinho);
@@ -245,13 +245,13 @@ public class RestauranteCategoriasActivity extends ActionBarActivity {
 			return (!voltar());
 		}
 		
-		if (id == R.id.informacoes) {
-			Bundle extras = new Bundle();
-			extras.putSerializable("empresa", empresa);
-			Intent intent = new Intent(this, InformacoesActivity.class);
-			intent.putExtras(extras);
-			startActivity(intent);
-		}
+//		if (id == R.id.informacoes) {
+//			Bundle extras = new Bundle();
+//			extras.putSerializable("empresa", empresa);
+//			Intent intent = new Intent(this, InformacoesActivity.class);
+//			intent.putExtras(extras);
+//			startActivity(intent);
+//		}
 		
 		return super.onOptionsItemSelected(item);
 	}
@@ -298,7 +298,7 @@ public class RestauranteCategoriasActivity extends ActionBarActivity {
 					Util.messagem(ex.getMessage(), handlerErros);
 				}
 			}
-    	});
+		    	});
     	
     	thread.start();
 	}
