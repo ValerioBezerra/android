@@ -26,15 +26,16 @@ public class ProdutoPedidoAdapter extends BaseAdapter {
 	private List<ProdutoPedido> listaProdutoPedidos;
 	
 	static class ProdutoPedidoViewHolder {
-		 TextView txtTamanho;
-		 TextView txtDescricao;
-		 TextView txtProdutosEscolhidos;
-		 TextView txtAdicionais;
-		 Button btnDiminuir;
-		 TextView txtQuantidade;
-		 Button btnAumentar;
-		 TextView txtValorUnitario;
-		 TextView txtValorTotal;
+		TextView txtTamanho;
+		TextView txtDescricao;
+		TextView txtProdutosEscolhidos;
+		TextView txtAdicionais;
+		TextView txtObservacao;
+		Button btnDiminuir;
+		TextView txtQuantidade;
+		Button btnAumentar;
+		TextView txtValorUnitario;
+		TextView txtValorTotal;
 	}		
 	
 	public ProdutoPedidoAdapter(Context context, List<ProdutoPedido> listaProdutoPedidos) {
@@ -75,6 +76,7 @@ public class ProdutoPedidoAdapter extends BaseAdapter {
 			produtoPedidoViewHolder.txtDescricao          = (TextView) view.findViewById(R.id.txtDescricao);
 			produtoPedidoViewHolder.txtProdutosEscolhidos = (TextView) view.findViewById(R.id.txtProdutosEscolhidos);
 			produtoPedidoViewHolder.txtAdicionais         = (TextView) view.findViewById(R.id.txtAdicionais);
+			produtoPedidoViewHolder.txtObservacao         = (TextView) view.findViewById(R.id.txtObservacao);
 			produtoPedidoViewHolder.btnDiminuir           = (Button) view.findViewById(R.id.btnDiminuir);
 			produtoPedidoViewHolder.txtQuantidade         = (TextView) view.findViewById(R.id.txtQuantidade);
 			produtoPedidoViewHolder.btnAumentar           = (Button) view.findViewById(R.id.btnAumentar);
@@ -157,14 +159,25 @@ public class ProdutoPedidoAdapter extends BaseAdapter {
 			String textoAdicionais      = "";
 			
 			for (Adicional adicional: produtoPedido.getListaAdicionais()) {
-				textoAdicionais += separador + "+ " + adicional.getDescricao() + " (R$ " + decimalFormat.format(adicional.getValor()).replace(".", ",") + ")";
+				textoAdicionais += separador + "+ " + adicional.getDescricao();
+
+				if (adicional.getValor() > 0)
+					textoAdicionais += " (R$ " + decimalFormat.format(adicional.getValor()).replace(".", ",") + ")";
+
 				separador        = "\n";
 				valorAdicionais += adicional.getValor();
 			}
 			
 			produtoPedidoViewHolder.txtAdicionais.setText(textoAdicionais);
 		}
-		
+
+		if (produtoPedido.getObservacao().trim().equals(""))
+			produtoPedidoViewHolder.txtObservacao.setVisibility(View.GONE);
+		else {
+			produtoPedidoViewHolder.txtObservacao.setVisibility(View.VISIBLE);
+			produtoPedidoViewHolder.txtObservacao.setText("Observação: " + produtoPedido.getObservacao());
+		}
+
 		produtoPedidoViewHolder.txtQuantidade.setText(String.valueOf(produtoPedido.getQuantidade()));
 		produtoPedidoViewHolder.txtValorUnitario.setText("R$ " + decimalFormat.format(produtoPedido.getPreco() + valorAdicionais).replace(".", ","));
 		produtoPedidoViewHolder.txtValorTotal.setText("R$ " + decimalFormat.format(produtoPedido.getQuantidade() * (produtoPedido.getPreco() + valorAdicionais)).replace(".", ","));

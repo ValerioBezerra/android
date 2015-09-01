@@ -64,19 +64,27 @@ public class DashboardActivity extends Activity {
 		cliente    = null;
 		clienteDao = new ClienteDao(this);
 		
-		progressoDialog   = new ProgressoDialog(this);
-		erroAvisoDialog   = new ErroAvisoDialog(this);
-		confirmacaoDialog = new ConfirmacaoDialog(this);
-
 		handlerErros = new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
 				progressoDialog.dismiss();
 				String mensagem = (String) msg.obj;
-				
+
+				erroAvisoDialog = new ErroAvisoDialog(DashboardActivity.this);
 		        erroAvisoDialog.setTitle("Erro");
 		        erroAvisoDialog.setMessage(mensagem);
 		        erroAvisoDialog.show();
+
+				Button btnOK = (Button) erroAvisoDialog.findViewById(R.id.btnOK);
+				btnOK.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						erroAvisoDialog.dismiss();
+						finish();
+					}
+				});
+
+//				finish();
 			}
 		};
 		
@@ -86,6 +94,7 @@ public class DashboardActivity extends Activity {
 				progressoDialog.dismiss();
 				
 				if (!configuracao.getMensagemInicial().trim().equals("")) {
+					erroAvisoDialog = new ErroAvisoDialog(DashboardActivity.this);
 					erroAvisoDialog.setTitle("Atenção");
 					erroAvisoDialog.setMessage(configuracao.getMensagemInicial());
 					Button btnOK = (Button) erroAvisoDialog.findViewById(R.id.btnOK);
@@ -102,6 +111,7 @@ public class DashboardActivity extends Activity {
 					erroAvisoDialog.show();
 				} else {
 					if (configuracao.getVersao() > versaoDispositivo) {
+						confirmacaoDialog = new ConfirmacaoDialog(DashboardActivity.this);
 						confirmacaoDialog.setTitle("Atenção");
 						confirmacaoDialog.setMessage("Sua versão do Encontre Delivery está desatualizada. Para continuar usando é necessário realizar uma atualização, " +
 								                     "deseja atualizar agora?");
@@ -239,14 +249,15 @@ public class DashboardActivity extends Activity {
 					} catch (Exception ex) {
 					}
 				}
-	    	});
+				    	});
 	    	thread.start();
 		}
     }
 	
     private void verificarVersao() {
     	registrarGCM();
-    	
+
+		progressoDialog = new ProgressoDialog(this);
 		progressoDialog.setMessage("Aguarde. Verificando versão...");
 		progressoDialog.show();
 		

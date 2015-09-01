@@ -42,11 +42,20 @@
         android:textColor="@color/black"
         android:textAppearance="?android:attr/textAppearanceSmall"  />
 
+    <TextView
+        android:id="@+id/txtObservacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtAdicionais"
+        android:text="Observação: Com limão"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"  />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/txtAdicionais"
+        android:layout_below="@id/txtObservacao"
         android:layout_marginTop="@dimen/layout_marginTop"
         android:orientation="horizontal" >
 
