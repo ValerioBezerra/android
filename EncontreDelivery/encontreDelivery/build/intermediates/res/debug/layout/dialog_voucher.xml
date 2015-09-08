@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:gravity="center_vertical"
+        android:text="@string/vouchers"
         android:textColor="@color/primary_500"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 

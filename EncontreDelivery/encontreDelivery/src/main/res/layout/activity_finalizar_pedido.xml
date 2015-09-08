@@ -104,6 +104,15 @@
         android:layout_marginTop="@dimen/layout_marginTop"
         android:orientation="vertical" >
 
+        <CheckBox
+            android:id="@+id/cbVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_marginTop"
+            android:text="@string/voucher"
+            android:button="@null"
+            android:drawableRight="?android:attr/listChoiceIndicatorMultiple" />
+
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"

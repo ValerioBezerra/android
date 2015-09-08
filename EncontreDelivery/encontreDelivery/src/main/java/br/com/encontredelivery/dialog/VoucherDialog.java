@@ -40,13 +40,7 @@ public class VoucherDialog extends Dialog {
         this.context       = context;
         this.listaVouchers = listaVouchers;
         
-        btnCancelar.setOnClickListener(new android.view.View.OnClickListener() {
-    		@Override
-    		public void onClick(View arg0) {
-    			dismiss();
-    		}
-    	});
-        
+
         carregarVouchers();
         setCancelable(false);
 	}

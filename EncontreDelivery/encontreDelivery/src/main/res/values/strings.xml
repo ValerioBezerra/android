@@ -133,6 +133,7 @@
     <string name="ultimos">Ultimos</string>
     <string name="valor_unitario">Valor unit.</string>
     <string name="voucher">Voucher</string>
+    <string name="vouchers">Vouchers</string>
 
     <!-- Facebook -->
     <string name="com_facebook_dialogloginactivity_ok_button">OK</string>

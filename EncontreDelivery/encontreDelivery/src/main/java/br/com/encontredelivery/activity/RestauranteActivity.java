@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ import java.util.List;
 
 import br.com.encontredelivery.R;
 import br.com.encontredelivery.adapter.RestauranteTabAdapter;
+import br.com.encontredelivery.dialog.ConfirmacaoDialog;
 import br.com.encontredelivery.dialog.ErroAvisoDialog;
 import br.com.encontredelivery.dialog.ProgressoDialog;
 import br.com.encontredelivery.listener.ListenerIcon;
@@ -59,10 +61,6 @@ public class RestauranteActivity extends AppCompatActivity {
 
 	public List<ProdutoPedido> getListaProdutosPedido() {
 		return listaProdutosPedido;
-	}
-
-	public void setListaProdutosPedido(List<ProdutoPedido> listaProdutosPedido) {
-		this.listaProdutosPedido = listaProdutosPedido;
 	}
 
 	@Override
@@ -193,7 +191,7 @@ public class RestauranteActivity extends AppCompatActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 			case android.R.id.home:
-				finish();
+				voltar();
 				break;
 		}
 		return super.onOptionsItemSelected(item);
@@ -277,10 +275,37 @@ public class RestauranteActivity extends AppCompatActivity {
 		restauranteTabAdapter.replaceFragment(categoria);
 	}
 
+	private boolean voltar() {
+		boolean voltar = true;
+
+		if (!listaProdutosPedido.isEmpty()) {
+			voltar = false;
+
+			ConfirmacaoDialog confirmacaoDialog = new ConfirmacaoDialog(this);
+			confirmacaoDialog.setTitle("Atenção");
+			confirmacaoDialog.setMessage("Há produto(s) adicionado(s) ao carrinho.\n" +
+										 "Realmente deseja sair?");
+
+			Button btnSim = (Button) confirmacaoDialog.findViewById(R.id.btnSim);
+			btnSim.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					finish();
+				}
+			});
+
+			confirmacaoDialog.show();
+		} else {
+			finish();
+		}
+
+		return voltar;
+	}
+
 	@Override
 	public void onBackPressed() {
 		if ((getSupportFragmentManager().getBackStackEntryCount() == 0) || (getSupportFragmentManager().getBackStackEntryCount() == 1)) {
-			finish();
+			voltar();
 		} else {
 			getSupportFragmentManager().popBackStack();
 		}

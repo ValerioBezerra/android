@@ -15,6 +15,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -44,6 +47,7 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 	private TextView txtComplementoReferencia;
 	private ListView lvFormasPagamento;
 	private LinearLayout llVazioFormasPagamento;
+	private CheckBox cbVoucher;
 	private TextView txtTotalProdutos;
 	private TextView txtDesconto;
 	private TextView txtTaxaEntrega;
@@ -68,6 +72,7 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 	private ErroAvisoDialog erroAvisoDialog;
 	
 	private Handler handlerErros;
+	private Handler handlerErrosVoucher;
 	private Handler handlerCarregarFormasPagamento;
 	private Handler handlerVerificarVoucher;
 	private Handler handlerEnviarPedido;
@@ -87,6 +92,7 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 		txtComplementoReferencia = (TextView) findViewById(R.id.txtComplementoReferencia);
 		lvFormasPagamento        = (ListView) findViewById(R.id.lvFormasPagamento);
 		llVazioFormasPagamento   = (LinearLayout) findViewById(R.id.llVazioFormasPagamento);
+		cbVoucher                = (CheckBox) findViewById(R.id.cbVoucher);
 		txtTotalProdutos   	     = (TextView) findViewById(R.id.txtTotalProdutos);
 		txtDesconto              = (TextView) findViewById(R.id.txtDesconto);
 		txtTaxaEntrega   		 = (TextView) findViewById(R.id.txtTaxaEntrega);		
@@ -115,6 +121,21 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 		        erroAvisoDialog.show();
 			}
 		};
+
+		handlerErrosVoucher = new Handler() {
+			@Override
+			public void handleMessage(Message msg) {
+				progressoDialog.dismiss();
+				String mensagem = (String) msg.obj;
+
+				cbVoucher.setChecked(false);
+
+				erroAvisoDialog.setTitle("Erro");
+				erroAvisoDialog.setMessage(mensagem);
+				erroAvisoDialog.show();
+			}
+		};
+
 		
 		handlerCarregarFormasPagamento = new Handler() {
 			@Override
@@ -191,8 +212,7 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 				abrirDialogVoucher();
 			}
 		};
-		
-		
+
 		txtNomeCliente.setText(cliente.getNome());
 		txtEnderecoNumero.setText(endereco.getLogradouro() + ", " + endereco.getNumero());
 		txtBairro.setText(endereco.getBairro().getNome());
@@ -203,25 +223,30 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 		} else {
 			txtComplementoReferencia.setText("Ref.: " + endereco.getComplemento());
 		}
+
+		cbVoucher.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if (isChecked) {
+					carregarVouchers();
+				} else {
+					desconto = 0;
+					calcularTotal();
+				}
+			}
+		});
 		
 		calcularTotal();
 		carregarFormasPagamento();
 	}
 	
 	@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.finalizar_pedido, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-	
-	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    	case android.R.id.home: finish();
 	        				        break;
-	    	case R.id.acao_voucher: carregarVouchers();
-	    							break;
+//	    	case R.id.acao_voucher: carregarVouchers();
+//	    							break;
 	    }
 	    return super.onOptionsItemSelected(item);
 	}
@@ -242,7 +267,7 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 						Util.messagem(ex.getMessage(), handlerErros);
 					}
 				}
-	    	});	
+				    	});
 			
 			thread.start();
 			
@@ -263,7 +288,7 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 					Util.messagem(ex.getMessage(), handlerErros);
 				}
 			}
-    	});
+		    	});
     	
     	thread.start();
 	}
@@ -333,17 +358,19 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 		        	listaVouchers = voucherRest.getVouchers(cliente.getId());
 		        	Util.messagem("", handlerCarregarVouchers);
 				} catch (Exception ex) {
-					Util.messagem(ex.getMessage(), handlerErros);
+					Util.messagem(ex.getMessage(), handlerErrosVoucher);
 				}
 			}
-    	});
+		    	});
     	
     	thread.start();
 	}
 	
 	private void abrirDialogVoucher() {
 		final VoucherDialog voucherDialog = new VoucherDialog(this, listaVouchers);
-		ListView lvVouchers         = (ListView) voucherDialog.findViewById(R.id.lvVouchers);
+
+		ListView lvVouchers = (ListView) voucherDialog.findViewById(R.id.lvVouchers);
+		Button btnCancelar  = (Button) voucherDialog.findViewById(R.id.btnCancelar);
 		lvVouchers.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -352,6 +379,16 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 				verificarVoucher(listaVouchers.get(position).getCodigo());
 			}
 		});
+
+		btnCancelar.setOnClickListener(new android.view.View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				voucherDialog.dismiss();
+				cbVoucher.setChecked(false);
+			}
+		});
+
+
 		voucherDialog.show();
 	}
 	
@@ -366,11 +403,11 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 		        	voucher = voucherRest.getVoucher(codigo, cliente.getId(), empresa.getId());
 		        	Util.messagem("", handlerVerificarVoucher);
 				} catch (Exception ex) {
-					Util.messagem(ex.getMessage(), handlerErros);
+					Util.messagem(ex.getMessage(), handlerErrosVoucher);
 				}
 			}
-    	});
-    	
+		    	});
+
     	thread.start();
 	}
 	
