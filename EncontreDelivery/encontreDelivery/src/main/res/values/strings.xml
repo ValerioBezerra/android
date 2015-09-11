@@ -98,7 +98,7 @@
     <string name="pedido_cancelado">O seu pedido foi cancelado automáticamente pois o restaurante não confirmou o recebimento. Ligue para o restaurante para informar sobre o ocorrido.</string>
     <string name="pedido_enviado_sucesso">Pedido enviado com sucesso!</string>
     <string name="pedido_minimo">Pedido mínimo</string>
-    <string name="pedido_recebido">O seu pedido foi recebido pelo restaurante. Para poder acompanhar o seu pedido clique em ACOMPANHAR PEDIDO ou em MEUS PEDIDOS na tela inicial.</string>
+    <string name="pedido_recebido">O seu pedido foi recebido pelo restaurante. Para visualizar detalhadamente e acompanhar o pedido clique em DETALHES DO PEDIDO.</string>
     <string name="pedir">Pedir</string>
     <string name="pesquisar">Pesquisar</string>
     <string name="preco_tamanho">O preço será definido pelo tamanho</string>
