@@ -81,7 +81,7 @@ public class NavigationDrawerActivity extends ActionBarActivity implements View.
 			if (resultCode == RESULT_OK) {
 				long idPedido =  data.getExtras().getLong("idPedido");
 				if (idPedido != -1) {
-					Intent intent = new Intent(this, ConfirmarPedidoActivity.class);
+					Intent intent = new Intent(this, PedidoEnviadoActivity.class);
 					intent.putExtras(data.getExtras());
 					startActivity(intent);
 					finish();

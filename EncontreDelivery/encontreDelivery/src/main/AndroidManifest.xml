@@ -89,12 +89,6 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".activity.RestauranteProdutosActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name=".activity.InformacoesActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/informacoes"
@@ -126,9 +120,9 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.ConfirmarPedidoActivity"
+            android:name=".activity.PedidoEnviadoActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/confirmar_pedido"
+            android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
         <activity
@@ -176,6 +170,7 @@
         </receiver>
 
         <service android:name=".service.GCMIntentService" />
+        <service android:name=".service.VerificarPedidoService" />
 
     </application>
 

@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/acao_refresh"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/atualizar"
+        yourapp:showAsAction="always"/>
+
+</menu><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/menu/refresh.xml -->

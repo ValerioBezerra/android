@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    
+    <item
+        android:id="@+id/acao_pesquisar"
+        android:icon="@drawable/ic_action_search"
+        android:title="@string/pesquisar"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/acao_filtros"
+        android:icon="@drawable/ic_fa_filter"
+        android:title="@string/filtros"
+        app:showAsAction="always" />
+    
+</menu><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/menu/restaurantes.xml -->

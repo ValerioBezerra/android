@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:color="@color/primary_700" android:state_pressed="true"/>
+	<item android:color="@color/primary_700" android:state_enabled="false"/>
+	<item android:color="@color/white"/>
+</selector><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/color/button_text_color_red_white.xml -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="@color/nav_drawer_item_icon_selected"
+        android:state_selected="true" />
+
+    <item android:color="@color/nav_drawer_item_icon_normal"/>
+</selector><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/color/nav_drawer_row_icon.xml -->

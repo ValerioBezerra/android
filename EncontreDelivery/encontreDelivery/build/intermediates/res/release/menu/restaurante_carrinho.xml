@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.android.MainActivity" >
+
+    <item
+        android:id="@+id/carrinho"
+        app:actionLayout="@layout/action_bar_notifitcation_icon"
+        android:icon="@drawable/ic_action_action_shopping_cart"
+        app:showAsAction="always"
+        android:title="@null"/>
+    
+</menu><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/menu/restaurante_carrinho.xml -->

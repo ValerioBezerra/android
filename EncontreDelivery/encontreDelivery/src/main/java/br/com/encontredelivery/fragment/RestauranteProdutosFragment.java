@@ -70,9 +70,7 @@ public class RestauranteProdutosFragment extends Fragment {
 	private ProgressoDialog progressoDialog;
 	private ErroAvisoDialog erroAvisoDialog;
 
-	public RestauranteProdutosFragment(Categoria categoria) {
-		this.categoria = categoria;
-	}
+	public RestauranteProdutosFragment() {}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -90,6 +88,9 @@ public class RestauranteProdutosFragment extends Fragment {
 		cliente       		= (Cliente) extras.getSerializable("cliente");
 		empresa             = (Empresa) extras.getSerializable("empresa");
 		listaProdutosPedido = (ArrayList<ProdutoPedido>) extras.getSerializable("listaProdutosPedido");
+
+		Bundle arguments = getArguments();
+		categoria        = (Categoria) arguments.getSerializable("categoria");
 
 		requestQueue = Volley.newRequestQueue(getActivity());
 		imageLoader  = new ImageLoader(requestQueue, new ImageLoader.ImageCache() {

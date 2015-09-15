@@ -43,7 +43,10 @@ public class CategoriaProdutoFragment extends Fragment {
 			fragment = restauranteCategoriasFragment;
 			restauranteCategoriasFragment.carregarCategorias(listaCategorias);
 		} else {
-			restauranteProdutosFragment = new RestauranteProdutosFragment(categoria);
+			Bundle bundle = new Bundle();
+			bundle.putSerializable("categoria", categoria);
+			restauranteProdutosFragment = new RestauranteProdutosFragment();
+			restauranteProdutosFragment.setArguments(bundle);
 			fragment                    = restauranteProdutosFragment;
 		}
 

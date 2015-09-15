@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="@dimen/padding" >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/nivImagem"
+        android:layout_width="@dimen/adapter_forma_pagamento_layout_width_NetworkImageView"
+        android:layout_height="@dimen/adapter_forma_pagamento_layout_height_NetworkImageView"
+        android:layout_marginRight="@dimen/layout_marginRight"
+        android:src="@null" />
+
+    <TextView
+        android:id="@+id/txtDescricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forma de Pagamento"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"  />
+
+</LinearLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_forma_pagamento.xml -->
