@@ -20,7 +20,7 @@ import br.com.encontredelivery.webservice.PedidoRest;
 
 public class VerificarPedidoService extends Service {
     public boolean recebido;
-    public long idPedido;
+    public long idPedidoService;
 
     private Handler handlerErros;
     private Handler handlerVerificarRecebimento;
@@ -49,7 +49,7 @@ public class VerificarPedidoService extends Service {
 
                 if (!recebido) {
                     Bundle extrasIntent = new Bundle();
-                    extrasIntent.putLong("idPedido", idPedido);
+                    extrasIntent.putLong("idPedido", idPedidoService);
                     Intent intent = new Intent(VerificarPedidoService.this, DetalhesPedidoActivity.class);
                     intent.putExtras(extrasIntent);
                     intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -57,7 +57,7 @@ public class VerificarPedidoService extends Service {
                     NotificationManager notificationManager = (NotificationManager) VerificarPedidoService.this.getSystemService(Context.NOTIFICATION_SERVICE);
                     PendingIntent contentIntent             = PendingIntent.getActivity(VerificarPedidoService.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
                     NotificationCompat.Builder notifBuilder = new NotificationCompat.Builder(VerificarPedidoService.this);
-                    String mensagem                         = "Seu pedido está demorando para ser aceito pelo restaurante? Clique aqui e ligue para saber o motivo.";
+                    String mensagem                         = getString(R.string.verificar_pedido_service);
 
                     notifBuilder.setContentIntent(contentIntent);
                     notifBuilder.setContentTitle(getString(R.string.app_name));
@@ -80,9 +80,7 @@ public class VerificarPedidoService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Bundle bundle = intent.getExtras();
         if (bundle != null) {
-            idPedido = bundle.getLong("idPedido");
-
-            VerificarPedidoThread verificarPedido = new VerificarPedidoThread();
+            VerificarPedidoThread verificarPedido = new VerificarPedidoThread(bundle.getLong("idPedido"));
             verificarPedido.start();
         } else {
             stopSelf();
@@ -99,7 +97,12 @@ public class VerificarPedidoService extends Service {
 
     private class VerificarPedidoThread extends Thread {
         private final int TEMPO_PEDIDO = 510;
-        public int tempo               = 0;
+        private int tempo              = 0;
+        private long idPedido;
+
+        VerificarPedidoThread(long idPedido) {
+            this.idPedido = idPedido;
+        }
 
         @Override
         public void run() {
@@ -111,10 +114,10 @@ public class VerificarPedidoService extends Service {
                 }
 
                 tempo++;
-                Log.i("VerificarPedidoThread", "Tempo: " + tempo);
             }
 
             try {
+                idPedidoService       = idPedido;
                 PedidoRest pedidoRest = new PedidoRest();
                 recebido = pedidoRest.verificarRecebimento(idPedido);
                 handlerVerificarRecebimento.sendMessage(new Message());

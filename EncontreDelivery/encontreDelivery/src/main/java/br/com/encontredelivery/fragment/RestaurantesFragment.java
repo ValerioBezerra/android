@@ -208,6 +208,7 @@ public class RestaurantesFragment extends Fragment implements OnQueryTextListene
         MenuItem menuItem = menu.findItem(R.id.acao_pesquisar);
         
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+		searchView.setQueryHint(getString(R.string.search_hint));
         searchView.setIconifiedByDefault(true);
         searchView.setOnQueryTextListener(this);
         searchView.setOnCloseListener(this);

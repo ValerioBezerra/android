@@ -15,7 +15,7 @@ public class PedidoEnviadoActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_pedido_enviando);
+		setContentView(R.layout.activity_pedido_enviado);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		Bundle extras = getIntent().getExtras();

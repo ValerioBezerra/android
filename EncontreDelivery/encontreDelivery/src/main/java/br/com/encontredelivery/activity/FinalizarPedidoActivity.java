@@ -191,12 +191,12 @@ public class FinalizarPedidoActivity extends ActionBarActivity {
 					try {
 						Bundle extras = new Bundle();
 						extras.putLong("idPedido", Long.parseLong((mensagem.substring(1, mensagem.length()))));
-//						extras.putSerializable("empresa", empresa);
 						Intent data = new Intent();
 						data.putExtras(extras);
 						setResult(RESULT_OK, data);
 						finish();						
 					} catch (NumberFormatException ex) {
+						erroAvisoDialog.setTitle("Erro");
 						erroAvisoDialog.setMessage(mensagem);
 				        erroAvisoDialog.show();
 				    }

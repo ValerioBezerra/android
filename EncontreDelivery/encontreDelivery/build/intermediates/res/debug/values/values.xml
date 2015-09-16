@@ -321,8 +321,9 @@
     <eat-comment/>
     <dimen name="activity_informacoes_layout_height_NetworkImageView">90dp</dimen>
     <dimen name="activity_informacoes_layout_width_NetworkImageView">90dp</dimen>
-    <dimen name="activity_produto_layout_height_NetworkImageView">140dp</dimen>
+    <dimen name="activity_produto_layout_height_NetworkImageView">180dp</dimen>
     <dimen name="activity_produto_layout_width">85dp</dimen>
+    <dimen name="activity_produto_layout_width_NetworkImageView">130dp</dimen>
     <dimen name="activity_produto_layout_width_height">40dp</dimen>
     <dimen name="adapter_empresa_layout_width_height_NetworkImageView">70dp</dimen>
     <dimen name="adapter_empresa_layout_width_height_imageView">15dp</dimen>
@@ -754,7 +755,7 @@
     <string name="pedido_cancelado">O seu pedido foi cancelado automáticamente pois o restaurante não confirmou o recebimento. Ligue para o restaurante para informar sobre o ocorrido.</string>
     <string name="pedido_enviado_sucesso">Pedido enviado com sucesso!</string>
     <string name="pedido_minimo">Pedido mínimo</string>
-    <string name="pedido_recebido">O seu pedido foi recebido pelo restaurante. Para visualizar detalhadamente e acompanhar o pedido clique em DETALHES DO PEDIDO.</string>
+    <string name="pedido_recebido">O seu pedido foi enviado ao restaurante. Informaremos assim que for recebido.\nPara visualizar detalhadamente e acompanhar o pedido clique em DETALHES DO PEDIDO.</string>
     <string name="pedidos">Pedidos</string>
     <string name="pedir">Pedir</string>
     <string name="pesquisar">Pesquisar</string>
@@ -770,6 +771,7 @@
     <string name="referencia_abreviada">Ref.:</string>
     <string name="restaurantes">Restaurantes</string>
     <string name="sabado">Sábado</string>
+    <string name="search_hint">Pesquisar...</string>
     <string name="segmentos">Segmentos</string>
     <string name="segunda">Segunda</string>
     <string name="selecione_seu_voucher">Selecione seu voucher</string>
@@ -798,6 +800,7 @@
     <string name="troco_para">Troco para:</string>
     <string name="ultimos">Ultimos</string>
     <string name="valor_unitario">Valor unit.</string>
+    <string name="verificar_pedido_service">Seu pedido está demorando para ser aceito pelo restaurante? Clique aqui e ligue para saber o motivo.</string>
     <string name="voucher">Voucher</string>
     <string name="vouchers">Vouchers</string>
     <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_strings.xml -->

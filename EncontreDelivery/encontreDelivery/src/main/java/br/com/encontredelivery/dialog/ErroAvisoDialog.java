@@ -36,9 +36,8 @@ public class ErroAvisoDialog extends Dialog {
         txtTitulo   = (TextView) findViewById(R.id.txtTitulo);    
         txtMensagem = (TextView) findViewById(R.id.txtMensagem);
     	btnOK = (Button) findViewById(R.id.btnOK);
-    	
-    	btnOK.setOnClickListener(clickOk);
 
+    	btnOK.setOnClickListener(clickOk);
         setCancelable(false);
 	}
 	

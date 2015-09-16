@@ -17,6 +17,7 @@
             android:id="@+id/nivImagem"
             android:layout_width="match_parent"
             android:layout_height="@dimen/activity_produto_layout_height_NetworkImageView"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="@dimen/layout_marginTop"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"

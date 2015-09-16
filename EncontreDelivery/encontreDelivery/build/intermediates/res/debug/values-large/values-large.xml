@@ -10,8 +10,9 @@
     <eat-comment/>
     <dimen name="activity_informacoes_layout_height_NetworkImageView">100dp</dimen>
     <dimen name="activity_informacoes_layout_width_NetworkImageView">100dp</dimen>
-    <dimen name="activity_produto_layout_height_NetworkImageView">170dp</dimen>
+    <dimen name="activity_produto_layout_height_NetworkImageView">210dp</dimen>
     <dimen name="activity_produto_layout_width">110dp</dimen>
+    <dimen name="activity_produto_layout_width_NetworkImageView">160dp</dimen>
     <dimen name="activity_produto_layout_width_height">44dp</dimen>
     <dimen name="adapter_empresa_layout_width_height_NetworkImageView">80dp</dimen>
     <dimen name="adapter_empresa_layout_width_height_imageView">15dp</dimen>
