@@ -25,4 +25,4 @@
     <item android:state_focused="true"                                                             android:drawable="@drawable/com_facebook_picker_list_focused" />
 
 </selector>
-<!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/facebookSDK/src/main/res/drawable/com_facebook_picker_list_selector.xml --><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/drawable/com_facebook_picker_list_selector.xml -->
+<!-- From: file:/home/valerio/github/android/EncontreDelivery/facebookSDK/src/main/res/drawable/com_facebook_picker_list_selector.xml --><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/drawable/com_facebook_picker_list_selector.xml -->

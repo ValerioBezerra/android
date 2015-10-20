@@ -65,8 +65,11 @@ public class NavigationDrawerActivity extends ActionBarActivity implements View.
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_navigation_drawer);
-		initialise();
-		initialiseAccountView(true);
+
+		if (savedInstanceState == null) {
+			initialise();
+			initialiseAccountView(true);
+		}
 	}
 
 	@Override
@@ -165,6 +168,7 @@ public class NavigationDrawerActivity extends ActionBarActivity implements View.
 
 		getSupportActionBar().setTitle(R.string.restaurantes);
 		flRestaurantes.setSelected(true);
+
 		getSupportFragmentManager().beginTransaction().add(R.id.content_frame, estabelecimentosFragment).commit();
 	}
 

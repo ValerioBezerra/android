@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\valerio\Documents\GitHub\android\EncontreDelivery\facebookSDK\src\main\assets"/></dataSet><dataSet config="release"><source path="C:\Users\valerio\Documents\GitHub\android\EncontreDelivery\facebookSDK\src\release\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/valerio/github/android/EncontreDelivery/facebookSDK/src/main/assets"/></dataSet><dataSet config="release"><source path="/home/valerio/github/android/EncontreDelivery/facebookSDK/src/release/assets"/></dataSet></merger>

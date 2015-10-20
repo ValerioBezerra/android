@@ -11,4 +11,4 @@
 	    android:top="@dimen/padding_top"  
 	    android:right="@dimen/padding_right"  
 	    android:bottom="@dimen/padding_bottom" /> 
-</shape><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/drawable/dialog_background.xml -->
+</shape><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/drawable/dialog_background.xml -->

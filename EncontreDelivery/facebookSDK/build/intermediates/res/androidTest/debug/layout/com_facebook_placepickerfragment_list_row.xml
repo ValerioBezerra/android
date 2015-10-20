@@ -88,4 +88,4 @@
             android:background="@drawable/com_facebook_picker_default_separator_color"
             />
 </RelativeLayout>
-<!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/facebookSDK/src/main/res/layout/com_facebook_placepickerfragment_list_row.xml --><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/facebookSDK/build/intermediates/bundles/debug/res/layout/com_facebook_placepickerfragment_list_row.xml -->
+<!-- From: file:/home/valerio/github/android/EncontreDelivery/facebookSDK/src/main/res/layout/com_facebook_placepickerfragment_list_row.xml --><!-- From: file:/home/valerio/github/android/EncontreDelivery/facebookSDK/build/intermediates/bundles/debug/res/layout/com_facebook_placepickerfragment_list_row.xml -->

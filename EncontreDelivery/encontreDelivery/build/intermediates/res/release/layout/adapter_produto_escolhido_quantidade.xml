@@ -58,4 +58,4 @@
         android:background="@android:color/transparent"
         android:src="@drawable/ic_action_about_dark" />
 
-</LinearLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_produto_escolhido_quantidade.xml -->
+</LinearLayout><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_produto_escolhido_quantidade.xml -->

@@ -87,4 +87,4 @@
         app:elevation="0dp"
         app:pressedTranslationZ="5dp"
         app:backgroundTint="@color/fab_ripple_red" />
-</android.support.design.widget.CoordinatorLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_meus_enderecos.xml -->
+</android.support.design.widget.CoordinatorLayout><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_meus_enderecos.xml -->

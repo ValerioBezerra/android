@@ -10,4 +10,4 @@
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-<!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/toolbar.xml -->
+<!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/layout/toolbar.xml -->

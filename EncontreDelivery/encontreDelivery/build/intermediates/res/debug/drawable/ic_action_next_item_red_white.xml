@@ -1,4 +1,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/ic_action_next_item_red" android:state_pressed="true"/>
     <item android:drawable="@drawable/ic_action_next_item_white"/>
-</selector><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/drawable/ic_action_next_item_red_white.xml -->
+</selector><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/drawable/ic_action_next_item_red_white.xml -->

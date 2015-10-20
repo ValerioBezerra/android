@@ -12,4 +12,4 @@
         android:textColor="@color/black"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-</RelativeLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_fone.xml -->
+</RelativeLayout><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/layout/adapter_fone.xml -->

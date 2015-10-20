@@ -74,4 +74,4 @@
         android:onClick="clickTelaInicial"
         android:text="@string/ir_tela_inicial"  />
 
-</LinearLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_pedido_enviado.xml -->
+</LinearLayout><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_pedido_enviado.xml -->

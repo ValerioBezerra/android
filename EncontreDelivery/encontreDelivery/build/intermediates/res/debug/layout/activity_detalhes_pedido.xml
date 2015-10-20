@@ -217,4 +217,4 @@
         app:pressedTranslationZ="0dp"
         app:backgroundTint="@color/fab_ripple_white" />
 
-</android.support.design.widget.CoordinatorLayout><!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_detalhes_pedido.xml -->
+</android.support.design.widget.CoordinatorLayout><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_detalhes_pedido.xml -->

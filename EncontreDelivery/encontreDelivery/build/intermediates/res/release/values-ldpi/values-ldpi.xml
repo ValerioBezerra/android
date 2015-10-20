@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/valerio/Documents/GitHub/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values-ldpi/values-ldpi.xml -->
+    <!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/res/values-ldpi/values-ldpi.xml -->
     <eat-comment/>
     <dimen name="com_facebook_picker_divider_width">1px</dimen>
 </resources>
