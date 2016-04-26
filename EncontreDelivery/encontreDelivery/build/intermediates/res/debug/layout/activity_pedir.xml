@@ -52,4 +52,4 @@
         android:onClick="clickMeusEnderecos"
         android:text="@string/meus_enderecos" />
 
-</LinearLayout><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_pedir.xml -->
+</LinearLayout><!-- From: file:/home/valerio/Github/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_pedir.xml -->

@@ -1,4 +1,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/ic_action_notification_event_available_white" android:state_pressed="true"/>
     <item android:drawable="@drawable/ic_action_notification_event_available_red"/>
-</selector><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/drawable/ic_action_notification_event_available_button_white_grey_red.xml -->
+</selector><!-- From: file:/home/valerio/Github/android/EncontreDelivery/encontreDelivery/src/main/res/drawable/ic_action_notification_event_available_button_white_grey_red.xml -->

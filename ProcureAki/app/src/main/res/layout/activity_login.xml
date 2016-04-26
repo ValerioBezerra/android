@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_login_padding_top"
+    android:paddingLeft="@dimen/activity_login_padding_left"
+    android:paddingRight="@dimen/activity_login_padding_right"
+    android:paddingBottom="@dimen/activity_login_padding_bottom"
+    tools:context=".MainActivity">
+
+    <com.facebook.widget.LoginButton
+        android:id="@+id/btnEntrarFacebook"
+        style="@style/button_blue"
+        android:drawableLeft="@drawable/com_facebook_inverse_icon"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button_blue" />
+
+    <TextView
+        android:id="@+id/txtAcessoSemLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/acesso_sem_login"
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

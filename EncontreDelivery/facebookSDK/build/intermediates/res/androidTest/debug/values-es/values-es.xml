@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/valerio/github/android/EncontreDelivery/facebookSDK/build/intermediates/bundles/debug/res/values-es/values-es.xml -->
+    <!-- From: file:/home/valerio/Github/android/EncontreDelivery/facebookSDK/build/intermediates/bundles/debug/res/values-es/values-es.xml -->
     <eat-comment/>
     <string name="com_facebook_choose_friends">Elige Amigos</string>
     <string name="com_facebook_dialogloginactivity_ok_button">Aceptar</string>

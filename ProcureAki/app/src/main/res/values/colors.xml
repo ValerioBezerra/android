@@ -1,0 +1,55 @@
+<resources>
+     <!-- Red -->
+    <color name="primary_100">#bbdefb</color>
+    <color name="primary_500">#2196f3</color>
+    <color name="primary_700">#1976d2</color>
+    <color name="secondary">#1976d2</color>
+
+    <!-- Blue -->
+    <color name="blue">#44619D</color>
+
+    <!-- Black and White-->
+    <color name="black_opacity">#804b4b4b</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+    <!-- Grey -->
+    <color name="grey_200">#eeeeee</color>
+    <color name="grey_300">#e0e0e0</color>
+    <color name="grey_400">#bdbdbd</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey">#e0e0e0</color>
+    <color name="grey_black">#696969</color>
+    <color name="grey_opacity">#80e0e0e0</color>
+    <color name="grey_black_opacity">#80696969</color>
+
+    <!-- Green -->
+    <color name="green">#ff069916</color>
+
+    <!-- Text -->
+    <color name="text_black_100">#000000</color>
+    <color name="text_black_text_87">#DE000000</color>
+    <color name="text_black_secondary_icon_54">#8A000000</color>
+    <color name="text_black_disable_hint_26">#42000000</color>
+    <color name="text_black_divider_12">#1F000000</color>
+
+    <color name="text_white_text_icons_100">#FFFFFF</color>
+    <color name="text_white_secondary_70">#B3FFFFFF</color>
+    <color name="text_white_disabled_hint_30">#4DFFFFFF</color>
+    <color name="text_white_divider_12">#1FFFFFFF</color>
+
+
+    <!-- NavigationDrawer -->
+    <color name="navigation_drawer_background">@color/white</color>
+    <color name="nav_drawer_item_icon_normal">@color/grey_600</color>
+    <color name="nav_drawer_item_icon_selected">@color/primary_500</color>
+    <color name="nav_drawer_item_text_selected">@color/primary_500</color>
+    <color name="nav_drawer_section_subheader">@color/text_black_secondary_icon_54</color>
+    <color name="nav_drawer_inset_foreground">#4000</color>
+
+    <color name="nav_drawer_row_item_unselected">@color/white</color>
+    <color name="nav_drawer_row_item_selected">@color/grey_200</color>
+    <color name="nav_drawer_row_item_pressed">@color/grey_400</color>
+
+    
+</resources>

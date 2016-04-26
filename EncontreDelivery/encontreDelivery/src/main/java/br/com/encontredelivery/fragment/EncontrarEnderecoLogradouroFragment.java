@@ -279,7 +279,7 @@ public class EncontrarEnderecoLogradouroFragment extends Fragment {
 						Util.messagem(ex.getMessage(), handlerErros);
 					}
 				}
-	    	});
+				    	});
 	    	
 	    	thread.start();
 		}
@@ -287,7 +287,7 @@ public class EncontrarEnderecoLogradouroFragment extends Fragment {
 	
 	private void carregarBairros(final boolean webservice, final int idCidade) {
 		listaBairros = new ArrayList<Bairro>();
-		
+
 		Bairro bairro = new Bairro();
 		bairro.setNome("Bairro");
 		listaBairros.add(bairro);
@@ -311,7 +311,7 @@ public class EncontrarEnderecoLogradouroFragment extends Fragment {
 						Util.messagem(ex.getMessage(), handlerErros);
 					}
 				}
-	    	});
+				    	});
 	    	
 	    	thread.start();
 		}

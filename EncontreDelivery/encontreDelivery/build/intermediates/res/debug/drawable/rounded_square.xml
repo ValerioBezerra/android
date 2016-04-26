@@ -6,4 +6,4 @@
     <corners android:radius="2dp" />
     <solid android:color="@color/primary_700" />
     <stroke android:color="@color/black_opacity" android:width="2dp"/>
-</shape><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/drawable/rounded_square.xml -->
+</shape><!-- From: file:/home/valerio/Github/android/EncontreDelivery/encontreDelivery/src/main/res/drawable/rounded_square.xml -->

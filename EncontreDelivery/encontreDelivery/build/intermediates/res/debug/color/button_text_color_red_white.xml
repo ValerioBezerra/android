@@ -2,4 +2,4 @@
 	<item android:color="@color/primary_700" android:state_pressed="true"/>
 	<item android:color="@color/primary_700" android:state_enabled="false"/>
 	<item android:color="@color/white"/>
-</selector><!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/color/button_text_color_red_white.xml -->
+</selector><!-- From: file:/home/valerio/Github/android/EncontreDelivery/encontreDelivery/src/main/res/color/button_text_color_red_white.xml -->

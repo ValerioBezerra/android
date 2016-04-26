@@ -384,17 +384,17 @@ ADDED from AndroidManifest.xml:144:9
 	android:name
 		ADDED from AndroidManifest.xml:145:13
 activity#com.facebook.LoginActivity
-ADDED from AndroidManifest.xml:150:9
+ADDED from AndroidManifest.xml:151:9
 	android:name
-		ADDED from AndroidManifest.xml:150:19
+		ADDED from AndroidManifest.xml:151:19
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from AndroidManifest.xml:152:9
+ADDED from AndroidManifest.xml:153:9
 	android:value
+		ADDED from AndroidManifest.xml:155:13
+	android:name
 		ADDED from AndroidManifest.xml:154:13
-	android:name
-		ADDED from AndroidManifest.xml:153:13
 meta-data#com.google.android.gms.version
-ADDED from AndroidManifest.xml:155:9
+ADDED from AndroidManifest.xml:156:9
 MERGED from com.google.android.gms:play-services-base:7.5.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.5.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.5.0:21:9
@@ -423,37 +423,37 @@ MERGED from com.google.android.gms:play-services-base:7.5.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.5.0:21:9
 MERGED from com.google.android.gms:play-services-base:7.5.0:21:9
 	android:value
+		ADDED from AndroidManifest.xml:158:13
+	android:name
 		ADDED from AndroidManifest.xml:157:13
-	android:name
-		ADDED from AndroidManifest.xml:156:13
 receiver#br.com.encontredelivery.service.GCMBroadcastReceiver
-ADDED from AndroidManifest.xml:159:9
+ADDED from AndroidManifest.xml:160:9
 	android:permission
+		ADDED from AndroidManifest.xml:162:13
+	android:name
 		ADDED from AndroidManifest.xml:161:13
-	android:name
-		ADDED from AndroidManifest.xml:160:13
 intent-filter#br.com.encontredelivery+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
-ADDED from AndroidManifest.xml:162:13
+ADDED from AndroidManifest.xml:163:13
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from AndroidManifest.xml:163:17
-	android:name
-		ADDED from AndroidManifest.xml:163:25
-action#com.google.android.c2dm.intent.REGISTRATION
 ADDED from AndroidManifest.xml:164:17
 	android:name
 		ADDED from AndroidManifest.xml:164:25
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from AndroidManifest.xml:165:17
+	android:name
+		ADDED from AndroidManifest.xml:165:25
 category#br.com.encontredelivery
-ADDED from AndroidManifest.xml:166:17
+ADDED from AndroidManifest.xml:167:17
 	android:name
-		ADDED from AndroidManifest.xml:166:27
+		ADDED from AndroidManifest.xml:167:27
 service#br.com.encontredelivery.service.GCMIntentService
-ADDED from AndroidManifest.xml:170:9
-	android:name
-		ADDED from AndroidManifest.xml:170:18
-service#br.com.encontredelivery.service.VerificarPedidoService
 ADDED from AndroidManifest.xml:171:9
 	android:name
 		ADDED from AndroidManifest.xml:171:18
+service#br.com.encontredelivery.service.VerificarPedidoService
+ADDED from AndroidManifest.xml:172:9
+	android:name
+		ADDED from AndroidManifest.xml:172:18
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from EncontreDelivery:volley:unspecified:7:5

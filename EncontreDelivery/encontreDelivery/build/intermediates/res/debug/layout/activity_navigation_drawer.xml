@@ -23,4 +23,4 @@
     <include layout="@layout/fragment_navigation_drawer"/>
 
 </android.support.v4.widget.DrawerLayout>
-<!-- From: file:/home/valerio/github/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_navigation_drawer.xml -->
+<!-- From: file:/home/valerio/Github/android/EncontreDelivery/encontreDelivery/src/main/res/layout/activity_navigation_drawer.xml -->
