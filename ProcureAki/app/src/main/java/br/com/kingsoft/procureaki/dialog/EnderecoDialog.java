@@ -14,6 +14,8 @@ import android.widget.ListView;
 import java.util.List;
 
 import br.com.kingsoft.procureaki.R;
+import br.com.kingsoft.procureaki.activity.EncontreMeuEnderecoActivity;
+import br.com.kingsoft.procureaki.activity.SegmentosActivity;
 import br.com.kingsoft.procureaki.adapter.EnderecoAdapter;
 import br.com.kingsoft.procureaki.model.Endereco;
 import br.com.kingsoft.procureaki.util.Retorno;
@@ -56,17 +58,15 @@ public class EnderecoDialog extends Dialog {
 			btnSim.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View arg0) {
-					confirmacaoEnderecoDialog.dismiss();
+				confirmacaoEnderecoDialog.dismiss();
 
-					Bundle extras = new Bundle();
-					extras.putSerializable("endereco", endereco);
-//					Intent intent = new Intent(context, NavigationDrawerActivity.class);
-//					intent.putExtras(extras);
-//					context.startActivity(intent);
-//
-//					if (context instanceof PedirActivity) {
-//						((PedirActivity) context).finish();
-//					}
+				Bundle extras = new Bundle();
+				extras.putString("latitude", endereco.getLatitude());
+				extras.putString("longitude", endereco.getLongitude());
+				Intent intent = new Intent(context, SegmentosActivity.class);
+				intent.putExtras(extras);
+				context.startActivity(intent);
+				((EncontreMeuEnderecoActivity) context).iniciarComponentes();
 				}
 			});
 			

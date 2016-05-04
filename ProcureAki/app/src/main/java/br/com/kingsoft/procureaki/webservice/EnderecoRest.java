@@ -72,7 +72,9 @@ public class EnderecoRest extends GenericRest{
 				endereco.setId(jsonObject.getInt("glo_id_end"));
 				endereco.setCep(jsonObject.getString("glo_cep_end"));
 				endereco.setLogradouro(jsonObject.getString("glo_logradouro_end"));
-				
+				endereco.setLatitude(jsonObject.getString("glo_latitude_end"));
+				endereco.setLongitude(jsonObject.getString("glo_longitude_end"));
+
 				Cidade cidade = new Cidade();
 				cidade.setId(jsonObject.getInt("glo_id_cid"));
 				cidade.setNome(jsonObject.getString("glo_nome_cid"));
@@ -108,7 +110,9 @@ public class EnderecoRest extends GenericRest{
 				endereco.setId(jsonObject.getInt("glo_id_end"));
 				endereco.setCep(jsonObject.getString("glo_cep_end"));
 				endereco.setLogradouro(jsonObject.getString("glo_logradouro_end"));
-				
+				endereco.setLatitude(jsonObject.getString("glo_latitude_end"));
+				endereco.setLongitude(jsonObject.getString("glo_longitude_end"));
+
 				Cidade cidade = new Cidade();
 				cidade.setId(jsonObject.getInt("glo_id_cid"));
 				cidade.setNome(jsonObject.getString("glo_nome_cid"));
@@ -128,47 +132,47 @@ public class EnderecoRest extends GenericRest{
 		}
 	}	
 	
-	public List<Endereco> getEnderecosCliente(long idCliente) throws Exception {
-		List<Endereco> listaEnderecos = new ArrayList<Endereco>();
-
-		String[] resposta = new WebServiceClient().get(getUrlWebService() + "retornar_enderecos_cliente/" + CHAVE_MD5 + "/" + idCliente);
-
-		if (resposta[0].equals("200")) {
-			JSONArray jsonArray = new JSONObject(resposta[1]).getJSONArray("enderecos");
-			
-			for(int i = 0; i < jsonArray.length(); i++){
-				JSONObject jsonObject = jsonArray.getJSONObject(i);
-				
-				Endereco endereco = new Endereco();
-				endereco.setId(jsonObject.getInt("glo_id_end"));
-				endereco.setCep(jsonObject.getString("glo_cep_end"));
-				endereco.setLogradouro(jsonObject.getString("glo_logradouro_end"));				
-				endereco.setNumero(jsonObject.getString("dlv_numero_ecl"));
-				endereco.setComplemento(jsonObject.getString("dlv_complemento_ecl"));
-				endereco.setCadastrado(true);
-				endereco.setIdEnderecoCliente(jsonObject.getLong("dlv_id_ecl"));
-				
-				Cidade cidade = new Cidade();
-				cidade.setId(jsonObject.getInt("glo_id_cid"));
-				cidade.setNome(jsonObject.getString("glo_nome_cid"));
-				cidade.setUf(jsonObject.getString("glo_uf_est"));
-				
-				Bairro bairro = new Bairro();
-				bairro.setId(jsonObject.getInt("glo_id_bai"));
-				bairro.setNome(jsonObject.getString("glo_nome_bai"));
-				bairro.setCidade(cidade);
-				
-				endereco.setBairro(bairro);
-
-				listaEnderecos.add(endereco);
-			}
-				
-		} else {
-			throw new WebServiceException(resposta[1]);
-		}
-
-		return listaEnderecos;
-	}
+//	public List<Endereco> getEnderecosCliente(long idCliente) throws Exception {
+//		List<Endereco> listaEnderecos = new ArrayList<Endereco>();
+//
+//		String[] resposta = new WebServiceClient().get(getUrlWebService() + "retornar_enderecos_cliente/" + CHAVE_MD5 + "/" + idCliente);
+//
+//		if (resposta[0].equals("200")) {
+//			JSONArray jsonArray = new JSONObject(resposta[1]).getJSONArray("enderecos");
+//
+//			for(int i = 0; i < jsonArray.length(); i++){
+//				JSONObject jsonObject = jsonArray.getJSONObject(i);
+//
+//				Endereco endereco = new Endereco();
+//				endereco.setId(jsonObject.getInt("glo_id_end"));
+//				endereco.setCep(jsonObject.getString("glo_cep_end"));
+//				endereco.setLogradouro(jsonObject.getString("glo_logradouro_end"));
+//				endereco.setNumero(jsonObject.getString("dlv_numero_ecl"));
+//				endereco.setComplemento(jsonObject.getString("dlv_complemento_ecl"));
+//				endereco.setCadastrado(true);
+//				endereco.setIdEnderecoCliente(jsonObject.getLong("dlv_id_ecl"));
+//
+//				Cidade cidade = new Cidade();
+//				cidade.setId(jsonObject.getInt("glo_id_cid"));
+//				cidade.setNome(jsonObject.getString("glo_nome_cid"));
+//				cidade.setUf(jsonObject.getString("glo_uf_est"));
+//
+//				Bairro bairro = new Bairro();
+//				bairro.setId(jsonObject.getInt("glo_id_bai"));
+//				bairro.setNome(jsonObject.getString("glo_nome_bai"));
+//				bairro.setCidade(cidade);
+//
+//				endereco.setBairro(bairro);
+//
+//				listaEnderecos.add(endereco);
+//			}
+//
+//		} else {
+//			throw new WebServiceException(resposta[1]);
+//		}
+//
+//		return listaEnderecos;
+//	}
 	
 //	public String cadastrarEnderecoCliente(Cliente cliente, Endereco endereco) throws Exception {
 //		JSONObject json = new JSONObject();

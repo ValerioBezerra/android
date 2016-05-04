@@ -2,10 +2,14 @@ package br.com.kingsoft.procureaki.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,11 +20,18 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.kingsoft.procureaki.R;
 import br.com.kingsoft.procureaki.adapter.SpinnerArrayAdapter;
+import br.com.kingsoft.procureaki.dialog.ConfirmacaoDialog;
 import br.com.kingsoft.procureaki.dialog.ConfirmacaoEnderecoDialog;
 import br.com.kingsoft.procureaki.dialog.EnderecoDialog;
 import br.com.kingsoft.procureaki.dialog.ErroAvisoDialog;
@@ -34,7 +45,7 @@ import br.com.kingsoft.procureaki.webservice.BairroRest;
 import br.com.kingsoft.procureaki.webservice.CidadeRest;
 import br.com.kingsoft.procureaki.webservice.EnderecoRest;
 
-public class EncontreMeuEnderecoActivity extends AppCompatActivity {
+public class EncontreMeuEnderecoActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     private RadioGroup rgOpcao;
     private RadioButton rbEndereco;
@@ -66,11 +77,22 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity {
     private EnderecoDialog enderecoDialog;
     private ConfirmacaoEnderecoDialog confirmacaoEnderecoDialog;
 
+    private LocationManager locationManager;
+    private Location location;
+
+    private GoogleApiClient mGoogleApiClient;
+    private LocationRequest mLocationRequest;
+
+    private static final int REQUEST_LOCALIZE_GPS_ACTIVITY = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_encontre_meu_endereco);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        location        = null;
+        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         rgOpcao       = (RadioGroup) findViewById(R.id.rgOpcao);
         rbEndereco    = (RadioButton) findViewById(R.id.rbEndereco);
@@ -168,29 +190,31 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View arg0) {
                             confirmacaoEnderecoDialog.dismiss();
-//                            Bundle extras = new Bundle();
-//                            extras.putSerializable("cliente", (Cliente) getActivity().getIntent().getExtras().getSerializable("cliente"));
-//                            extras.putSerializable("endereco", endereco);
-//
-//                            if (getActivity().getIntent().getExtras().getBoolean("adicionar")) {
-//                                extras.putBoolean("adicionar", true);
-//                                Intent intent = new Intent(getActivity(), ConfirmarEnderecoActivity.class);
-//                                intent.putExtras(extras);
-//                                startActivityForResult(intent, REQUEST_CONFIRMAR_ENDERECO_ACTIVITY);
-//                            } else {
-//                                Intent intent = new Intent(getActivity(), NavigationDrawerActivity.class);
-//                                intent.putExtras(extras);
-//                                getActivity().startActivity(intent);
-//                                getActivity().setResult(Activity.RESULT_OK);
-//                                getActivity().finish();
-//                            }
+                            Bundle extras = new Bundle();
+                            extras.putString("latitude", endereco.getLatitude());
+                            extras.putString("longitude", endereco.getLongitude());
+                            Intent intent = new Intent(EncontreMeuEnderecoActivity.this, SegmentosActivity.class);
+                            intent.putExtras(extras);
+                            startActivity(intent);
+                            iniciarComponentes();
                         }
                     });
                 }
             }
         };
 
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addApi(LocationServices.API)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .build();
 
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(10000);
+        mLocationRequest.setFastestInterval(5000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
+        ativarGPS();
     }
 
     @Override
@@ -200,6 +224,53 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mGoogleApiClient.isConnected()) {
+            startLocationUpdate();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+        location = getLocation();
+        startLocationUpdate();
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        Log.d("result:", "connection has been suspended");
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+        Log.d("result:", "not connected with GoogleApiClient");
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        this.location = location;
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_LOCALIZE_GPS_ACTIVITY) {
+            ativarGPS();
+        }
     }
 
     private RadioGroup.OnCheckedChangeListener onCheckChangeOpcao() {
@@ -267,12 +338,12 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity {
     }
 
 
-    private void iniciarComponentes() {
+    public void iniciarComponentes() {
         rbEndereco.setChecked(true);
         rlEndereco.setVisibility(View.VISIBLE);
+        edtLogradouro.setText("");
         rlCep.setVisibility(View.GONE);
-        carregarCidades(true);
-        carregarBairros(false, 0);
+        edtCEP.setText("");
     }
 
     private void carregarCidades(final boolean webservice) {
@@ -426,6 +497,60 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity {
         });
 
         thread.start();
+    }
+
+    private Location getLocation() {
+        return LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+    }
+
+    private void startLocationUpdate() {
+        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+    }
+
+    private void ativarGPS() {
+        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            final ConfirmacaoDialog confirmacaoDialog = new ConfirmacaoDialog(this);
+            confirmacaoDialog.setTitle("Aviso");
+            confirmacaoDialog.setMessage("Localização desativada. Para podermos te encontrar é preciso ativar a localização, " +
+                    "deseja ativá-la?");
+            confirmacaoDialog.show();
+
+            Button btnSim = (Button) confirmacaoDialog.findViewById(R.id.btnSim);
+
+            btnSim.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View arg0) {
+                    confirmacaoDialog.dismiss();
+                    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivityForResult(intent, REQUEST_LOCALIZE_GPS_ACTIVITY);
+                }
+            });
+        } else {
+            progressoDialog = new ProgressoDialog(this);
+            progressoDialog.setMessage("Aguarde. Carregando sua localização...");
+            progressoDialog.show();
+
+            new Handler().postDelayed(new Runnable(){
+                public void run() {
+                    location = getLocation();
+                    progressoDialog.dismiss();
+
+                    carregarCidades(true);
+                    carregarBairros(false, 0);
+
+                    if (location != null) {
+                        Bundle extras = new Bundle();
+                        extras.putString("latitude", String.valueOf(location.getLatitude()));
+                        extras.putString("longitude", String.valueOf(location.getLongitude()));
+                        Intent intent = new Intent(EncontreMeuEnderecoActivity.this, SegmentosActivity.class);
+                        intent.putExtras(extras);
+                        startActivity(intent);
+                        iniciarComponentes();
+                    }
+                }
+            }, 1000);
+        }
+
     }
 
 

@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="@dimen/activity_encontrar_meu_endereco_padding_top"
+    android:paddingLeft="@dimen/activity_encontrar_meu_endereco_padding_left"
+    android:paddingRight="@dimen/activity_encontrar_meu_endereco_padding_right"
     android:paddingBottom="@dimen/activity_encontrar_meu_endereco_padding_bottom"
     tools:context=".EncontreMeuEnderecoActivity">
 

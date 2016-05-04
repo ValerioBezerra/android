@@ -15,8 +15,10 @@
     <dimen name="activity_login_padding_right">30dp</dimen>
     <dimen name="activity_login_padding_bottom">50dp</dimen>
 
-    <dimen name="activity_encontrar_meu_endereco_padding_top">230dp</dimen>
     <dimen name="activity_encontrar_meu_endereco_margin_top_rlEndereco_layout">20dp</dimen>
     <dimen name="activity_encontrar_meu_endereco_margin_top_rlCep_layout">80dp</dimen>
+    <dimen name="activity_encontrar_meu_endereco_padding_top">200dp</dimen>
+    <dimen name="activity_encontrar_meu_endereco_padding_left">30dp</dimen>
+    <dimen name="activity_encontrar_meu_endereco_padding_right">30dp</dimen>
     <dimen name="activity_encontrar_meu_endereco_padding_bottom">20dp</dimen>
 </resources>

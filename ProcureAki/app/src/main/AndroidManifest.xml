@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.kingsoft.procureaki" >
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,8 +31,25 @@
             android:name=".activity.EncontreMeuEnderecoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/encontrar_meu_endereco"
-            android:screenOrientation="portrait"
-            >
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.SegmentosActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/segmentos"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.TiposActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/tipos"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.EmpresasActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/empresas"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

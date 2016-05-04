@@ -10,6 +10,8 @@ public class Endereco implements Serializable {
 	private Bairro bairro;
 	private String numero;
 	private String complemento;
+	private String latitude;
+	private String longitude;
 	private boolean cadastrado;
 	private long idEnderecoCliente;
 	
@@ -22,6 +24,8 @@ public class Endereco implements Serializable {
 		this.complemento       = "";
 		this.cadastrado        = false;
 		this.idEnderecoCliente = 0;
+		this.latitude          = "";
+		this.longitude         = "";
 	}
 
 	public int getId() {
@@ -88,4 +92,19 @@ public class Endereco implements Serializable {
 		this.idEnderecoCliente = idEnderecoCliente;
 	}
 
+	public String getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
+	}
+
+	public String getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
+	}
 }

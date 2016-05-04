@@ -4,13 +4,17 @@
     <string name="cancelar">Cancelar</string>
     <string name="cep">CEP</string>
     <string name="confirmar_endereco">Confirmar este endereço?</string>
+    <string name="empresas">Empresas</string>
     <string name="encontrar">Encontrar</string>
     <string name="encontrar_meu_endereco">Encontrar meu endereço</string>
     <string name="endereco">Endereço</string>
     <string name="logradouro_exemplos">Logradouro(rua, avenida, etc.)</string>
     <string name="nao">Não</string>
+    <string name="nenhum_estabelecimento_encontrado">Nenhum estabelecimento encontrado.</string>
     <string name="ok">OK</string>
+    <string name="segmentos">Segmentos</string>
     <string name="sim">Sim</string>
+    <string name="tipos">Tipos</string>
 
 
     <!-- Facebook -->
