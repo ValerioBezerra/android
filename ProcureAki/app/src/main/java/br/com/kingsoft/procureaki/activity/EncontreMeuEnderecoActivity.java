@@ -57,6 +57,7 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity implements Go
     private RelativeLayout rlCep;
     private EditText edtCEP;
     private Button btnEncontrar;
+    private Button btnLocalizarPeloGps;
 
     private Cidade cidade;
     private List<Cidade> listaCidades;
@@ -64,7 +65,6 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity implements Go
     private List<Bairro> listaBairros;
     private Endereco endereco;
     private List<Endereco> listaEnderecos;
-
 
     private Handler handlerErros;
     private Handler handlerCarregarCidades;
@@ -89,21 +89,21 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity implements Go
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_encontre_meu_endereco);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         location        = null;
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
-        rgOpcao       = (RadioGroup) findViewById(R.id.rgOpcao);
-        rbEndereco    = (RadioButton) findViewById(R.id.rbEndereco);
-        rbCep         = (RadioButton) findViewById(R.id.rbCep);
-        rlEndereco    = (RelativeLayout) findViewById(R.id.rlEndereco);
-        spnCidades    = (Spinner) findViewById(R.id.spnCidades);
-        spnBairros    = (Spinner) findViewById(R.id.spnBairros);
-        edtLogradouro = (EditText) findViewById(R.id.edtLogradouro);
-        rlCep         = (RelativeLayout) findViewById(R.id.rlCep);
-        edtCEP        = (EditText) findViewById(R.id.edtCEP);
-        btnEncontrar  = (Button) findViewById(R.id.btnEncontrar);
+        rgOpcao              = (RadioGroup) findViewById(R.id.rgOpcao);
+        rbEndereco           = (RadioButton) findViewById(R.id.rbEndereco);
+        rbCep                = (RadioButton) findViewById(R.id.rbCep);
+        rlEndereco           = (RelativeLayout) findViewById(R.id.rlEndereco);
+        spnCidades           = (Spinner) findViewById(R.id.spnCidades);
+        spnBairros           = (Spinner) findViewById(R.id.spnBairros);
+        edtLogradouro        = (EditText) findViewById(R.id.edtLogradouro);
+        rlCep                = (RelativeLayout) findViewById(R.id.rlCep);
+        edtCEP               = (EditText) findViewById(R.id.edtCEP);
+        btnEncontrar         = (Button) findViewById(R.id.btnEncontrar);
+        btnLocalizarPeloGps  = (Button) findViewById(R.id.btnLocalizarPeloGps);
 
         iniciarComponentes();
 
@@ -111,6 +111,7 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity implements Go
         spnCidades.setOnItemSelectedListener(onItemSelectedCidade());
         spnBairros.setOnItemSelectedListener(onItemSelectedBairro());
         btnEncontrar.setOnClickListener(onClickEncontrar());
+        btnLocalizarPeloGps.setOnClickListener(onClickLocalizarPeloGps());
 
 
 
@@ -214,16 +215,9 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity implements Go
         mLocationRequest.setFastestInterval(5000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
-        ativarGPS();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home: finish();
-                break;
-        }
-        return super.onOptionsItemSelected(item);
+        carregarCidades(true);
+        carregarBairros(false, 0);
+        iniciarComponentes();
     }
 
     @Override
@@ -337,6 +331,14 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity implements Go
         };
     }
 
+    private View.OnClickListener onClickLocalizarPeloGps() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                ativarGPS();
+            }
+        };
+    }
 
     public void iniciarComponentes() {
         rbEndereco.setChecked(true);
@@ -534,9 +536,6 @@ public class EncontreMeuEnderecoActivity extends AppCompatActivity implements Go
                 public void run() {
                     location = getLocation();
                     progressoDialog.dismiss();
-
-                    carregarCidades(true);
-                    carregarBairros(false, 0);
 
                     if (location != null) {
                         Bundle extras = new Bundle();

@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/acao_eventos"
+        android:icon="@drawable/paki_iconeventos"
+        android:title="Eventos"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/acao_seguir"
+        android:icon="@drawable/paki_iconseguir"
+        android:title="Seguir"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/acao_mensagem"
+        android:icon="@drawable/paki_iconmensagens"
+        android:title="Mensagens"
+        app:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/acao_configuracao"
+        android:icon="@drawable/paki_iconconfig"
+        android:title="Configuração"
+        app:showAsAction="always" />
+    
+
+</menu>

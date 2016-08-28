@@ -2,95 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.5.0/jars/classes.jar"
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-3f5f2ba70b9364148550f5401a007f3cd639bcf4.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-6b4447549322480caba118ad48635e6d9217c675.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/libs/internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-b97514c046469e13811cb812e385ce56aeef4c91.jar" />
-    </item>
-    <item
-        jar="/home/valerio/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/gson-2.3-cdd3cd161f30ac18a988a97e7228681f5bc3683a.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-7c7380fa7f8b7a617ece7fa4f2b102023c6280c1.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-fd3935a0b344cbd9acf95c7db1e25f9dfa04e719.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-8ceb5cdfa67f9768a1f1200d67c2dae26d694d03.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-179e63b84119cd395abf7293f040f1fb81aa3b0a.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-a9408d439888befd128679b22c9cfad00ba40fa1.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="64c3fc842270ea9a1de8988251ce0bd2e87d5bd6">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-7d9080a0ed003ede7ab80b98511b9768b4ab235c.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-d5d56d3e8ed4e45cd1e2e4735f8026975df21f74.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/jars/libs/bolts-android-1.1.2.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="91c20388c9a45f62b5ed8fe0502bb76ff6251fc7">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/bolts-android-1.1.2-ecf38f024db8aa72bc930b57e524bed79a38d3b5.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-cf258d0d1865b25c4660997c4f962dd68a5c54be.jar" />
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-52cdae44deadd1a9d5ec3724627b8b0c349e2212.jar" />
     </item>
     <item
         jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/jars/classes.jar"
@@ -100,11 +16,67 @@
         <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-21deada70d64f10719cea19d518d1cb368f80672.jar" />
     </item>
     <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-2e4c8f51a0be2fd247071d610b9c95d464d92633.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-cec96ae4d4eda661ea977b1e76d38058d6ecedfc.jar" />
+    </item>
+    <item
         jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
         <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-78eb84c2c23c69f71f84aba599919e42004d5446.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-b97514c046469e13811cb812e385ce56aeef4c91.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-d5d56d3e8ed4e45cd1e2e4735f8026975df21f74.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-a9408d439888befd128679b22c9cfad00ba40fa1.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-6b4447549322480caba118ad48635e6d9217c675.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-3f5f2ba70b9364148550f5401a007f3cd639bcf4.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/volley/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2c6ba36027e0a83a2b6c66717d5c31ebe19f7802">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-f99a3303d71669d1c9981b4a7dd641f57a65d935.jar" />
     </item>
     <item
         jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.5.0/jars/classes.jar"
@@ -114,18 +86,46 @@
         <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-c9d04d9aa0af961e2209c34244de4b1e8fe6a157.jar" />
     </item>
     <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="97f7e239e86ef994de894818fdd8a71d2e89d6aa">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-da038b1f0f78489d744bd77d84ef549f5cf124c1.jar" />
-    </item>
-    <item
         jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="a1372c17fccacca753d3951d3ad820571cbce075">
         <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-260fef2ee93f4ee1ab8d70e9d9851b45931f061b.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-fd3935a0b344cbd9acf95c7db1e25f9dfa04e719.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-8f4a07fe7d14de23d2954fc9a0b9e05fab52e0ed.jar" />
+    </item>
+    <item
+        jar="/home/valerio/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/gson-2.3-cdd3cd161f30ac18a988a97e7228681f5bc3683a.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-f73b43ad7ee1751901b3f394aad434a4d4e78be5.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-2aa811129bb0493d96cd07c9d34b8ace62f87f59.jar" />
     </item>
     <item
         jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar"
@@ -135,11 +135,74 @@
         <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-8bca466e3b7450263fc92e2204d02d8930aae980.jar" />
     </item>
     <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-179e63b84119cd395abf7293f040f1fb81aa3b0a.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-7049439dd27d412ee6891e600954614c612dfb5b.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-eb88cdbeb9d5f0e443d72ca3ed5d55c6bcdc3c3e.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="97f7e239e86ef994de894818fdd8a71d2e89d6aa">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-da038b1f0f78489d744bd77d84ef549f5cf124c1.jar" />
+    </item>
+    <item
         jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
         <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-9d217431b13c99c2c68f9bd3cdcea986b6b87ad0.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-cf258d0d1865b25c4660997c4f962dd68a5c54be.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/jars/libs/bolts-android-1.1.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="91c20388c9a45f62b5ed8fe0502bb76ff6251fc7">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/bolts-android-1.1.2-ecf38f024db8aa72bc930b57e524bed79a38d3b5.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-e4b50d7928e7fffda8b2703fc0fd60bc77f859d0.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-7c7380fa7f8b7a617ece7fa4f2b102023c6280c1.jar" />
+    </item>
+    <item
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/facebookSDK/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4aa3dba8b640fc4112a24125753d75b64d5c3766">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-7d9080a0ed003ede7ab80b98511b9768b4ab235c.jar" />
     </item>
     <item
         jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/jars/classes.jar"
@@ -156,60 +219,11 @@
         <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-d1eb3f637ca4b82a777970e7b61e497f3d9cf902.jar" />
     </item>
     <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/jars/classes.jar"
+        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-2aa811129bb0493d96cd07c9d34b8ace62f87f59.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-7049439dd27d412ee6891e600954614c612dfb5b.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-52cdae44deadd1a9d5ec3724627b8b0c349e2212.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="d405025c600055237c171a0bbabaa49d69696573">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-eb88cdbeb9d5f0e443d72ca3ed5d55c6bcdc3c3e.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-e4b50d7928e7fffda8b2703fc0fd60bc77f859d0.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-f73b43ad7ee1751901b3f394aad434a4d4e78be5.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/EncontreDelivery/volley/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c287b4369d0f031f97b5742c1c5420517c79ebef">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-f99a3303d71669d1c9981b4a7dd641f57a65d935.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.android.support/design/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-cec96ae4d4eda661ea977b1e76d38058d6ecedfc.jar" />
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-8ceb5cdfa67f9768a1f1200d67c2dae26d694d03.jar" />
     </item>
     <item
         jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.5.0/jars/classes.jar"
@@ -217,20 +231,6 @@
         revision="22.0.1"
         sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
         <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-76bc7a05ed46b7b25150af73dbb64c0b4648b20d.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-8f4a07fe7d14de23d2954fc9a0b9e05fab52e0ed.jar" />
-    </item>
-    <item
-        jar="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
-        <dex dex="/home/valerio/Github/android/EncontreDelivery/encontreDelivery/build/intermediates/pre-dexed/debug/classes-2e4c8f51a0be2fd247071d610b9c95d464d92633.jar" />
     </item>
 
 </items>

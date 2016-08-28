@@ -19,10 +19,10 @@ public class EmpresaRest extends GenericRest{
 	}
 	
 
-	public List<Empresa> getEmpresas(int idSegmento, int idTipo, String latitude, String longitude, int distanciaKm) throws Exception {
+	public List<Empresa> getEmpresas(int idSegmento, String latitude, String longitude, int distanciaKm) throws Exception {
 		List<Empresa> listaEmpresas = new ArrayList<Empresa>();
 		
-		String[] resposta = new WebServiceClient().get(getUrlWebService() + "retornar_empresas/" + CHAVE_MD5 + "/" + idSegmento + "/" + idTipo + "/" + latitude + "/" + longitude + "/" + distanciaKm);
+		String[] resposta = new WebServiceClient().get(getUrlWebService() + "retornar_empresas/" + CHAVE_MD5 + "/" + idSegmento + "/" + latitude + "/" + longitude + "/" + distanciaKm);
 
 		if (resposta[0].equals("200")) {
 			JSONArray jsonArray = new JSONObject(resposta[1]).getJSONArray("empresas");

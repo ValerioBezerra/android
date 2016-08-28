@@ -16,10 +16,10 @@ public class SegmentoRest extends GenericRest{
 	}
 	
 
-	public List<Segmento> getSegmentos(String latitude, String longitude, int distanciaKm) throws Exception {
+	public List<Segmento> getSegmentos() throws Exception {
 		List<Segmento> listaSegmentos = new ArrayList<Segmento>();
 		
-		String[] resposta = new WebServiceClient().get(getUrlWebService() + "retornar_segmentos" + "/" + CHAVE_MD5 + "/" + latitude + "/" + longitude + "/" + distanciaKm);
+		String[] resposta = new WebServiceClient().get(getUrlWebService() + "retornar_segmentos" + "/" + CHAVE_MD5);
 		
 		if (resposta[0].equals("200")) {
 			JSONArray jsonArray = new JSONObject(resposta[1]).getJSONArray("segmentos");
@@ -30,7 +30,7 @@ public class SegmentoRest extends GenericRest{
 				Segmento segmento = new Segmento();
 				segmento.setId(jsonObject.getInt("bus_id_seg"));
 				segmento.setDescricao(jsonObject.getString("bus_descricao_seg"));
-				segmento.setQuantidadeEmpresas(jsonObject.getInt("quantidade_empresa"));
+				segmento.setIcone(jsonObject.getString("bus_icone_seg"));
 
 				listaSegmentos.add(segmento);
 			}

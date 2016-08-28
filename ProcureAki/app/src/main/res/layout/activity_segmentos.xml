@@ -1,23 +1,111 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/encontre_meu_endereco"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.SegmentosActivity">
+    android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/black_opacity"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:padding="15dp"
+        android:orientation="horizontal">
 
-    <ListView
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/paki_logobranco" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/paki_iconmapabranco" />
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="BOA TARDE!"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:id="@+id/txtSaudacao" />
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="SÁBADO, 23/07"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:id="@+id/txtData" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lvSegmentos"
-        android:layout_centerVertical="true" />
+        android:orientation="vertical"
+        android:background="@color/black_opacity"
+        android:layout_alignParentBottom="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/nenhum_estabelecimento_encontrado"
-        android:id="@+id/txtNenhumEstabelecimentoEncontrado"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:visibility="gone"/>
+        <TextView
+            android:layout_margin="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/texto_busca_item"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/paki_fundotextobuscar"
+                android:id="@+id/edtBuscarProdutos"
+                android:padding="10dp"
+                android:hint="@string/o_que_voce_esta_buscando"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
+
+            <Button
+                android:id="@+id/btnPesquisar"
+                android:background="@drawable/paki_botaobuscar"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pesquisar" />
+
+        </LinearLayout>
+
+        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/gvSegmentos"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:columnWidth="300dp"
+            android:minHeight="100dp"
+            android:numColumns="3"
+            android:verticalSpacing="0dp"
+            android:horizontalSpacing="0dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center" />
+    </LinearLayout>
+
 </RelativeLayout>

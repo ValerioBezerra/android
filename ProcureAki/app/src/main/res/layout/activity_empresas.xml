@@ -1,23 +1,127 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.SegmentosActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#01B8E0"
+            android:src="@drawable/paki_iconbusca"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00B1DD"
+            android:id="@+id/txtSegmento"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Bares e restaurantes"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textColorHint="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:background="#00B1DD"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/edtBuscarProdutos"
+            android:gravity="left|center_vertical"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/distancia"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textColorHint="@color/white"/>
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbDistancia"
+            android:max="5"
+            android:contentDescription="dasda"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ver_promocoes"
+            android:background="@drawable/paki_botaopromocoes"
+            android:textColor="@color/primary_700"
+            android:id="@+id/btnVerPromocoes" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="#00B1DD"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rgOpcao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aberto"
+                android:id="@+id/rbAberto"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:checked="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fechado"
+                android:id="@+id/rbFechado"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal" />
+        </RadioGroup>
+    </LinearLayout>
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/lvEmpresas"
+        android:background="#01C2EB"
         android:layout_centerVertical="true" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/nenhum_estabelecimento_encontrado"
         android:id="@+id/txtNenhumEstabelecimentoEncontrado"
+        android:background="#01C2EB"
+        android:gravity="center"
+        android:textColor="@color/white"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:visibility="gone"/>
-</RelativeLayout>
+</LinearLayout>

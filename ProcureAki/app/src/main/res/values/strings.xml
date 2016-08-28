@@ -1,20 +1,45 @@
 <resources>
     <string name="app_name">ProcureAki</string>
+    <string name="aberto">Aberto</string>
     <string name="acesso_sem_login">Acesso sem login</string>
+    <string name="buscar_meu_endereco">Buscar meu endereço</string>
+    <string name="buscar_por_produto">Buscar por produto</string>
+    <string name="buscar_por_estabelecimentos">Buscar por estabelecimentos</string>
+    <string name="cadastra_se_agora">Cadastra-se agora</string>
+    <string name="cadastrar">Cadastrar</string>
     <string name="cancelar">Cancelar</string>
     <string name="cep">CEP</string>
     <string name="confirmar_endereco">Confirmar este endereço?</string>
+    <string name="confirmar_senha">Confirmar senha</string>
+    <string name="distancia">Distância</string>
+    <string name="email">E-mail</string>
+    <string name="email_exemplo">exemplo@email.com</string>
     <string name="empresas">Empresas</string>
     <string name="encontrar">Encontrar</string>
     <string name="encontrar_meu_endereco">Encontrar meu endereço</string>
     <string name="endereco">Endereço</string>
+    <string name="entrar">Entrar</string>
+    <string name="entrar_com_facebook">Entrar com facebook</string>
+    <string name="entrar_com_google">Entrar com google</string>
+    <string name="entrar_sem_cadastro">Entrar sem cadastro</string>
+    <string name="esqueci_senha">Esqueci minha senha</string>
+    <string name="fechado">Fechado</string>
     <string name="logradouro_exemplos">Logradouro(rua, avenida, etc.)</string>
+    <string name="localize_me_pelo_gps">Localize-me pelo GPS</string>
     <string name="nao">Não</string>
     <string name="nenhum_estabelecimento_encontrado">Nenhum estabelecimento encontrado.</string>
+    <string name="nenhum_produto_encontrado">Nenhum produto encontrado.</string>
+    <string name="nome">Nome</string>
     <string name="ok">OK</string>
+    <string name="o_que_voce_esta_buscando">O que você está buscando?</string>
+    <string name="pesquisar">Pesquisar</string>
     <string name="segmentos">Segmentos</string>
+    <string name="senha">Senha</string>
     <string name="sim">Sim</string>
     <string name="tipos">Tipos</string>
+    <string name="texto_esqueci_minha_senha">Informe seu e-mail e enviaremos passo-a-passo de como redifinir sua senha.</string>
+    <string name="texto_busca_item">Busque por um item ou escolha um segmento abaixo</string>
+    <string name="ver_promocoes">Ver promoções</string>
 
 
     <!-- Facebook -->

@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/ActionBarTheme" >
         <activity
@@ -28,15 +28,33 @@
             android:value="@string/facebook_app_id" />
 
         <activity
+            android:name=".activity.CadastroActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/cadastrar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.EsqueciMinhaSenhaActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/esqueci_senha"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
             android:name=".activity.EncontreMeuEnderecoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/encontrar_meu_endereco"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme">
         </activity>
         <activity
             android:name=".activity.SegmentosActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/segmentos"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.BuscarProdutoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/buscar_por_produto"
             android:screenOrientation="portrait">
         </activity>
         <activity
@@ -48,7 +66,7 @@
         <activity
             android:name=".activity.EmpresasActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/empresas"
+            android:label="@string/buscar_por_estabelecimentos"
             android:screenOrientation="portrait">
         </activity>
     </application>

@@ -1,13 +1,22 @@
 package br.com.kingsoft.procureaki.activity;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.Volley;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +28,17 @@ import br.com.kingsoft.procureaki.dialog.ProgressoDialog;
 import br.com.kingsoft.procureaki.model.Segmento;
 import br.com.kingsoft.procureaki.model.Empresa;
 import br.com.kingsoft.procureaki.model.Tipo;
+import br.com.kingsoft.procureaki.util.LruBitmapCache;
 import br.com.kingsoft.procureaki.util.Util;
 import br.com.kingsoft.procureaki.webservice.EmpresaRest;
 
 public class EmpresasActivity extends AppCompatActivity {
+    private TextView txtSegmento;
+    private SeekBar sbDistancia;
+    private Button btnVerPromocoes;
+    private RadioGroup rgOpcao;
+    private RadioButton rbAberto;
+    private RadioButton rbFechado;
     private ListView lvEmpresas;
     private TextView txtNenhumEstabelecimentoEncontrado;
 
@@ -42,21 +58,45 @@ public class EmpresasActivity extends AppCompatActivity {
     private ProgressoDialog progressoDialog;
     private ErroAvisoDialog erroAvisoDialog;
 
+    private RequestQueue requestQueue;
+    private ImageLoader imageLoader;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empresas);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        lvEmpresas                        = (ListView) findViewById(R.id.lvEmpresas);
+        txtSegmento                        = (TextView) findViewById(R.id.txtSegmento);
+        sbDistancia                        = (SeekBar) findViewById(R.id.sbDistancia);
+        btnVerPromocoes                    = (Button) findViewById(R.id.btnVerPromocoes);
+        rgOpcao                            = (RadioGroup) findViewById(R.id.rgOpcao);
+        rbAberto                           = (RadioButton) findViewById(R.id.rbAberto);
+        rbFechado                          = (RadioButton) findViewById(R.id.rbFechado);
+        lvEmpresas                         = (ListView) findViewById(R.id.lvEmpresas);
         txtNenhumEstabelecimentoEncontrado = (TextView) findViewById(R.id.txtNenhumEstabelecimentoEncontrado);
 
         Bundle extras = getIntent().getExtras();
 
         segmento  = (Segmento) extras.getSerializable("segmento");
-        tipo      = (Tipo) extras.getSerializable("tipo");
         latitude  = extras.getString("latitude");
         longitude = extras.getString("longitude");
+
+        requestQueue = Volley.newRequestQueue(this);
+        imageLoader  = new ImageLoader(requestQueue, new ImageLoader.ImageCache() {
+            private LruBitmapCache lruCache = new LruBitmapCache();
+
+            @Override
+            public void putBitmap(String url, Bitmap bitmap) {
+                lruCache.put(url, bitmap);
+            }
+
+            @Override
+            public Bitmap getBitmap(String url) {
+                return lruCache.get(url);
+            }
+        });
+
 
         iniciarComponentes();
 
@@ -82,7 +122,7 @@ public class EmpresasActivity extends AppCompatActivity {
                 } else {
                     lvEmpresas.setVisibility(View.VISIBLE);
                     txtNenhumEstabelecimentoEncontrado.setVisibility(View.GONE);
-                    empresaAdapter = new EmpresaAdapter(EmpresasActivity.this, listaEmpresas);
+                    empresaAdapter = new EmpresaAdapter(EmpresasActivity.this, listaEmpresas, imageLoader);
                     lvEmpresas.setAdapter(empresaAdapter);
                 }
 
@@ -102,9 +142,9 @@ public class EmpresasActivity extends AppCompatActivity {
     }
 
     private void iniciarComponentes() {
-        setTitle(segmento.getDescricao() + " -> " + tipo.getDescricao());
+        txtSegmento.setText(segmento.getDescricao());
         listaEmpresas  = new ArrayList<>();
-        empresaAdapter = new EmpresaAdapter(this, listaEmpresas);
+        empresaAdapter = new EmpresaAdapter(this, listaEmpresas, imageLoader);
         lvEmpresas.setAdapter(empresaAdapter);
         txtNenhumEstabelecimentoEncontrado.setVisibility(View.GONE);
         carregarEmpresas();
@@ -119,7 +159,7 @@ public class EmpresasActivity extends AppCompatActivity {
             public void run() {
                 EmpresaRest empresaRest = new EmpresaRest();
                 try {
-                    listaEmpresas = empresaRest.getEmpresas(segmento.getId(), tipo.getId(),  latitude, longitude, 5);
+                    listaEmpresas = empresaRest.getEmpresas(segmento.getId(),  latitude, longitude, 80);
                     Util.messagem("", handlerCarregarEmpresas);
                 } catch (Exception ex) {
                     Util.messagem(ex.getMessage(), handlerErros);
@@ -128,6 +168,13 @@ public class EmpresasActivity extends AppCompatActivity {
         });
 
         thread.start();
+    }
+
+    private int getOpcaoAbertoFechado() {
+        if (rgOpcao.getCheckedRadioButtonId() == R.id.rbAberto)
+            return 1;
+
+        return 0;
     }
 
 

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/black_opacity"
     android:padding="@dimen/padding" >
 
     <TextView
@@ -11,16 +12,16 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="Postos"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/txtQuantidadeEmpresas"
-        android:layout_width="match_parent"
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="(2)"
-        android:textColor="@color/black"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:src="@drawable/ic_categoria0"
+        android:id="@+id/imgIcone"
+        android:layout_gravity="center_horizontal" />
+
 
 </LinearLayout>

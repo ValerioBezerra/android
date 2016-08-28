@@ -5,7 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -17,18 +21,19 @@ import br.com.kingsoft.procureaki.model.Empresa;
 public class EmpresaAdapter extends BaseAdapter {
 	private LayoutInflater inflater;
 	private List<Empresa> listaEmpresas;
-	
+	private ImageLoader imageLoader;
+
 	static class EmpresaViewHolder {
+		NetworkImageView nivImagem;
 		TextView txtNome;
-		TextView txtEnderecoNumero;
-		TextView txtBairroCidadeUf;
-		TextView txtQuantidadeDiasAtualizacao;
-		TextView txtDistanciaKm;
+		ImageView imgAbertoFechado;
+		TextView txtDistancia;
 	}
 	
-	public EmpresaAdapter(Context context, List<Empresa> listaEmpresas) {
+	public EmpresaAdapter(Context context, List<Empresa> listaEmpresas, ImageLoader imageLoader) {
 		this.inflater       = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		this.listaEmpresas = listaEmpresas;
+		this.imageLoader    = imageLoader;
 	}
 
 	@Override
@@ -55,12 +60,11 @@ public class EmpresaAdapter extends BaseAdapter {
 			view = inflater.inflate(R.layout.adapter_empresa, parent, false);
 			
 			empresaViewHolder = new EmpresaViewHolder();
-		
-			empresaViewHolder.txtNome                      = (TextView) view.findViewById(R.id.txtNome);
-			empresaViewHolder.txtEnderecoNumero            = (TextView) view.findViewById(R.id.txtEnderecoNumero);
-			empresaViewHolder.txtBairroCidadeUf            = (TextView) view.findViewById(R.id.txtBairroCidadeUf);
-			empresaViewHolder.txtQuantidadeDiasAtualizacao = (TextView) view.findViewById(R.id.txtQuantidadeDiasAtualizacao);
-			empresaViewHolder.txtDistanciaKm               = (TextView) view.findViewById(R.id.txtDistanciaKm);
+
+			empresaViewHolder.nivImagem        = (NetworkImageView) view.findViewById(R.id.nivImagem);
+			empresaViewHolder.txtNome          = (TextView) view.findViewById(R.id.txtNome);
+			empresaViewHolder.imgAbertoFechado = (ImageView) view.findViewById(R.id.imgAbertoFechado);
+			empresaViewHolder.txtDistancia     = (TextView) view.findViewById(R.id.txtDistancia);
 
 			view.setTag(empresaViewHolder);
 		} else {
@@ -68,10 +72,18 @@ public class EmpresaAdapter extends BaseAdapter {
 		}
 		
 		empresaViewHolder.txtNome.setText(empresa.getNome());
-		empresaViewHolder.txtEnderecoNumero.setText(empresa.getEndereco().getLogradouro() + ", " + empresa.getEndereco().getNumero());
-		empresaViewHolder.txtBairroCidadeUf.setText(empresa.getEndereco().getBairro().getNome() + ". " + empresa.getEndereco().getBairro().getCidade().getNome() + "-" + empresa.getEndereco().getBairro().getCidade().getUf());
-		empresaViewHolder.txtQuantidadeDiasAtualizacao.setText(empresa.getQuantidadeDiasAtualizacao() + " dia(s)");
-		empresaViewHolder.txtDistanciaKm.setText(new DecimalFormat("0.00").format(empresa.getDistanciaKm()) + " Km");
+
+		if (empresa.isAberto())
+			empresaViewHolder.imgAbertoFechado.setImageResource(R.drawable.paki_aberto);
+		else
+			empresaViewHolder.imgAbertoFechado.setImageResource(R.drawable.paki_fechado);
+
+		empresaViewHolder.txtDistancia.setText(new DecimalFormat("0.0").format(empresa.getDistanciaKm()) + " Km");
+
+		empresaViewHolder.nivImagem.setImageUrl(empresa.getUrlImagem(), imageLoader);
+		empresaViewHolder.nivImagem.setDefaultImageResId(R.drawable.ic_launcher);
+		empresaViewHolder.nivImagem.setErrorImageResId(R.drawable.ic_launcher);
+
 
 		return view;
 	}

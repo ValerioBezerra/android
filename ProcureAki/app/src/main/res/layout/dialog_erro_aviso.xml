@@ -51,11 +51,11 @@
 
         <Button
             android:id="@+id/btnOK"
-            style="@style/button_blue"
             android:layout_width="match_parent"
             android:layout_alignParentBottom="true"
             android:background="@drawable/button_blue"
-            android:text="@string/ok"/>
+            android:text="@string/ok"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

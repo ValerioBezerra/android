@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="#01C2EB"
+    android:padding="20dp" >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/nivImagem"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="@dimen/layout_marginRight"
+        android:src="@null" />
+
+    <TextView
+        android:id="@+id/txtDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Skol Beats"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtPreco"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="5,00"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>

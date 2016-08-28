@@ -10,7 +10,7 @@
     <dimen name="padding_right">10dp</dimen>
     <dimen name="padding_bottom">10dp</dimen>
 
-    <dimen name="activity_login_padding_top">130dp</dimen>
+    <dimen name="activity_login_padding_top">40dp</dimen>
     <dimen name="activity_login_padding_left">30dp</dimen>
     <dimen name="activity_login_padding_right">30dp</dimen>
     <dimen name="activity_login_padding_bottom">50dp</dimen>

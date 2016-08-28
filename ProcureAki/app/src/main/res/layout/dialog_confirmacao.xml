@@ -57,7 +57,6 @@
 
             <Button
                 android:id="@+id/btnSim"
-                style="@style/button_blue"
                 android:layout_width="match_parent"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/button_blue"
@@ -67,7 +66,6 @@
 
             <Button
                 android:id="@+id/btnNao"
-                style="@style/button_blue"
                 android:layout_width="match_parent"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/button_blue"

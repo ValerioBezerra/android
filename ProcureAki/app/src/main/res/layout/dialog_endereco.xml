@@ -23,12 +23,12 @@
 
         <Button
             android:id="@+id/btnCancelar"
-            style="@style/button_blue"
             android:layout_width="match_parent"
             android:layout_alignParentBottom="true"
             android:background="@drawable/button_blue"
             android:layout_marginRight="@dimen/layout_marginRight"
-            android:text="@string/cancelar"/>
+            android:text="@string/cancelar"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </RelativeLayout>

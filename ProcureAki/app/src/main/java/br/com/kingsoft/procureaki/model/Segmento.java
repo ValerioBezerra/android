@@ -6,12 +6,12 @@ import java.io.Serializable;
 public class Segmento implements Serializable {
 	private int id;
 	private String descricao;
-	private int quantidadeEmpresas;
+	private String icone;
 	
 	public Segmento() {
 		this.id                 = 0;
 		this.descricao          = "";
-		this.quantidadeEmpresas = 0;
+		this.icone          = "";
 	}
 	
 	public int getId() {
@@ -29,11 +29,11 @@ public class Segmento implements Serializable {
 		this.descricao = descricao;
 	}
 
-	public int getQuantidadeEmpresas() {
-		return quantidadeEmpresas;
+	public String getIcone() {
+		return icone;
 	}
 
-	public void setQuantidadeEmpresas(int quantidadeEmpresas) {
-		this.quantidadeEmpresas = quantidadeEmpresas;
+	public void setIcone(String icone) {
+		this.icone = icone;
 	}
 }

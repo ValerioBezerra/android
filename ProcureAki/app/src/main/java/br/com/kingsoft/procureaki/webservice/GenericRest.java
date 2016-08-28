@@ -11,7 +11,7 @@ public class GenericRest {
 //		this.urlWebService = "http://192.168.100.11/web/encontredelivery/administrador/json/" + classe + "/";
 //		this.urlWebService = "http://encontredelivery.com.br/demo/administrador/json/" + classe + "/";
 //		this.urlWebService = "http://192.168.100.101/web/procureaki/json/" + classe + "/";
-		this.urlWebService = "http://192.168.2.109/web/procureaki/json/" + classe + "/";
+		this.urlWebService = "http://192.168.2.110/web/procureaki/json/" + classe + "/";
 	}
 
 	public String getUrlWebService() {

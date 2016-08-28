@@ -3,106 +3,151 @@
     android:background="@drawable/encontre_meu_endereco"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/activity_encontrar_meu_endereco_padding_top"
-    android:paddingLeft="@dimen/activity_encontrar_meu_endereco_padding_left"
-    android:paddingRight="@dimen/activity_encontrar_meu_endereco_padding_right"
-    android:paddingBottom="@dimen/activity_encontrar_meu_endereco_padding_bottom"
-    tools:context=".EncontreMeuEnderecoActivity">
+    android:orientation="vertical">
 
-
-    <RadioGroup
-        android:id="@+id/rgOpcao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/black_opacity"
+        android:gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:orientation="horizontal">
 
-        <RadioButton
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/endereco"
-            android:id="@+id/rbEndereco"
-            android:layout_gravity="center_horizontal"
-            android:checked="true"/>
+            android:background="@drawable/paki_logobranco" />
 
-        <RadioButton
+        <TextView
+            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cep"
-            android:id="@+id/rbCep"
-            android:layout_gravity="center_horizontal" />
-    </RadioGroup>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/buscar_meu_endereco"
+            style="@style/button_login"
+            android:textSize="20dp"
+            android:id="@+id/textView" />
 
-    <RelativeLayout
-        android:id="@+id/rlEndereco"
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_encontrar_meu_endereco_margin_top_rlEndereco_layout"
-        android:layout_centerVertical="true"
-        android:layout_below="@+id/rgOpcao"
-        android:orientation="vertical" >
-
-        <Spinner
-            android:id="@+id/spnCidades"
-            android:layout_alignParentTop="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Spinner
-            android:id="@+id/spnBairros"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/spnCidades" />
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/tilLogradouro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/spnBairros">
-            <EditText
-                android:id="@+id/edtLogradouro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/logradouro_exemplos"
-                android:maxLines="100" />
-        </android.support.design.widget.TextInputLayout>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rlCep"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_encontrar_meu_endereco_margin_top_rlCep_layout"
-        android:layout_centerVertical="true"
-        android:layout_below="@+id/rgOpcao"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/activity_encontrar_meu_endereco_padding_left"
+        android:paddingRight="@dimen/activity_encontrar_meu_endereco_padding_right"
+        android:paddingBottom="@dimen/activity_encontrar_meu_endereco_padding_bottom">
+        <TextView
+            android:background="@color/primary_700"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/tilCEP"
+        <RelativeLayout
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true">
-            <EditText
-                android:id="@+id/edtCEP"
+            android:padding="10dp"
+            android:layout_centerVertical="true">
+
+            <RadioGroup
+                android:id="@+id/rgOpcao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/endereco"
+                    android:id="@+id/rbEndereco"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cep"
+                    android:id="@+id/rbCep"
+                    android:layout_gravity="center_horizontal" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/rlEndereco"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/cep"
-                android:inputType="number"
-                android:maxLength="8" />
-        </android.support.design.widget.TextInputLayout>
-    </RelativeLayout>
+                android:layout_marginTop="@dimen/activity_encontrar_meu_endereco_margin_top_rlEndereco_layout"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/rgOpcao"
+                android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/btnEncontrar"
-        style="@style/button_blue"
-        android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/button_blue"
-        android:text="@string/encontrar"/>
+                <Spinner
+                    android:id="@+id/spnCidades"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spnBairros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spnCidades" />
+
+                <EditText
+                    android:id="@+id/edtLogradouro"
+                    android:drawableLeft="@drawable/paki_iconmapa"
+                    android:drawablePadding="15dp"
+                    android:layout_below="@+id/spnBairros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/logradouro_exemplos"
+                    android:maxLines="100" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_encontrar_meu_endereco_margin_top_rlCep_layout"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/rgOpcao"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edtCEP"
+                    android:drawableLeft="@drawable/paki_iconmapa"
+                    android:drawablePadding="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/cep"
+                    android:inputType="number"
+                    android:maxLength="8" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/btnEncontrar"
+            android:background="@color/black_opacity"
+            style="@style/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/encontrar" />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnLocalizarPeloGps"
+            android:background="@color/black_opacity"
+            style="@style/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/localize_me_pelo_gps" />
+    </LinearLayout>
 
 </RelativeLayout>

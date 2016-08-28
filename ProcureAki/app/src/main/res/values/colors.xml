@@ -1,12 +1,17 @@
 <resources>
-     <!-- Red -->
+     <!-- Blue -->
     <color name="primary_100">#bbdefb</color>
     <color name="primary_500">#2196f3</color>
     <color name="primary_700">#1976d2</color>
     <color name="secondary">#1976d2</color>
 
     <!-- Blue -->
-    <color name="blue">#44619D</color>
+    <color name="blue_sure">#F6F7F9</color>
+    <color name="blue_background_facebook">#E2F1F8</color>
+    <color name="blue_text_facebook">#86A8C4</color>
+    <color name="red_background_google">#F6E6E7</color>
+    <color name="red_text_google">#BE9895</color>
+
 
     <!-- Black and White-->
     <color name="black_opacity">#804b4b4b</color>
