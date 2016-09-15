@@ -1,4 +1,0 @@
-int drawable ic_arrow_down 0x7f020000
-int drawable ic_arrow_left 0x7f020001
-int drawable ic_arrow_right 0x7f020002
-int drawable ic_arrow_up 0x7f020003

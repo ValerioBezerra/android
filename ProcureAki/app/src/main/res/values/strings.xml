@@ -14,6 +14,7 @@
     <string name="distancia">Distância</string>
     <string name="email">E-mail</string>
     <string name="email_exemplo">exemplo@email.com</string>
+    <string name="empresa">Empresa</string>
     <string name="empresas">Empresas</string>
     <string name="encontrar">Encontrar</string>
     <string name="encontrar_meu_endereco">Encontrar meu endereço</string>
@@ -33,6 +34,7 @@
     <string name="ok">OK</string>
     <string name="o_que_voce_esta_buscando">O que você está buscando?</string>
     <string name="pesquisar">Pesquisar</string>
+    <string name="seguir">seguir</string>
     <string name="segmentos">Segmentos</string>
     <string name="senha">Senha</string>
     <string name="sim">Sim</string>

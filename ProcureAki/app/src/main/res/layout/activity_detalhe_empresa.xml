@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DetalheEmpresaActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:padding="10dp"
+                android:background="@drawable/encontre_meu_endereco"
+                android:orientation="horizontal">
+
+                 <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/encontre_meu_endereco"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNomeEmpresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textStyle="bold"
+                        android:text="Barretu's Grill"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/primary_500" />
+
+                    <TextView
+                        android:id="@+id/txtRuaNumero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearance"
+                        android:textStyle="bold"
+                        android:text="Avenida Cardoso de Sá, nº 3."
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/txtBairroCidade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearance"
+                        android:textStyle="bold"
+                        android:text="Atrás da Banca. Petrolina, PE."
+                        android:textColor="@color/white" />
+
+                     <Button
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/btnSeguir"
+                         android:background="@drawable/button_login"
+                         android:layout_marginTop="20dp"
+                         android:text="@string/seguir"
+                         style="@style/button_login" />
+                </LinearLayout>
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/nivImagem"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/layout_marginTop"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Sobre"
+                    android:textColor="@color/grey_400"/>
+
+                <TextView
+                    android:id="@+id/txtSobre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="O Barretu's Grill possui um ambiente rústico, agradável, ventilado e aconchegante, com cardápio variado, músicas ao vivo para quem gosta de se divertir e saborear uma boa comida."
+                    android:textColor="@color/grey_600"/>
+
+                <br.com.kingsoft.procureaki.view.NoScrollGridView
+                          android:id="@+id/gvItens"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:columnWidth="300dp"
+                          android:minHeight="300dp"
+                          android:numColumns="3"
+                          android:verticalSpacing="0dp"
+                          android:horizontalSpacing="0dp"
+                          android:stretchMode="columnWidth"
+                          android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_200"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgFone"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/paki_iconfone"/>
+
+                <ImageView
+                    android:id="@+id/imgCompartilhar"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/paki_iconemail"/>
+
+                <ImageView
+                    android:id="@+id/imgSite"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/paki_iconsite"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnFormaPagamentoHorario"
+                android:background="@drawable/button_login"
+                android:layout_marginTop="10dp"
+                android:text="Ver formas de pagamento e horário de funcionamento"
+                style="@style/button_forma_pagamento_horario" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -53,10 +53,10 @@
             android:textColorHint="@color/white"/>
 
         <SeekBar
+            android:id="@+id/sbDistancia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/sbDistancia"
-            android:max="5"
+            android:max="4"
             android:contentDescription="dasda"
             android:layout_weight="1" />
 
@@ -68,41 +68,6 @@
             android:textColor="@color/primary_700"
             android:id="@+id/btnVerPromocoes" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:background="#00B1DD"
-        android:layout_alignParentTop="true"
-        android:orientation="horizontal">
-
-        <RadioGroup
-            android:id="@+id/rgOpcao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/aberto"
-                android:id="@+id/rbAberto"
-                android:textColor="@color/white"
-                android:layout_gravity="center_horizontal"
-                android:checked="true"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/fechado"
-                android:id="@+id/rbFechado"
-                android:textColor="@color/white"
-                android:layout_gravity="center_horizontal" />
-        </RadioGroup>
     </LinearLayout>
 
     <ListView

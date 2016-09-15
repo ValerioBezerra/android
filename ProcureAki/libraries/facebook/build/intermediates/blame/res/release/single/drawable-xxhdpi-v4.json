@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Valerio\\Documents\\Projetos\\GitHub\\android\\ProcureAki\\libraries\\facebook\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\com_facebook_button_like_pressed.png",
+        "source": "C:\\Users\\Valerio\\Documents\\Projetos\\GitHub\\android\\ProcureAki\\libraries\\facebook\\src\\main\\res\\drawable-xxhdpi\\com_facebook_button_like_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\Valerio\\Documents\\Projetos\\GitHub\\android\\ProcureAki\\libraries\\facebook\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\com_facebook_button_like_icon_selected.png",
+        "source": "C:\\Users\\Valerio\\Documents\\Projetos\\GitHub\\android\\ProcureAki\\libraries\\facebook\\src\\main\\res\\drawable-xxhdpi\\com_facebook_button_like_icon_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\Valerio\\Documents\\Projetos\\GitHub\\android\\ProcureAki\\libraries\\facebook\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\com_facebook_button_like_icon.png",
+        "source": "C:\\Users\\Valerio\\Documents\\Projetos\\GitHub\\android\\ProcureAki\\libraries\\facebook\\src\\main\\res\\drawable-xxhdpi\\com_facebook_button_like_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Valerio\\Documents\\Projetos\\GitHub\\android\\ProcureAki\\libraries\\facebook\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\com_facebook_button_like_background_selected.png",
+        "source": "C:\\Users\\Valerio\\Documents\\Projetos\\GitHub\\android\\ProcureAki\\libraries\\facebook\\src\\main\\res\\drawable-xxhdpi\\com_facebook_button_like_background_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\Valerio\\Documents\\Projetos\\GitHub\\android\\ProcureAki\\libraries\\facebook\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\com_facebook_button_like_background.png",
+        "source": "C:\\Users\\Valerio\\Documents\\Projetos\\GitHub\\android\\ProcureAki\\libraries\\facebook\\src\\main\\res\\drawable-xxhdpi\\com_facebook_button_like_background.png"
+    }
+]

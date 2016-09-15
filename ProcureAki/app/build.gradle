@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "br.com.kingsoft.procureaki"
-        minSdkVersion 10
+        minSdkVersion 14
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -31,4 +31,5 @@ dependencies {
     compile 'com.android.support:design:22.2.0'
     compile project(path: ':volley')
     compile 'com.github.xizzhu:simple-tool-tip:0.6.1'
+    compile 'com.venmo.view.tooltip:tooltip:0.1.2@aar'
 }

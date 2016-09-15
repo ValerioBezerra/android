@@ -69,6 +69,14 @@
             android:label="@string/buscar_por_estabelecimentos"
             android:screenOrientation="portrait">
         </activity>
+
+        <activity
+            android:name=".activity.DetalheEmpresaActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/empresas"
+            android:screenOrientation="portrait">
+        </activity>
+
     </application>
 
 </manifest>
